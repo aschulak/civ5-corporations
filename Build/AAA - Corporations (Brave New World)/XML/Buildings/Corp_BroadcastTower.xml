@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BUILDING_BROADCAST_TOWER_CORP_HELP">
+			<Text>+33% [ICON_CULTURE] Culture in this City. Increases the distance Corporate pressure emanating from this City may spread by 25% with Mass Media.[NEWLINE][NEWLINE]City must have a Museum.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_BROADCAST_TOWER_CORP_STRATEGY">
+			<Text>A Broadcast Tower is a late-game building which increases [ICON_CULTURE] Culture output of the city by 33%. Once Mass Media technology is discovered, the Broadcast Tower also increases the distance Corporate pressure emanating from the city may spread by 25%. The city must possess a Museum before it can construct a Broadcast Tower.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

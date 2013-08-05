@@ -31,6 +31,10 @@ Be sure to check out the new entries in the Game Concepts section of the Civilop
 
 [NEWLINE][NEWLINE]
 
+This mod overwrites several UI components to enhance gameplay. If these overrides conflict with one of your favorite mods, you may delete the files from the UI/InGame folder manually without causing the mod to break.
+
+[NEWLINE][NEWLINE]
+
 Architected and designed with a database centric view, this mod is built to enable other modders to quickly and easily incporporate Corporations game mechanics into their mods though easy to use XML tags. No Lua coding required!
 
 [NEWLINE][NEWLINE]
@@ -79,6 +83,7 @@ Special thanks:
     <File md5="4F0EA71159083EE475080688BB3FA6ED" import="1">ART/SidsSushiSplash.dds</File>
     <File md5="03A3163BE4BB680A2237A94678CE47B9" import="1">ART/ThinkDrinkSplash.dds</File>
     <File md5="F5E8C60FFC7600FC1E1A8A2E57E38220" import="1">ART/YoungArmySplash.dds</File>
+    <File md5="6ED8204CCE30D0BA6DDBB20810D1C01C" import="0">CorporationsBNWSteam.jpg</File>
     <File md5="6CAB9BB5211943A75146A91B4CB72EA7" import="0">Ideas.txt</File>
     <File md5="36BF5848A97A36B5BBA7AFAFECF165AC" import="1">Lua/Corp_BuildingConstructs.lua</File>
     <File md5="3E2426440B99885B3A55AF60D639EB25" import="0">Lua/Corporations.lua</File>
@@ -88,7 +93,7 @@ Special thanks:
     <File md5="4858F42567E2302D711B580DC775EFD2" import="1">Lua/Corp_Utils.lua</File>
     <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="0">Lua/SaveUtils.lua</File>
     <File md5="4B97DB1E8B8AACCFD3F4D33F8DF3AB14" import="1">Lua/TableSaverLoader.lua</File>
-    <File md5="BDBFBB8AAD0F6C8E402107B5923783D2" import="0">SQL/Corp_TableUpdates.sql</File>
+    <File md5="EFA7462C5618A0F2203B36A48E8AB580" import="0">SQL/Corp_TableUpdates.sql</File>
     <File md5="0D2A16105354F7C3D83944745F32B618" import="1">UI/Corporations.xml</File>
     <File md5="71E0A7E9065143BADEDEBF9C75D9D648" import="1">UI/InGame/CityBannerManager.lua</File>
     <File md5="3232586C82666803799F31BA8F92CF12" import="0">UI/InGame/CityView.lua</File>
@@ -98,6 +103,7 @@ Special thanks:
     <File md5="AD5F997424BFF67A691EFDFC1072DECB" import="1">UI/InGame/TechButtonInclude.lua</File>
     <File md5="141712555E5793FAE1E56FA86D9EB52D" import="1">UI/InGame/TopPanel.lua</File>
     <File md5="E1CCF6C0CB53BAC567FBAB69208C2A12" import="0">XML/BasicInfos/Corp_Concepts.xml</File>
+    <File md5="7AEF6F58F587071A25B440C2DE9D7DE9" import="0">XML/Buildings/Corp_BroadcastTower.xml</File>
     <File md5="45810716CB34080CB4E7481F6529AEF3" import="0">XML/Buildings/Corp_Clothes.xml</File>
     <File md5="64410986743A4F105C325965E3F12BE9" import="0">XML/Buildings/Corp_ClothesHQ.xml</File>
     <File md5="E00EACF3CE18FBD6E77F2DC7E87660DD" import="0">XML/Buildings/Corp_Cola.xml</File>
@@ -137,6 +143,7 @@ Special thanks:
       <UpdateDatabase>XML/Buildings/Corp_WallStreet.xml</UpdateDatabase>
       <UpdateDatabase>XML/Buildings/Corp_AdvertisingAgency.xml</UpdateDatabase>
       <UpdateDatabase>XML/Buildings/Corp_MadisonAvenue.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_BroadcastTower.xml</UpdateDatabase>
       <UpdateDatabase>XML/Buildings/Corp_Jeweler.xml</UpdateDatabase>
       <UpdateDatabase>XML/Buildings/Corp_JewelerHQ.xml</UpdateDatabase>
       <UpdateDatabase>XML/Buildings/Corp_Sushi.xml</UpdateDatabase>

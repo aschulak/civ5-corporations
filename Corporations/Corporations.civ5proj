@@ -35,6 +35,10 @@ Be sure to check out the new entries in the Game Concepts section of the Civilop
 
 [NEWLINE][NEWLINE]
 
+This mod overwrites several UI components to enhance gameplay. If these overrides conflict with one of your favorite mods, you may delete the files from the UI/InGame folder manually without causing the mod to break.
+
+[NEWLINE][NEWLINE]
+
 Architected and designed with a database centric view, this mod is built to enable other modders to quickly and easily incporporate Corporations game mechanics into their mods though easy to use XML tags. No Lua coding required!
 
 [NEWLINE][NEWLINE]
@@ -108,6 +112,11 @@ Special thanks:
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>XML/Buildings/Corp_MadisonAvenue.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>XML/Buildings/Corp_BroadcastTower.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -389,6 +398,10 @@ Special thanks:
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="XML\BasicInfos\Corp_Concepts.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="XML\Buildings\Corp_BroadcastTower.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

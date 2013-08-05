@@ -3,6 +3,9 @@ ALTER TABLE Buildings ADD COLUMN 'CorporationOwnershipRequired' BOOLEAN DEFAULT 
 ALTER TABLE Buildings ADD COLUMN 'CorporationHeadquartersCity' BOOLEAN DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'CorporationSpreadPressureModifier' INTEGER DEFAULT 0;
 ALTER TABLE Buildings ADD COLUMN 'CorporationSpreadDistanceModifier' INTEGER DEFAULT 0;
+UPDATE Buildings SET CorporationSpreadDistanceModifier=25 WHERE Type='BUILDING_BROADCAST_TOWER';
+UPDATE Buildings SET Help='TXT_KEY_BUILDING_BROADCAST_TOWER_CORP_HELP' WHERE Type='BUILDING_BROADCAST_TOWER';
+UPDATE Buildings SET Strategy='TXT_KEY_BUILDING_BROADCAST_TOWER_CORP_STRATEGY' WHERE Type='BUILDING_BROADCAST_TOWER';
 ALTER TABLE Buildings ADD COLUMN 'CorporationFranchiseGoldRevenueModifier' INTEGER DEFAULT 0;
 
 -- Worlds
