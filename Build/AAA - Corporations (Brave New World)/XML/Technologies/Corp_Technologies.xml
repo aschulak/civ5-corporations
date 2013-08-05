@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Technologies>
+		<Row>
+			<Type>TECH_CORPORATION</Type>
+			<Cost>2350</Cost>
+			<Description>TXT_KEY_TECH_CORPORATION_TITLE</Description>
+			<Civilopedia>TXT_KEY_TECH_CORPORATION_DESC</Civilopedia>
+			<Help>TXT_KEY_TECH_CORPORATION_HELP</Help>
+			<Era>ERA_INDUSTRIAL</Era>
+			<Trade>true</Trade>
+			<GridX>10</GridX>
+			<GridY>4</GridY>
+			<Quote>TXT_KEY_TECH_CORPORATION_QUOTE</Quote>
+			<PortraitIndex>0</PortraitIndex>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+		</Row>
+		<Row>
+			<Type>TECH_MASS_MEDIA</Type>
+			<Cost>5100</Cost>
+			<Description>TXT_KEY_TECH_MASS_MEDIA_TITLE</Description>
+			<Civilopedia>TXT_KEY_TECH_MASS_MEDIA_DESC</Civilopedia>
+			<Help>TXT_KEY_TECH_MASS_MEDIA_HELP_CORP</Help>
+			<Era>ERA_MODERN</Era>			
+			<AllowsCorporationSpread>true</AllowsCorporationSpread>
+			<Trade>true</Trade>
+			<GridX>12</GridX>
+			<GridY>2</GridY>
+			<Quote>TXT_KEY_TECH_MASS_MEDIA_QUOTE</Quote>
+			<PortraitIndex>59</PortraitIndex>
+			<IconAtlas>TECH_ATLAS_1</IconAtlas>
+			<AudioIntro>AS2D_TECH_MASS_MEDIA</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_MASS_MEDIA</AudioIntroHeader>
+		</Row>
+		<!-- Move other Techs to better organize for Mass Media -->
+		<Update>
+			<Set GridY="0"/>
+			<Where Type="TECH_REFRIGERATION"/>
+		</Update>
+		<Update>
+			<Set GridY="0"/>
+			<Where Type="TECH_PENICILIN"/>
+		</Update>
+		<Update>
+			<Set GridY="1"/>
+			<Where Type="TECH_PLASTIC"/>
+		</Update>
+	</Technologies>
+	<Technology_PrereqTechs>
+		<Row>
+			<TechType>TECH_CORPORATION</TechType>
+			<PrereqTech>TECH_INDUSTRIALIZATION</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_REPLACEABLE_PARTS</TechType>
+			<PrereqTech>TECH_CORPORATION</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_MASS_MEDIA</TechType>
+			<PrereqTech>TECH_RADIO</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_TELECOM</TechType>
+			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
+		</Row>
+	</Technology_PrereqTechs>
+	<Technology_Flavors>
+		<Row>
+			<TechType>TECH_CORPORATION</TechType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_CORPORATION</TechType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<TechType>TECH_MASS_MEDIA</TechType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>30</Flavor>
+		</Row>
+	</Technology_Flavors>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_TECH_CORPORATION_TITLE">
+			<Text>Corporation</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_CORPORATION_HELP">
+			<Text>Allows you to build the [COLOR_POSITIVE_TEXT]Wall Street[ENDCOLOR] National Wonder, as well as all of the [COLOR_POSITIVE_TEXT]Corporation[ENDCOLOR] Wonders.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_CORPORATION_QUOTE">
+			<Text>[NEWLINE][TAB][TAB]"Corporation, n. an ingenious device for obtaining individual profit without individual responsibility."[NEWLINE] - Ambrose Bierce[NEWLINE][TAB]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_TECH_CORPORATION_DESC">
+			<Text>As businesses grow, they often find it necessary to raise large amounts of operating capital in order to expand their operations beyond a certain point, or to meet operating expenses. In these cases, one option available is to form a corporation and "go public", or sell shares of the business to investors. This arrangement allows the business to expand rapidly, while spreading the risks of the expansion among many people, reducing individual risk. Corporations also have legal advantages such as the right to sue, and the limitation of liability for the corporation's debt to the amount originally invested by the owners. Corporations as legal entities have existed since ancient Rome, although the joint-stock company as it is known today didn't begin operating until sometime in the 16th century.</Text>			
+		</Row>
+		<Row Tag="TXT_KEY_TECH_MASS_MEDIA_HELP_CORP">
+			<Text>Allows Corporation franchises to spread to other cities.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CORPORATION_SPREAD">
+			<Text>Allows Corporation franchises to spread to other cities.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNLIMITED_CORPORATION_SPREAD_DISTANCE">			
+			<Text>Corporation franchises can spread over an unlimited amount of distance.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

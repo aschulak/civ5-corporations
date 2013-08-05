@@ -1,0 +1,50 @@
+-- Ideas
+-- Author: aschulak
+-- DateCreated: 3/14/2013 7:29:59 PM
+--------------------------------------------------------------
+
+stephangoodwin 6 hours ago  
+Minor comment: truffles could get the Burger Shack bonus. Whether you look at them as bacon or 
+actual mushrooms, they are a burger option.
+
+DJ_MD5 Mar 11, 2013 @ 9:49pm  Delete
+Franchises of a corporation that is owned by a player should still cost that player 1 GPT (describe 
+in in the mod as "overhead costs"?). Otherwise, the bonuses from having a maintenance-cost-free 
+franchise of your corporation(s) in each of your cities very heavily outweigh any costs from the 
+initial sinking of production into building the corporation wonder. Also, some franchises are much 
+more powerful than others; having +4-6 food in a city from a building lets you take 2-3 workers 
+from food and put them onto other non-food tiles. Getting, for example, +2 science from a Think 
+Drink franchise in a city with 2 aluminum mines is much less useful than using the Burger Shack 
+franchise's food to offset the placement of 2 workers from food tiles into science-specialization 
+slots (which yields +6-8 science in the presence of the social policies you'd take anyways, as 
+well as Great Scientist points).
+
+Samirak Mar 11, 2013 @ 2:46pm  
+I am happy that you have done a big effort to bring something new to Civilization V, and that is 
+why I thank you Envoy. Altrough I don't understand these food corporation, why would not combine 
+burgers and drinks, and reaname it to fastfoodchain corporation. It could boost food per city,or 
+you would get some happines bonuses from some bonus resources (Cow,Deer and wheat), but this is just my opinion. 
+What I realy want to have is Oil Corporation, Airplain corporaiton and Steel corporaiton. 
+Oil.C could produce oil,consume it, or give bonuses to oil strategic resource. 
+Airplaine.C would consume oil (2-5 maybe?), you would get bonuses from natural wonders and world wonders,because of turists.Bonuses could be culture,gold or happines.
+Steel.C would do iron more usefull resource, that means Steel.C could transform/consume iron to production or gold.
+Just some ideas that raised in my head.
+
+Galgus at Civfanatics
+1. Unlock the ability to construct the various Corporation wonders to all civilizations at the start of the Industrial era, with the first player to enter it gaining a 15% production bonus for those wonders.
+
+2. Give a small (5-10%?) bonus to constructing a Corporation wonder for each resource it uses that the city has access to.
+
+------------------------------------------------------------------------------------
+ADDED
+------------------------------------------------------------------------------------
+
+EUGENE 8 hours ago  Delete
+This is looking great! I haven't tried it yet but I can already come up with a two suggestions to 
+improve it. First the corporation wonders themselves should not give a massive gold bonus on their
+ own, after all it's an investment and one can expect massive amount of revenue from the franchises. 
+ Maybe they should provide no additional gold bonus or even gold penalty. This would make the 
+ decision to build these corporations more strategic. Second, as someone has already said, the 
+ reward the corporation owner gets from each franchises should be slightly lower than the building 
+ maintenance to reflect cost. Finally, thanks for the great mod!
+

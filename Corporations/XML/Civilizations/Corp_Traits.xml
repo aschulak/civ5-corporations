@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_TRAIT_RIVER_EXPANSION_CORP">
+			<Text>All land military units have +1 sight. 50% discount when purchasing tiles. Corporate pressure doubled.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

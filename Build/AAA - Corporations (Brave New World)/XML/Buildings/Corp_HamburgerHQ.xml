@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<BuildingClasses>
+		<Row>
+			<Type>BUILDINGCLASS_CORP_HAMBURGER_HQ</Type>
+			<DefaultBuilding>BUILDING_CORP_HAMBURGER_HQ</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CORP_HAMBURGER_HQ</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+	</BuildingClasses>
+	<Buildings>
+		<Row>
+			<Type>BUILDING_CORP_HAMBURGER_HQ</Type>
+			<BuildingClass>BUILDINGCLASS_CORP_HAMBURGER_HQ</BuildingClass>
+			<Cost>1250</Cost>
+			<PrereqTech>TECH_CORPORATION</PrereqTech>
+			<Help>TXT_KEY_WONDER_CORP_HAMBURGER_HQ_HELP</Help>
+			<Description>TXT_KEY_WONDER_CORP_HAMBURGER_HQ</Description>
+			<Civilopedia>TXT_KEY_WONDER_CORP_HAMBURGER_HQ_DESC</Civilopedia>
+			<Quote>TXT_KEY_WONDER_CORP_HAMBURGER_HQ_QUOTE</Quote>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<GreatPeopleRateChange>3</GreatPeopleRateChange>			
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>10</PortraitIndex>
+			<WonderSplashImage>BurgerShackSplash.dds</WonderSplashImage>
+			<WonderSplashAnchor>R,T</WonderSplashAnchor>			
+		</Row>
+	</Buildings>
+	<Building_TechAndPrereqs>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER_HQ</BuildingType>
+			<TechType>TECH_REFRIGERATION</TechType>
+		</Row>
+	</Building_TechAndPrereqs>
+	<!--
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER_HQ</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>10</Yield>
+		</Row>
+	</Building_YieldChanges>
+	-->
+	<Building_Flavors>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER_HQ</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER_HQ</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER_HQ</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER_HQ</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+	</Building_Flavors>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_WONDER_CORP_HAMBURGER_HQ">
+			<Text>Burger Shack Corporation</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_HAMBURGER_HQ_QUOTE">
+			<Text>[NEWLINE][TAB][TAB]"We take the hamburger business more seriously than anyone else."[NEWLINE] - Ray Kroc[NEWLINE][TAB]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_HAMBURGER_HQ_HELP">
+			<Text>Incorporates Burger Shack, allowing all Civilizations to build franchises in their Cities. +5 [ICON_GOLD] Gold from every Burger Shack in the World.[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]Refrigeration is also required.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_HAMBURGER_HQ_DESC">
+			<Text>{TXT_KEY_MISSION_CORP_HAMBURGER}[NEWLINE][NEWLINE]Fast food is the term given to food that can be prepared and served very quickly. While any meal with low preparation time can be considered to be fast food, typically the term refers to food sold in a restaurant or store with preheated or precooked ingredients, and served to the customer in a packaged form for take-out/take-away. The term "fast food" was recognized in a dictionary by Merriam–Webster in 1951. Outlets may be stands or kiosks, which may provide no shelter or seating, or fast food restaurants (also known as quick service restaurants). Franchise operations which are part of restaurant chains have standardized foodstuffs shipped to each restaurant from central locations.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

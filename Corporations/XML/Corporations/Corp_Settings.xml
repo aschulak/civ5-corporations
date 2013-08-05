@@ -1,0 +1,28 @@
+<GameData>
+	<Table name="CorporationSettings">
+		<Column name="Type" primarykey="true" type="Text" />
+		<Column name="Value" type="integer" default="0"/>
+	</Table>
+	<CorporationSettings>
+		<Row>
+			<Type>BasePressureModifier</Type>
+			<Value>100</Value>
+		</Row>
+		<Row>
+			<Type>OpenBordersPressureModifier</Type>
+			<Value>5</Value>
+		</Row>
+		<Row>
+			<Type>ClosedBordersPressureModifier</Type>
+			<Value>-75</Value>
+		</Row>
+		<Row>
+			<Type>FriendsPressureModifier</Type>
+			<Value>10</Value>
+		</Row>
+		<Row>
+			<Type>AlliesPressureModifier</Type>
+			<Value>15</Value>
+		</Row>	
+	</CorporationSettings>
+</GameData>

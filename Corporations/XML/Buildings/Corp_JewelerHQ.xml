@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<BuildingClasses>
+		<Row>
+			<Type>BUILDINGCLASS_CORP_JEWELER_HQ</Type>
+			<DefaultBuilding>BUILDING_CORP_JEWELER_HQ</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CORP_JEWELER_HQ</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+	</BuildingClasses>
+	<Buildings>
+		<Row>
+			<Type>BUILDING_CORP_JEWELER_HQ</Type>
+			<BuildingClass>BUILDINGCLASS_CORP_JEWELER_HQ</BuildingClass>
+			<Cost>1250</Cost>
+			<PrereqTech>TECH_CORPORATION</PrereqTech>
+			<Help>TXT_KEY_WONDER_CORP_JEWELER_HQ_HELP</Help>
+			<Description>TXT_KEY_WONDER_CORP_JEWELER_HQ</Description>
+			<Civilopedia>TXT_KEY_WONDER_CORP_JEWELER_HQ_DESC</Civilopedia>
+			<Quote>TXT_KEY_WONDER_CORP_JEWELER_HQ_QUOTE</Quote>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<GreatPeopleRateChange>3</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>11</PortraitIndex>
+			<WonderSplashImage>CivilizedJewelersSplash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>			
+		</Row>
+	</Buildings>
+	<Building_TechAndPrereqs>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER_HQ</BuildingType>
+			<TechType>TECH_METAL_CASTING</TechType>
+		</Row>
+	</Building_TechAndPrereqs>
+	<!--
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER_HQ</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>10</Yield>
+		</Row>
+	</Building_YieldChanges>
+	-->
+	<Building_Flavors>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER_HQ</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER_HQ</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER_HQ</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER_HQ</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+	</Building_Flavors>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_WONDER_CORP_JEWELER_HQ">
+			<Text>Civilized Jewelers Corporation</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_JEWELER_HQ_QUOTE">
+			<Text>[NEWLINE][TAB][TAB]"Jewelry takes people's minds off your wrinkles."[NEWLINE] - Sonja Henie[NEWLINE][TAB]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_JEWELER_HQ_HELP">
+			<Text>Incorporates Civilized Jewelers, allowing all Civilizations to build franchises in their Cities. +5 [ICON_GOLD] Gold from every Civilized Jewelers in the World.[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]Metal Casting is also required.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_JEWELER_HQ_DESC">
+			<Text>{TXT_KEY_MISSION_CORP_JEWELER}[NEWLINE][NEWLINE]Humanity's fascination with shiny objects has persisted since time immemorial. Gold, silver and jewels have decorated the heads of monarchs and the interiors of palaces for millennia, but it was the nineteenth century that began the true blossoming of the trade in treasures. Gold rushes throughout the world - in the United States, Canada and Australia - not only created new fonts of wealth, but left a lasting impression on the shape of world population, relocating avaricious prospectors to some of the most remote places on earth. The gem trade, with diamonds as its crown, grew up around similar circumstances. Throngs of miners flocked to South Africa in the mid-nineteenth century with the discovery of the "Star of Africa," an enormous 83.5 carat diamond. As of the turn of the twentieth century, the age of the traveling prospector bowed before the growth of enormous precious metal and jewel firms. South Africa remains one of the most important sources for gold and diamonds in the world, as well as the birth place to some of the most influential corporations in the business.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

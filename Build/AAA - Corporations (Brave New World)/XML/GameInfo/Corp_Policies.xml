@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Policy_BuildingClassHappiness>
+		<Row>
+			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CORP_HAMBURGER_HQ</BuildingClassType>
+			<Happiness>5</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CORP_SUSHI_HQ</BuildingClassType>
+			<Happiness>5</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CORP_JEWELER_HQ</BuildingClassType>
+			<Happiness>5</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CORP_MINING_HQ</BuildingClassType>
+			<Happiness>5</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CORP_PERFUME_HQ</BuildingClassType>
+			<Happiness>5</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CORP_CLOTHES_HQ</BuildingClassType>
+			<Happiness>5</Happiness>
+		</Row>
+		<Row>
+			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
+			<BuildingClassType>BUILDINGCLASS_CORP_COLA_HQ</BuildingClassType>
+			<Happiness>5</Happiness>
+		</Row>
+	</Policy_BuildingClassHappiness>
+	<Policies>
+		<Row>
+			<Type>POLICY_CORP_FREEDOM</Type>
+			<Description>TXT_KEY_POLICY_CORP_FREEDOM</Description>
+			<Civilopedia>TXT_KEY_POLICY_CORP_FREEDOM_TEXT</Civilopedia>
+			<Help>TXT_KEY_POLICY_CORP_FREEDOM_HELP</Help>
+			<PolicyBranchType>POLICY_BRANCH_FREEDOM</PolicyBranchType>
+			<CultureCost>10</CultureCost>
+			<SharedIdeologyCorporationSpreadPressureModifier>67</SharedIdeologyCorporationSpreadPressureModifier>
+			<DifferentIdeologyCorporationSpreadPressureModifier>34</DifferentIdeologyCorporationSpreadPressureModifier>
+			<Level>2</Level>
+			<PortraitIndex>25</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>		
+		</Row>
+		<Row>
+			<Type>POLICY_CORP_AUTOCRACY</Type>
+			<Description>TXT_KEY_POLICY_CORP_AUTOCRACY</Description>
+			<Civilopedia>TXT_KEY_POLICY_CORP_AUTOCRACY_TEXT</Civilopedia>
+			<Help>TXT_KEY_POLICY_CORP_AUTOCRACY_HELP</Help>
+			<PolicyBranchType>POLICY_BRANCH_AUTOCRACY</PolicyBranchType>
+			<CultureCost>10</CultureCost>
+			<SharedIdeologyCorporationSpreadPressureModifier>50</SharedIdeologyCorporationSpreadPressureModifier>
+			<DifferentIdeologyCorporationSpreadPressureModifier>-50</DifferentIdeologyCorporationSpreadPressureModifier>
+			<Level>2</Level>
+			<PortraitIndex>10</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS_EXP2</IconAtlasAchieved>
+		</Row>
+		<Row>
+			<Type>POLICY_CORP_ORDER</Type>
+			<Description>TXT_KEY_POLICY_CORP_ORDER</Description>
+			<Civilopedia>TXT_KEY_POLICY_CORP_ORDER_TEXT</Civilopedia>
+			<Help>TXT_KEY_POLICY_CORP_ORDER_HELP</Help>
+			<PolicyBranchType>POLICY_BRANCH_ORDER</PolicyBranchType>
+			<CultureCost>10</CultureCost>
+			<SharedIdeologyCorporationSpreadPressureModifier>-34</SharedIdeologyCorporationSpreadPressureModifier>
+			<DifferentIdeologyCorporationSpreadPressureModifier>-67</DifferentIdeologyCorporationSpreadPressureModifier>
+			<Level>2</Level>
+			<PortraitIndex>11</PortraitIndex>
+			<IconAtlas>POLICY_ATLAS_EXP2</IconAtlas>
+			<IconAtlasAchieved>POLICY_A_ATLAS_EXP2</IconAtlasAchieved>
+		</Row>
+	</Policies>
+	<Language_en_US>	
+		<Update>
+			<Set Text="[COLOR_POSITIVE_TEXT]Entrepreneurship[ENDCOLOR][NEWLINE]Great Merchants are earned 25% faster, and +5 [ICON_HAPPINESS_1] Happiness from every Corporation Wonder."/>
+			<Where Tag="TXT_KEY_POLICY_ENTREPRENEURSHIP_HELP"/>
+		</Update>
+		<Update>
+			<Set Text="[COLOR_POSITIVE_TEXT]Commerce[ENDCOLOR] provides bonuses to empires focused on [ICON_GOLD] Gold.[NEWLINE][NEWLINE]Adopting Commerce will boost [ICON_GOLD] Gold output in [ICON_CAPITAL] Capital City by 25%, and doubles Corporate [ICON_GOLD] Gold revenue from locally owned franchises. Unlocks building Big Ben.[NEWLINE][NEWLINE]Adopting all Policies in the Commerce tree will grant +1 [ICON_GOLD] Gold from every Trading Post, double [ICON_GOLD] Gold from Great Merchant trade missions, and double Corporate [ICON_GOLD] Gold revenue from foreign owned franchises. It also allows the purchase of Great Merchants with [ICON_PEACE] Faith starting in the Industrial Era."/>
+			<Where Tag="TXT_KEY_POLICY_BRANCH_COMMERCE_HELP"/>
+		</Update>
+		<Row Tag="TXT_KEY_POLICY_CORP_FREEDOM">
+			<Text>Cultural Globalization</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_CORP_FREEDOM_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]Cultural Globalization[ENDCOLOR][NEWLINE]Corporate pressure to and from other Freedom civilizations increased by 67%. Corporate pressure to and from non-Freedom civilizations increased by 34%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_CORP_FREEDOM_TEXT">
+			<Text>Cultural globalization refers to the transmission of ideas, meanings and values across national borders. This process is marked by the common consumption of cultures that have been diffused by the Internet, popular culture, and international travel. The circulation of cultures enables individuals to partake in extended social relations outside the borders. The creation and expansion of such social relations is not merely observed on a material level. Cultural globalization involves the formation of shared norms and knowledge with which people associate their individual and collective cultural identities, and increasing interconnectedness among different populations and cultures.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_CORP_AUTOCRACY">
+			<Text>Cultural Imperialism</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_CORP_AUTOCRACY_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]Cultural Imperialism[ENDCOLOR][NEWLINE]Corporate pressure to and from other Autocracy civilizations increased by 50%. Corporate pressure to and from non-Autocracy civilizations decreased by 50%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_CORP_AUTOCRACY_TEXT">
+			<Text>Cultural imperialism is defined as the cultural aspects of imperialism. Imperialism, here, is referring to the creation and maintenance of unequal relationships between civilizations favoring the more powerful civilization. Therefore, it can be defined as the practice of promoting and imposing a culture, usually of politically powerful nations over less potent societies. It is the cultural hegemony of those industrialized or economically influential countries, which determine general cultural values and standardize civilizations throughout the world. Many scholars employ the term, especially those in the fields of history, cultural studies, and postcolonial theory. The term is usually used in a pejorative sense, often in conjunction with a call to reject such influence.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_CORP_ORDER">
+			<Text>Cultural Hegemony</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_CORP_ORDER_HELP">
+			<Text>[COLOR_POSITIVE_TEXT]Cultural Hegemony[ENDCOLOR][NEWLINE]Corporate pressure to and from other Order civilizations decreased by 34%. Corporate pressure to and from non-Order civilizations decreased by 67%.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_POLICY_CORP_ORDER_TEXT">
+			<Text>In Marxist philosophy, the term Cultural hegemony describes the domination of a culturally diverse society by the ruling class, who manipulate the culture of the society — the beliefs, explanations, perceptions, values, and mores — so that their ruling-class Weltanschauung becomes the worldview that is imposed and accepted as the cultural norm; as the universally valid dominant ideology that justifies the social, political, and economic status quo as natural and inevitable, perpetual and beneficial for everyone, rather than as artificial social constructs that benefit only the ruling class.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

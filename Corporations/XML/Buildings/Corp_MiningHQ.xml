@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<BuildingClasses>
+		<Row>
+			<Type>BUILDINGCLASS_CORP_MINING_HQ</Type>
+			<DefaultBuilding>BUILDING_CORP_MINING_HQ</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CORP_MINING_HQ</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+	</BuildingClasses>
+	<Buildings>
+		<Row>
+			<Type>BUILDING_CORP_MINING_HQ</Type>
+			<BuildingClass>BUILDINGCLASS_CORP_MINING_HQ</BuildingClass>
+			<Cost>1250</Cost>
+			<PrereqTech>TECH_CORPORATION</PrereqTech>
+			<Help>TXT_KEY_WONDER_CORP_MINING_HQ_HELP</Help>
+			<Description>TXT_KEY_WONDER_CORP_MINING_HQ</Description>
+			<Civilopedia>TXT_KEY_WONDER_CORP_MINING_HQ_DESC</Civilopedia>
+			<Quote>TXT_KEY_WONDER_CORP_MINING_HQ_QUOTE</Quote>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<GreatPeopleRateChange>3</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>13</PortraitIndex>
+			<WonderSplashImage>MiningIncSplash.dds</WonderSplashImage>
+			<WonderSplashAnchor>R,B</WonderSplashAnchor>			
+		</Row>
+	</Buildings>
+	<Building_TechAndPrereqs>
+		<Row>
+			<BuildingType>BUILDING_CORP_MINING_HQ</BuildingType>
+			<TechType>TECH_RAILROAD</TechType>
+		</Row>
+	</Building_TechAndPrereqs>
+	<!--
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CORP_MINING_HQ</BuildingType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>10</Yield>
+		</Row>
+	</Building_YieldChanges>
+	-->
+	<Building_Flavors>
+		<Row>
+			<BuildingType>BUILDING_CORP_MINING_HQ</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_MINING_HQ</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_MINING_HQ</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_MINING_HQ</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+	</Building_Flavors>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_WONDER_CORP_MINING_HQ">
+			<Text>Mining Inc. Corporation</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_MINING_HQ_QUOTE">
+			<Text>[NEWLINE][TAB][TAB]"Coal mining is tough. Acting is just tedious."[NEWLINE] - Johnny Knoxville[NEWLINE][TAB]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_MINING_HQ_HELP">
+			<Text>Incorporates Mining Inc., allowing all Civilizations to build franchises in their Cities. +5 [ICON_GOLD] Gold from every Mining Inc. in the World.[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]Railroad is also required.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_MINING_HQ_DESC">
+			<Text>{TXT_KEY_MISSION_CORP_MINING}[NEWLINE][NEWLINE]For much of human history, victory has gone to those with access to the finest metals. From the Bronze Age onwards, metal tools, weapons and alloys have been an inherent part of the rise of civilization, spurring conquests and construction by the world's greatest empires. And while metal mining has had an impressive history, it was not until the nineteenth century that industrial mining truly began to take root. Two reasons explain this sudden intensification in mining operations. The first was the almost daily revolutions in the production of tools and consumer items, requiring a continual source of metal to produce them. The second was that the fuel that powered the Industrial Revolution was coal, nestled deep within the earth. In modern times, enormous excavators like the Bagger 288 have it possible to mine a pit three-hundred feet long and one-hundred feet deep in a day, a feat that, in the past, would have required the mobilization of nations.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

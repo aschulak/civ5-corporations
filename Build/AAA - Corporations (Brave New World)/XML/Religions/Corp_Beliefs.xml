@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Beliefs>
+		<Row>
+			<Type>BELIEF_CORP_FRANCHISE_HAPPINESS</Type>
+			<Follower>true</Follower>
+			<Description>TXT_KEY_BELIEF_CORP_FRANCHISE_HAPPINESS</Description>
+			<ShortDescription>TXT_KEY_BELIEF_CORP_FRANCHISE_HAPPINESS_SHORT</ShortDescription>		
+		</Row>
+		<Row>
+			<Type>BELIEF_CORP_FRANCHISE_FAITH</Type>
+			<Follower>true</Follower>
+			<Description>TXT_KEY_BELIEF_CORP_FRANCHISE_FAITH</Description>
+			<ShortDescription>TXT_KEY_BELIEF_CORP_FRANCHISE_FAITH_SHORT</ShortDescription>
+		</Row>
+		<!-- The UI is broken and hardcoded and even though the effect seems to work, the CityView doesn't. 
+		<Row>
+			<Type>BELIEF_CORP_FRANCHISE_TOURISM</Type>
+			<Follower>true</Follower>
+			<Description>TXT_KEY_BELIEF_CORP_FRANCHISE_TOURISM</Description>
+			<ShortDescription>TXT_KEY_BELIEF_CORP_FRANCHISE_TOURISM_SHORT</ShortDescription>
+		</Row>
+		-->
+		<Row>
+			<Type>BELIEF_CORP_PRESSURE_SPREAD</Type>
+			<Enhancer>true</Enhancer>
+			<Description>TXT_KEY_BELIEF_CORP_PRESSURE_SPREAD</Description>
+			<ShortDescription>TXT_KEY_BELIEF_CORP_PRESSURE_SPREAD_SHORT</ShortDescription>
+			<CorporationSpreadPressureModifier>25</CorporationSpreadPressureModifier>			
+		</Row>
+	</Beliefs>
+	<Belief_BuildingClassHappiness>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_HAPPINESS</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_SUSHI</BuildingClassType>
+			<Happiness>2</Happiness>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_HAPPINESS</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_JEWELER</BuildingClassType>
+			<Happiness>2</Happiness>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_HAPPINESS</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_PERFUME</BuildingClassType>
+			<Happiness>2</Happiness>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_HAPPINESS</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_CLOTHES</BuildingClassType>
+			<Happiness>2</Happiness>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_HAPPINESS</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_MINING</BuildingClassType>
+			<Happiness>2</Happiness>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_HAPPINESS</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_HAMBURGER</BuildingClassType>
+			<Happiness>2</Happiness>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_HAPPINESS</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_COLA</BuildingClassType>
+			<Happiness>2</Happiness>
+		</Row>
+	</Belief_BuildingClassHappiness>
+	<Belief_BuildingClassYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_FAITH</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_SUSHI</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_FAITH</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_JEWELER</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_FAITH</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_PERFUME</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_FAITH</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_CLOTHES</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_FAITH</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_MINING</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_FAITH</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_HAMBURGER</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_FAITH</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_COLA</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+	</Belief_BuildingClassYieldChanges>
+	<!-- Whoever coded BNW needs to go back to school 
+	<Belief_BuildingClassTourism>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_TOURISM</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_SUSHI</BuildingClassType>
+			<Tourism>1</Tourism>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_TOURISM</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_JEWELER</BuildingClassType>
+			<Tourism>1</Tourism>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_TOURISM</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_PERFUME</BuildingClassType>
+			<Tourism>1</Tourism>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_TOURISM</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_CLOTHES</BuildingClassType>
+			<Tourism>1</Tourism>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_TOURISM</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_MINING</BuildingClassType>
+			<Tourism>1</Tourism>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_TOURISM</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_HAMBURGER</BuildingClassType>
+			<Tourism>1</Tourism>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CORP_FRANCHISE_TOURISM</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_CORP_COLA</BuildingClassType>
+			<Tourism>1</Tourism>
+		</Row>
+	</Belief_BuildingClassTourism>
+	-->
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BELIEF_CORP_FRANCHISE_HAPPINESS_SHORT">
+			<Text>Retail Therapy</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_CORP_FRANCHISE_HAPPINESS">
+			<Text>Corporation franchises provide +2 [ICON_HAPPINESS_1] Happiness in city</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_CORP_FRANCHISE_FAITH_SHORT">
+			<Text>Retail Salvation</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_CORP_FRANCHISE_FAITH">
+			<Text>Corporation franchises provide +2 [ICON_PEACE] Faith in city</Text>
+		</Row>
+		<!-- Maybe they'll fix it in the fall patch? 
+		<Row Tag="TXT_KEY_BELIEF_CORP_FRANCHISE_TOURISM_SHORT">
+			<Text>Retail Idolization</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_CORP_FRANCHISE_TOURISM">
+			<Text>Corporation franchises provide +1 [ICON_TOURISM] Tourism in city</Text>
+		</Row>
+		-->
+		<Row Tag="TXT_KEY_BELIEF_CORP_PRESSURE_SPREAD_SHORT">
+			<Text>Spiritual Entrepreneurship</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BELIEF_CORP_PRESSURE_SPREAD">
+			<Text>Corporate pressure to cities following the same religion increased by 25%</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<BuildingClasses>
+		<Row>
+			<Type>BUILDINGCLASS_CORP_PERFUME</Type>
+			<DefaultBuilding>BUILDING_CORP_PERFUME</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CORP_PERFUME</Description>
+		</Row>
+	</BuildingClasses>
+	<Buildings>
+		<Row>
+			<Type>BUILDING_CORP_PERFUME</Type>
+			<BuildingClass>BUILDINGCLASS_CORP_PERFUME</BuildingClass>
+			<Cost>300</Cost>
+			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
+			<GoldMaintenance>4</GoldMaintenance>
+			<Help>TXT_KEY_BUILDING_CORP_PERFUME_HELP</Help>
+			<Description>TXT_KEY_BUILDING_CORP_PERFUME</Description>
+			<Strategy>TXT_KEY_BUILDING_CORP_PERFUME_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_WONDER_CORP_PERFUME_HQ_DESC</Civilopedia>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<HurryCostModifier>5</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>5</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_LockedBuildingClasses>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CORP_COLA</BuildingClassType>
+		</Row>
+	</Building_LockedBuildingClasses>
+	<Building_LocalResourceOrs>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME</BuildingType>
+			<ResourceType>RESOURCE_CITRUS</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME</BuildingType>
+			<ResourceType>RESOURCE_SPICES</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME</BuildingType>
+			<ResourceType>RESOURCE_INCENSE</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME</BuildingType>
+			<ResourceType>RESOURCE_WHALE</ResourceType>
+		</Row>
+	</Building_LocalResourceOrs>
+	<Building_ResourceYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME</BuildingType>
+			<ResourceType>RESOURCE_CITRUS</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME</BuildingType>
+			<ResourceType>RESOURCE_SPICES</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME</BuildingType>
+			<ResourceType>RESOURCE_INCENSE</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME</BuildingType>
+			<ResourceType>RESOURCE_WHALE</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+	</Building_ResourceYieldChanges>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+	</Building_YieldChanges>
+	<Building_Flavors>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+	</Building_Flavors>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BUILDING_CORP_PERFUME">
+			<Text>Good Scents</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CORP_PERFUME_STRATEGY">
+			<Text>Good Scents can only be constructed in a city with an improved source of [ICON_RES_CITRUS] Citrus, [ICON_RES_INCENSE] Incense, [ICON_RES_SPICES] Spices, or [ICON_RES_WHALE] Whales nearby.[NEWLINE][NEWLINE]Good Scents competes with Think Drink and cannot be built in the same city. The Good Scents Corporation Wonder must be built by any civilization before Good Scents can be constructed.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CORP_PERFUME_HELP">
+			<Text>Each source of [ICON_RES_CITRUS] Citrus, [ICON_RES_INCENSE] Incense, [ICON_RES_SPICES] Spices, and [ICON_RES_WHALE] Whales worked by this City produces +3 [ICON_CULTURE] Culture.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>
