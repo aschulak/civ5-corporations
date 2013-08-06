@@ -36,15 +36,13 @@
 			<TechType>TECH_CHEMISTRY</TechType>
 		</Row>
 	</Building_TechAndPrereqs>
-	<!--
 	<Building_YieldChanges>
 		<Row>
 			<BuildingType>BUILDING_CORP_PERFUME_HQ</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>10</Yield>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
 		</Row>
 	</Building_YieldChanges>
-	-->
 	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_CORP_PERFUME_HQ</BuildingType>

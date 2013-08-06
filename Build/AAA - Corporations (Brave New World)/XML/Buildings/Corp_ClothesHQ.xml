@@ -36,15 +36,13 @@
 			<TechType>TECH_INDUSTRIALIZATION</TechType>
 		</Row>
 	</Building_TechAndPrereqs>
-	<!--
 	<Building_YieldChanges>
 		<Row>
 			<BuildingType>BUILDING_CORP_CLOTHES_HQ</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>10</Yield>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>5</Yield>
 		</Row>
 	</Building_YieldChanges>
-	-->
 	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_CORP_CLOTHES_HQ</BuildingType>

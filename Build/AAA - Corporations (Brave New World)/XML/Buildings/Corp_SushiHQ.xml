@@ -36,15 +36,18 @@
 			<TechType>TECH_COMPASS</TechType>
 		</Row>
 	</Building_TechAndPrereqs>
-	<!--
 	<Building_YieldChanges>
 		<Row>
 			<BuildingType>BUILDING_CORP_SUSHI_HQ</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>10</Yield>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_SUSHI_HQ</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
 		</Row>
 	</Building_YieldChanges>
-	-->
 	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_CORP_SUSHI_HQ</BuildingType>

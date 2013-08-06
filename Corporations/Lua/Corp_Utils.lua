@@ -86,8 +86,6 @@ function GetCityWithCorporationHq(corp, playerWithCorporation)
 	print("--GetCityWithCorporationHq");
 		
 	if playerWithCorporation == nil then
-		print("ERROR should never happen");
-		--playerWithCorporation = gCorpHqOwners[corp.ID];
 		return nil;
 	end		
 	

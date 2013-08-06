@@ -36,15 +36,13 @@
 			<TechType>TECH_REFRIGERATION</TechType>
 		</Row>
 	</Building_TechAndPrereqs>
-	<!--
 	<Building_YieldChanges>
 		<Row>
 			<BuildingType>BUILDING_CORP_HAMBURGER_HQ</BuildingType>
-			<YieldType>YIELD_GOLD</YieldType>
-			<Yield>10</Yield>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>5</Yield>
 		</Row>
 	</Building_YieldChanges>
-	-->
 	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_CORP_HAMBURGER_HQ</BuildingType>
