@@ -4,10 +4,12 @@
 		<Column name="ID" type="integer" primarykey="true" autoincrement="true"/>
 		<Column name="Type" type="text" notnull="true" unique="true"/>
 		<Column name="Mission" type="text" reference="Language_en_US(Tag)"/>
+		<Column name="SharesSymbol" type="text" reference="Language_en_US(Tag)"/>
 		<Column name="HeadquartersBuildingType" type="text" notnull="true" reference="Buildings(Type)"/>
 		<Column name="FranchiseBuildingType" type="text" notnull="true" reference="Buildings(Type)"/>
-		<Column name="LocalFranchiseGoldRevenue" type="integer" default="0"/>
-		<Column name="ForeignFranchiseGoldRevenue" type="integer" default="0"/>
+		<Column name="SharesResourceType" type="text" notnull="true" reference="Resources(Type)"/>
+		<Column name="LocalFranchiseGoldRevenuePerShare" type="integer" default="0"/>
+		<Column name="ForeignFranchiseGoldRevenuePerShare" type="integer" default="0"/>
 		<Column name="IconString" type="text" notnull="true"/>
 	</Table>
 	<Corporations>
@@ -15,64 +17,78 @@
 			<ID>0</ID>
 			<Type>CORP_SUSHI</Type>
 			<Mission>TXT_KEY_MISSION_CORP_SUSHI</Mission>
+			<SharesSymbol>TXT_KEY_SHARES_CORP_SUSHI</SharesSymbol>
 			<HeadquartersBuildingType>BUILDING_CORP_SUSHI_HQ</HeadquartersBuildingType>
 			<FranchiseBuildingType>BUILDING_CORP_SUSHI</FranchiseBuildingType>
-			<LocalFranchiseGoldRevenue>5</LocalFranchiseGoldRevenue>
-			<ForeignFranchiseGoldRevenue>5</ForeignFranchiseGoldRevenue>
+			<SharesResourceType>RESOURCE_CORP_SUSHI</SharesResourceType>
+			<LocalFranchiseGoldRevenuePerShare>1</LocalFranchiseGoldRevenuePerShare>
+			<ForeignFranchiseGoldRevenuePerShare>1</ForeignFranchiseGoldRevenuePerShare>
 			<IconString>[ICON_CORP_SUSHI]</IconString>
 		</Row>
 		<Row>
 			<Type>CORP_JEWELER</Type>
 			<Mission>TXT_KEY_MISSION_CORP_JEWELER</Mission>
+			<SharesSymbol>TXT_KEY_SHARES_CORP_JEWELER</SharesSymbol>
 			<HeadquartersBuildingType>BUILDING_CORP_JEWELER_HQ</HeadquartersBuildingType>
 			<FranchiseBuildingType>BUILDING_CORP_JEWELER</FranchiseBuildingType>
-			<LocalFranchiseGoldRevenue>5</LocalFranchiseGoldRevenue>
-			<ForeignFranchiseGoldRevenue>5</ForeignFranchiseGoldRevenue>
+			<SharesResourceType>RESOURCE_CORP_JEWELER</SharesResourceType>
+			<LocalFranchiseGoldRevenuePerShare>1</LocalFranchiseGoldRevenuePerShare>
+			<ForeignFranchiseGoldRevenuePerShare>1</ForeignFranchiseGoldRevenuePerShare>
 			<IconString>[ICON_CORP_JEWELER]</IconString>
 		</Row>
 		<Row>
 			<Type>CORP_PERFUME</Type>
 			<Mission>TXT_KEY_MISSION_CORP_PERFUME</Mission>
+			<SharesSymbol>TXT_KEY_SHARES_CORP_PERFUME</SharesSymbol>
 			<HeadquartersBuildingType>BUILDING_CORP_PERFUME_HQ</HeadquartersBuildingType>
 			<FranchiseBuildingType>BUILDING_CORP_PERFUME</FranchiseBuildingType>
-			<LocalFranchiseGoldRevenue>5</LocalFranchiseGoldRevenue>
-			<ForeignFranchiseGoldRevenue>5</ForeignFranchiseGoldRevenue>
+			<SharesResourceType>RESOURCE_CORP_PERFUME</SharesResourceType>
+			<LocalFranchiseGoldRevenuePerShare>1</LocalFranchiseGoldRevenuePerShare>
+			<ForeignFranchiseGoldRevenuePerShare>1</ForeignFranchiseGoldRevenuePerShare>
 			<IconString>[ICON_CORP_PERFUME]</IconString>
 		</Row>
 		<Row>
 			<Type>CORP_CLOTHES</Type>
 			<Mission>TXT_KEY_MISSION_CORP_CLOTHES</Mission>
+			<SharesSymbol>TXT_KEY_SHARES_CORP_CLOTHES</SharesSymbol>
 			<HeadquartersBuildingType>BUILDING_CORP_CLOTHES_HQ</HeadquartersBuildingType>
 			<FranchiseBuildingType>BUILDING_CORP_CLOTHES</FranchiseBuildingType>
-			<LocalFranchiseGoldRevenue>5</LocalFranchiseGoldRevenue>
-			<ForeignFranchiseGoldRevenue>5</ForeignFranchiseGoldRevenue>
+			<SharesResourceType>RESOURCE_CORP_CLOTHES</SharesResourceType>
+			<LocalFranchiseGoldRevenuePerShare>1</LocalFranchiseGoldRevenuePerShare>
+			<ForeignFranchiseGoldRevenuePerShare>1</ForeignFranchiseGoldRevenuePerShare>
 			<IconString>[ICON_CORP_CLOTHES]</IconString>
 		</Row>
 		<Row>
 			<Type>CORP_MINING</Type>
 			<Mission>TXT_KEY_MISSION_CORP_MINING</Mission>
+			<SharesSymbol>TXT_KEY_SHARES_CORP_MINING</SharesSymbol>
 			<HeadquartersBuildingType>BUILDING_CORP_MINING_HQ</HeadquartersBuildingType>
 			<FranchiseBuildingType>BUILDING_CORP_MINING</FranchiseBuildingType>
-			<LocalFranchiseGoldRevenue>5</LocalFranchiseGoldRevenue>
-			<ForeignFranchiseGoldRevenue>5</ForeignFranchiseGoldRevenue>
+			<SharesResourceType>RESOURCE_CORP_MINING</SharesResourceType>
+			<LocalFranchiseGoldRevenuePerShare>1</LocalFranchiseGoldRevenuePerShare>
+			<ForeignFranchiseGoldRevenuePerShare>1</ForeignFranchiseGoldRevenuePerShare>
 			<IconString>[ICON_CORP_MINING]</IconString>
 		</Row>
 		<Row>
 			<Type>CORP_HAMBURGER</Type>
 			<Mission>TXT_KEY_MISSION_CORP_HAMBURGER</Mission>
+			<SharesSymbol>TXT_KEY_SHARES_CORP_HAMBURGER</SharesSymbol>
 			<HeadquartersBuildingType>BUILDING_CORP_HAMBURGER_HQ</HeadquartersBuildingType>
 			<FranchiseBuildingType>BUILDING_CORP_HAMBURGER</FranchiseBuildingType>
-			<LocalFranchiseGoldRevenue>5</LocalFranchiseGoldRevenue>
-			<ForeignFranchiseGoldRevenue>5</ForeignFranchiseGoldRevenue>
+			<SharesResourceType>RESOURCE_CORP_HAMBURGER</SharesResourceType>
+			<LocalFranchiseGoldRevenuePerShare>1</LocalFranchiseGoldRevenuePerShare>
+			<ForeignFranchiseGoldRevenuePerShare>1</ForeignFranchiseGoldRevenuePerShare>
 			<IconString>[ICON_CORP_HAMBURGER]</IconString>
 		</Row>
 		<Row>
 			<Type>CORP_COLA</Type>
 			<Mission>TXT_KEY_MISSION_CORP_COLA</Mission>
+			<SharesSymbol>TXT_KEY_SHARES_CORP_COLA</SharesSymbol>
 			<HeadquartersBuildingType>BUILDING_CORP_COLA_HQ</HeadquartersBuildingType>
 			<FranchiseBuildingType>BUILDING_CORP_COLA</FranchiseBuildingType>
-			<LocalFranchiseGoldRevenue>5</LocalFranchiseGoldRevenue>
-			<ForeignFranchiseGoldRevenue>5</ForeignFranchiseGoldRevenue>
+			<SharesResourceType>RESOURCE_CORP_COLA</SharesResourceType>
+			<LocalFranchiseGoldRevenuePerShare>1</LocalFranchiseGoldRevenuePerShare>
+			<ForeignFranchiseGoldRevenuePerShare>1</ForeignFranchiseGoldRevenuePerShare>
 			<IconString>[ICON_CORP_COLA]</IconString>
 		</Row>
 	</Corporations>
@@ -80,23 +96,44 @@
 		<Row Tag="TXT_KEY_MISSION_CORP_SUSHI">
 			<Text>Sid's Sushi Corporation is focused on feeding the world sustainably through their locally sourced restaurants.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SHARES_CORP_SUSHI">
+			<Text>SIDS</Text>
+		</Row>
 		<Row Tag="TXT_KEY_MISSION_CORP_JEWELER">
 			<Text>Civilized Jewelers Corporation is focused on crafting and distributing world-class quality jewelry.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SHARES_CORP_JEWELER">
+			<Text>CIVJ</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MISSION_CORP_PERFUME">
 			<Text>Good Scents Corporation is focused on manufacturing and distributing sensuous perfumes.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SHARES_CORP_PERFUME">
+			<Text>GSCT</Text>
+		</Row>
 		<Row Tag="TXT_KEY_MISSION_CORP_CLOTHES">
 			<Text>Young Army Corporation is focused on manufacturing and distributing low-cost clothing.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SHARES_CORP_CLOTHES">
+			<Text>ARMY</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MISSION_CORP_MINING">
 			<Text>Mining Inc. Corporation is focused on extracting and wholesaling precious metals and ores.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SHARES_CORP_MINING">
+			<Text>MINC</Text>
+		</Row>
 		<Row Tag="TXT_KEY_MISSION_CORP_HAMBURGER">
 			<Text>Burger Shack Corporation is focused on cheaply feeding the world through their fast food chains.</Text>
 		</Row>
+		<Row Tag="TXT_KEY_SHARES_CORP_HAMBURGER">
+			<Text>BSHK</Text>
+		</Row>
 		<Row Tag="TXT_KEY_MISSION_CORP_COLA">
 			<Text>Think Drink Corporation is focused on manufacturing and distributing highly caffeinated soft drinks.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_SHARES_CORP_COLA">
+			<Text>THNK</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

@@ -16,7 +16,7 @@ MapModData.gCorpUiInitted = MapModData.gCorpUiInitted or false;
 print("MapModData.gCorpUiInitted", MapModData.gCorpUiInitted);
 
 -- only do this once regardless of how many times this file gets included
-if not MapModData.gCorpUiInitted then	
+if not MapModData.gCorpUiInitted then			
 	-- load data
 	local DBQuery = Modding.OpenSaveData().Query;
 	local bNewGame = true;
@@ -30,39 +30,17 @@ if not MapModData.gCorpUiInitted then
 	end	
 	MapModData.gT = gT;
 
-	-- print loaded data
-	print("corp owners");
-	for corpID, playerID in pairs(gT.gCorpHqOwners) do
-		print(corpID, playerID);
-	end
-		
-	print("revenue");
-	for playerId, revenue in pairs(gT.gCorpOwnerRevenue) do
-		print(playerId, revenue);
-	end
-
+	PrintCorpOwnerRevenue();
+	UpdateCorpHqOwners(nil);
+	PrintCorpHqOwners();
+	UpdateCorpSharesOwners(nil);	
+	PrintCorpSharesOwners();
+	
 	function SaveFranchiseSpreadData()
 		print("--SaveFranchiseSpreadData");
 		TableSave(gT, "CorporationsBNW");
 	end
 	GameEvents.PlayerDoTurn.Add(SaveFranchiseSpreadData);
-	
-	local gCorpHqOwners = gT.gCorpHqOwners;
-		
-	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
-		local player = Players[playerNum];					
-		if (player ~= nil and player:IsAlive() and not player:IsMinorCiv() and not player:IsBarbarian() and player:GetNumCities() > 0) then			
-			--print("ICHO Player", player:GetName());		
-			for corp in GameInfo.Corporations() do
-				--print("ICHO Corp", corp.Type);
-				local corpHq = GameInfo.Buildings[corp.HeadquartersBuildingType];
-				if player:CountNumBuildings(corpHq.ID) > 0 then
-					--print("ICHO Owns Hq");
-					gCorpHqOwners[corp.ID] = player:GetID();
-				end
-			end
-		end
-	end			
 	
 	MapModData.gCorpUiInitted = true;
 end
@@ -130,16 +108,13 @@ function GetCorporationCityTooltip(player, city)
 end
 
 function GetCorporationRevenue(player)
+	print("--GetCorporationRevenue");
+	PrintCorpOwnerRevenue();
+	
 	local gCorpOwnerRevenue = gT.gCorpOwnerRevenue;
 	
 	-- these are stored when rewarded for faster UI display
-	return gCorpOwnerRevenue[player:GetID()] or 5;	
-end
-
-function GetCorporationRevenueForCity(city)
-	local gCorpCityRevenue = gT.gCorpCityRevenue;
-	
-	return gCorpCityRevenue[city:GetID()] or 5;	
+	return gCorpOwnerRevenue[player:GetID()] or 1337;	
 end
 
 print("Corp_UI.lua loaded.");

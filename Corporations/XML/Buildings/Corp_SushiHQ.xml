@@ -48,6 +48,13 @@
 			<Yield>3</Yield>
 		</Row>
 	</Building_YieldChanges>
+	<Building_ResourceQuantity>
+		<Row>
+			<BuildingType>BUILDING_CORP_SUSHI_HQ</BuildingType>
+			<ResourceType>RESOURCE_CORP_SUSHI</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+	</Building_ResourceQuantity>
 	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_CORP_SUSHI_HQ</BuildingType>
@@ -83,10 +90,10 @@
 			<Text>[NEWLINE][TAB][TAB]"Even at my age, after decades of work, I don't think I've achieved perfection. But I feel ecstatic all day. I love making sushi."[NEWLINE] - Jiro Ono[NEWLINE][TAB]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_SUSHI_HQ_HELP">
-			<Text>Incorporates Sid's Sushi, allowing all Civilizations to build franchises in their Cities. +5 [ICON_GOLD] Gold from every Sid's Sushi in the World.[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]Compass is also required.[ENDCOLOR]</Text>
+			<Text>Incorporates Sid's Sushi, allowing all Civilizations to build franchises in their Cities. Provides 5 [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_SUSHI} Shares. +1 [ICON_GOLD] Gold from every Sid's Sushi in the World per [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_SUSHI} Share owned.[NEWLINE][COLOR_WARNING_TEXT]Compass is also required.[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_SUSHI_HQ_DESC">
-			<Text>{TXT_KEY_MISSION_CORP_SUSHI}[NEWLINE][NEWLINE]Sushi is an ancient form of food preservation that originated in Southeast Asia in the fourth century BC. This technique of wrapping fish in vinegar-soaked rice spread through out Asia, making its way to China in the thirteenth century and later to Japan. In Japan, the dish became extremely popular in the early nineteenth century, when a sushi stall owner in Edo began placing bits of extremely fresh and even raw fish within or atop the classic bed of vinegar rice. It was here that modern sushi was born. Sushi has since become Japan's signature dish, and from the 1980s onward has become a popular delicacy throughout the world.</Text>
+			<Text>{TXT_KEY_MISSION_CORP_SUSHI}[NEWLINE][NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_SUSHI}[NEWLINE][NEWLINE]Sushi is an ancient form of food preservation that originated in Southeast Asia in the fourth century BC. This technique of wrapping fish in vinegar-soaked rice spread through out Asia, making its way to China in the thirteenth century and later to Japan. In Japan, the dish became extremely popular in the early nineteenth century, when a sushi stall owner in Edo began placing bits of extremely fresh and even raw fish within or atop the classic bed of vinegar rice. It was here that modern sushi was born. Sushi has since become Japan's signature dish, and from the 1980s onward has become a popular delicacy throughout the world.</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

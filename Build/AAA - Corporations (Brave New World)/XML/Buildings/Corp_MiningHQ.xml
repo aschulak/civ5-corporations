@@ -43,6 +43,13 @@
 			<Yield>5</Yield>
 		</Row>
 	</Building_YieldChanges>
+	<Building_ResourceQuantity>
+		<Row>
+			<BuildingType>BUILDING_CORP_MINING_HQ</BuildingType>
+			<ResourceType>RESOURCE_CORP_MINING</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+	</Building_ResourceQuantity>
 	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_CORP_MINING_HQ</BuildingType>
@@ -73,10 +80,10 @@
 			<Text>[NEWLINE][TAB][TAB]"Coal mining is tough. Acting is just tedious."[NEWLINE] - Johnny Knoxville[NEWLINE][TAB]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_MINING_HQ_HELP">
-			<Text>Incorporates Mining Inc., allowing all Civilizations to build franchises in their Cities. +5 [ICON_GOLD] Gold from every Mining Inc. in the World.[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]Railroad is also required.[ENDCOLOR]</Text>
+			<Text>Incorporates Mining Inc., allowing all Civilizations to build franchises in their Cities. Provides 5 [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_MINING} Shares. +1 [ICON_GOLD] Gold from every Mining Inc. in the World per [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_MINING} Share owned.[NEWLINE][COLOR_WARNING_TEXT]Railroad is also required.[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_MINING_HQ_DESC">
-			<Text>{TXT_KEY_MISSION_CORP_MINING}[NEWLINE][NEWLINE]For much of human history, victory has gone to those with access to the finest metals. From the Bronze Age onwards, metal tools, weapons and alloys have been an inherent part of the rise of civilization, spurring conquests and construction by the world's greatest empires. And while metal mining has had an impressive history, it was not until the nineteenth century that industrial mining truly began to take root. Two reasons explain this sudden intensification in mining operations. The first was the almost daily revolutions in the production of tools and consumer items, requiring a continual source of metal to produce them. The second was that the fuel that powered the Industrial Revolution was coal, nestled deep within the earth. In modern times, enormous excavators like the Bagger 288 have it possible to mine a pit three-hundred feet long and one-hundred feet deep in a day, a feat that, in the past, would have required the mobilization of nations.</Text>
+			<Text>{TXT_KEY_MISSION_CORP_MINING}[NEWLINE][NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_MINING}[NEWLINE][NEWLINE]For much of human history, victory has gone to those with access to the finest metals. From the Bronze Age onwards, metal tools, weapons and alloys have been an inherent part of the rise of civilization, spurring conquests and construction by the world's greatest empires. And while metal mining has had an impressive history, it was not until the nineteenth century that industrial mining truly began to take root. Two reasons explain this sudden intensification in mining operations. The first was the almost daily revolutions in the production of tools and consumer items, requiring a continual source of metal to produce them. The second was that the fuel that powered the Industrial Revolution was coal, nestled deep within the earth. In modern times, enormous excavators like the Bagger 288 have it possible to mine a pit three-hundred feet long and one-hundred feet deep in a day, a feat that, in the past, would have required the mobilization of nations.</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

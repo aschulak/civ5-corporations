@@ -4,13 +4,8 @@
 --------------------------------------------------------------
 MapModData.gT = MapModData.gT or {};
 gT = MapModData.gT;
-gCorpHqOwners = {};
-gT.gCorpHqOwners = gCorpHqOwners;
-gCorpOwnerRevenue = {};
-gT.gCorpOwnerRevenue = gCorpOwnerRevenue;
-gCorpCityRevenue = {};
-gT.gCorpCityRevenue = gCorpCityRevenue;
-gFranchiseCityPressureMap	= {};
-gT.gFranchiseCityPressureMap = gFranchiseCityPressureMap;
-gFranchiseCityFanMap = {};
-gT.gFranchiseCityFanMap = gFranchiseCityFanMap;
+gT.gCorpHqOwners = gT.gCorpHqOwners or {};
+gT.gCorpSharesOwners = gT.gCorpSharesOwners or {};
+gT.gCorpOwnerRevenue = gT.gCorpOwnerRevenue or {};
+gT.gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap or {};
+gT.gFranchiseCityFanMap = gT.gFranchiseCityFanMap or {};

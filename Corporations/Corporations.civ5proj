@@ -12,9 +12,10 @@
 
 [NEWLINE][NEWLINE]
 
-The Corporations mod provides an alternate way for your civilization to amass a fortune in [ICON_GOLD] Gold, including:
-[NEWLINE][ICON_BULLET] 8 new Buildings
-[NEWLINE][ICON_BULLET] 7 new Wonders
+This mod provides an alternate way for your civilization to amass a fortune in [ICON_GOLD] Gold, including:
+[NEWLINE][ICON_BULLET] 8 new Buildings, and 1 upgraded Building
+[NEWLINE][ICON_BULLET] 7 new World Wonders
+[NEWLINE][ICON_BULLET] 7 new Luxury Resources
 [NEWLINE][ICON_BULLET] 3 new Religious Beliefs
 [NEWLINE][ICON_BULLET] 3 new Ideology Policies
 [NEWLINE][ICON_BULLET] 2 new Technologies
@@ -92,11 +93,6 @@ Special thanks:
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>SQL/Corp_TableUpdates.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>XML/Technologies/Corp_Technologies.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -191,7 +187,7 @@ Special thanks:
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>XML/GameInfo/Corp_Policies.xml</FileName>
+        <FileName>XML/Buildings/Corp_IconAtlases.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -206,12 +202,22 @@ Special thanks:
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>XML/GameInfo/Corp_Policies.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>XML/Religions/Corp_Beliefs.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>XML/Buildings/Corp_IconAtlases.xml</FileName>
+        <FileName>XML/Technologies/Corp_Technologies.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>XML/Terrain/Corp_Resources.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -261,6 +267,7 @@ Special thanks:
     <Folder Include="XML\Civilizations" />
     <Folder Include="XML\Corporations" />
     <Folder Include="XML\BasicInfos" />
+    <Folder Include="XML\Terrain" />
     <Folder Include="XML\Religions" />
     <Folder Include="XML\Technologies" />
   </ItemGroup>
@@ -310,6 +317,14 @@ Special thanks:
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="ART\SidsSushiSplash.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="ART\SharesFontIcon.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="ART\SharesFontIcon.ggxml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
@@ -372,14 +387,6 @@ Special thanks:
     <Content Include="UI\InGame\CityBannerManager.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="UI\InGame\CityView.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="UI\InGame\InfoTooltipInclude.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="UI\InGame\Popups\EconomicGeneralInfo.lua">
       <SubType>Lua</SubType>
@@ -510,6 +517,10 @@ Special thanks:
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="XML\Technologies\Corp_Technologies.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="XML\Terrain\Corp_Resources.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

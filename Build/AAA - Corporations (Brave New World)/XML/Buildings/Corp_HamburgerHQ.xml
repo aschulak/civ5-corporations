@@ -43,6 +43,13 @@
 			<Yield>5</Yield>
 		</Row>
 	</Building_YieldChanges>
+	<Building_ResourceQuantity>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER_HQ</BuildingType>
+			<ResourceType>RESOURCE_CORP_HAMBURGER</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+	</Building_ResourceQuantity>
 	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_CORP_HAMBURGER_HQ</BuildingType>
@@ -73,10 +80,10 @@
 			<Text>[NEWLINE][TAB][TAB]"We take the hamburger business more seriously than anyone else."[NEWLINE] - Ray Kroc[NEWLINE][TAB]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_HAMBURGER_HQ_HELP">
-			<Text>Incorporates Burger Shack, allowing all Civilizations to build franchises in their Cities. +5 [ICON_GOLD] Gold from every Burger Shack in the World.[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]Refrigeration is also required.[ENDCOLOR]</Text>
+			<Text>Incorporates Burger Shack, allowing all Civilizations to build franchises in their Cities. Provides 5 [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_HAMBURGER} Shares. +1 [ICON_GOLD] Gold from every Burger Shack in the World per [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_HAMBURGER} Share owned.[NEWLINE][COLOR_WARNING_TEXT]Refrigeration is also required.[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_HAMBURGER_HQ_DESC">
-			<Text>{TXT_KEY_MISSION_CORP_HAMBURGER}[NEWLINE][NEWLINE]Fast food is the term given to food that can be prepared and served very quickly. While any meal with low preparation time can be considered to be fast food, typically the term refers to food sold in a restaurant or store with preheated or precooked ingredients, and served to the customer in a packaged form for take-out/take-away. The term "fast food" was recognized in a dictionary by Merriam–Webster in 1951. Outlets may be stands or kiosks, which may provide no shelter or seating, or fast food restaurants (also known as quick service restaurants). Franchise operations which are part of restaurant chains have standardized foodstuffs shipped to each restaurant from central locations.</Text>
+			<Text>{TXT_KEY_MISSION_CORP_HAMBURGER}[NEWLINE][NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_HAMBURGER}[NEWLINE][NEWLINE]Fast food is the term given to food that can be prepared and served very quickly. While any meal with low preparation time can be considered to be fast food, typically the term refers to food sold in a restaurant or store with preheated or precooked ingredients, and served to the customer in a packaged form for take-out/take-away. The term "fast food" was recognized in a dictionary by Merriam–Webster in 1951. Outlets may be stands or kiosks, which may provide no shelter or seating, or fast food restaurants (also known as quick service restaurants). Franchise operations which are part of restaurant chains have standardized foodstuffs shipped to each restaurant from central locations.</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

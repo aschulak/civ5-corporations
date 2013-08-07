@@ -222,12 +222,6 @@ function UpdateGPT()
     Controls.TotalExpenseValue:SetText( "[COLOR_NEGATIVE_TEXT]" .. Locale.ToNumber( pPlayer:CalculateInflatedCosts(), "#.##" ) .. "[ENDCOLOR]" );
 
 	-- Cities
-	-- CORPORATIONS Start
-	--local corpRevenue = GetCorporationRevenue(pPlayer);
-	--local cityGoldValue = pPlayer:GetGoldFromCitiesTimes100() / 100;
-	--cityGoldValue = cityGoldValue + corpRevenue;
-	--Controls.CityIncomeValue:SetText( Locale.ToNumber( cityGoldValue, "#.##" ) );    
-    -- CORPORATIONS End        
 	Controls.CityIncomeValue:SetText( Locale.ToNumber( pPlayer:GetGoldFromCitiesTimes100() / 100, "#.##" ) );
 	
     local bFoundCity = false;
@@ -235,11 +229,6 @@ function UpdateGPT()
     for pCity in pPlayer:Cities() do
     
         local CityIncome = pCity:GetYieldRateTimes100(YieldTypes.YIELD_GOLD) / 100;
-		-- CORPORATIONS Start
-		--local iYieldFromCorporations = GetCorporationRevenueForCity(pCity);
-		--iYieldFromCorporations = iYieldFromCorporations * (pCity:GetBaseYieldRateModifier(YieldTypes.YIELD_GOLD) / 100);
-		--CityIncome = CityIncome + iYieldFromCorporations;
-		-- CORPORATIONS End
 		
         if( CityIncome > 0 ) then
             bFoundCity = true;

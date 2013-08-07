@@ -563,13 +563,7 @@ function GoldTipHandler( control )
 	strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_CITY_OUTPUT", fGoldPerTurnFromCities);
 	strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_FROM_CITY_CONNECTIONS", math.floor(fCityConnectionGold));
 	strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_FROM_ITR", math.floor(fTradeRouteGold));
-	
-	-- CORPORATIONS Start	
-	if (math.floor(fCorpGold) > 0) then
-		strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_FROM_CORP", math.floor(fCorpGold));
-	end	
-	-- CORPORATIONS End
-
+		
 	if (math.floor(fTraitGold) > 0) then
 		strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_FROM_TRAITS", math.floor(fTraitGold));
 	end
@@ -579,6 +573,11 @@ function GoldTipHandler( control )
 	if (iGoldPerTurnFromReligion > 0) then
 		strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_FROM_RELIGION", iGoldPerTurnFromReligion);
 	end
+	-- CORPORATIONS Start	
+	if (math.floor(fCorpGold) > 0) then
+		strText = strText .. "[NEWLINE]  [ICON_BULLET]" .. Locale.ConvertTextKey("TXT_KEY_TP_GOLD_FROM_CORP", math.floor(fCorpGold));
+	end	
+	-- CORPORATIONS End
 	strText = strText .. "[/COLOR]";
 	
 	local iUnitCost = pPlayer:CalculateUnitCost();

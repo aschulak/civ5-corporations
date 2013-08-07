@@ -81,7 +81,7 @@
 			<Text>The Wall Street National Wonder increases a city's [ICON_GOLD] Gold output by 100%. A civilization must have a Bank in all cities before it can construct Wall Street.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILDING_WALL_STREET_TEXT">
-			<Text>The location of the New York Stock Exchange, Wall Street has become the epitome of the modern financial district. A narrow street running from Broadway to the East River, it houses some of the world's most prestigious and powerful banks and commodity exchanges. In 1653 Dutch colonists erected a barricade along this route to ward off the British and unfriendly natives.</Text>
+			<Text>The location of the New York Shares Exchange, Wall Street has become the epitome of the modern financial district. A narrow street running from Broadway to the East River, it houses some of the world's most prestigious and powerful banks and commodity exchanges. In 1653 Dutch colonists erected a barricade along this route to ward off the British and unfriendly natives.</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

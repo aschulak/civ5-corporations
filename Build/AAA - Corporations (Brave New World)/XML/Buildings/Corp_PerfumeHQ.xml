@@ -43,6 +43,13 @@
 			<Yield>5</Yield>
 		</Row>
 	</Building_YieldChanges>
+	<Building_ResourceQuantity>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME_HQ</BuildingType>
+			<ResourceType>RESOURCE_CORP_PERFUME</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+	</Building_ResourceQuantity>
 	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_CORP_PERFUME_HQ</BuildingType>
@@ -73,10 +80,10 @@
 			<Text>[NEWLINE][TAB][TAB]"A woman's perfume tells more about her than her handwriting."[NEWLINE] - Christian Dior[NEWLINE][TAB]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_PERFUME_HQ_HELP">
-			<Text>Incorporates Good Scents, allowing all Civilizations to build franchises in their Cities. +5 [ICON_GOLD] Gold from every Good Scents in the World.[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]Chemistry is also required.[ENDCOLOR]</Text>
+			<Text>Incorporates Good Scents, allowing all Civilizations to build franchises in their Cities. Provides 5 [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_PERFUME} Shares. +1 [ICON_GOLD] Gold from every Good Scents in the World per [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_PERFUME} Share owned.[NEWLINE][COLOR_WARNING_TEXT]Chemistry is also required.[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_PERFUME_HQ_DESC">
-			<Text>{TXT_KEY_MISSION_CORP_PERFUME}[NEWLINE][NEWLINE]Perfume is a mixture of fragrant essential oils or aroma compounds, fixatives and solvents used to give the human body, animals, objects, and living spaces "a pleasant scent."[1] The odoriferous compounds that make up a perfume can be manufactured synthetically or extracted from plant or animal sources. Perfumes have been known to exist in some of the earliest human civilizations, either through ancient texts or from archaeological digs. Modern perfumery began in the late 19th century with the commercial synthesis of aroma compounds such as vanillin or coumarin, which allowed for the composition of perfumes with smells previously unattainable solely from natural aromatics alone.</Text>
+			<Text>{TXT_KEY_MISSION_CORP_PERFUME}[NEWLINE][NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_PERFUME}[NEWLINE][NEWLINE]Perfume is a mixture of fragrant essential oils or aroma compounds, fixatives and solvents used to give the human body, animals, objects, and living spaces "a pleasant scent."[1] The odoriferous compounds that make up a perfume can be manufactured synthetically or extracted from plant or animal sources. Perfumes have been known to exist in some of the earliest human civilizations, either through ancient texts or from archaeological digs. Modern perfumery began in the late 19th century with the commercial synthesis of aroma compounds such as vanillin or coumarin, which allowed for the composition of perfumes with smells previously unattainable solely from natural aromatics alone.</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

@@ -43,6 +43,13 @@
 			<Yield>5</Yield>
 		</Row>
 	</Building_YieldChanges>
+	<Building_ResourceQuantity>
+		<Row>
+			<BuildingType>BUILDING_CORP_CLOTHES_HQ</BuildingType>
+			<ResourceType>RESOURCE_CORP_CLOTHES</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+	</Building_ResourceQuantity>
 	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_CORP_CLOTHES_HQ</BuildingType>
@@ -73,10 +80,10 @@
 			<Text>[NEWLINE][TAB][TAB]"Distrust any enterprise that requires new clothes."[NEWLINE] - Henry David Thoreau[NEWLINE][TAB]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_CLOTHES_HQ_HELP">
-			<Text>Incorporates Young Army, allowing all Civilizations to build franchises in their Cities. +5 [ICON_GOLD] Gold from every Young Army in the World.[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]Industrialization is also required.[ENDCOLOR]</Text>
+			<Text>Incorporates Young Army, allowing all Civilizations to build franchises in their Cities. Provides 5 [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_CLOTHES} Shares. +1 [ICON_GOLD] Gold from every Young Army in the World per [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_CLOTHES} Share owned.[NEWLINE][COLOR_WARNING_TEXT]Industrialization is also required.[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_CLOTHES_HQ_DESC">
-			<Text>{TXT_KEY_MISSION_CORP_CLOTHES}[NEWLINE][NEWLINE]Clothing is fiber and textile material worn on the body. The wearing of clothing is mostly restricted to human beings and is a feature of nearly all human societies. The amount and type of clothing worn depends on physical, social and geographic considerations. Some clothing types can be gender-specific, although this does not apply to cross dressers.	Physically, clothing serves many purposes: it can serve as protection from the elements, and can enhance safety during hazardous activities such as hiking and cooking. It protects the wearer from rough surfaces, rash-causing plants, insect bites, splinters, thorns and prickles by providing a barrier between the skin and the environment. Clothes can insulate against cold or hot conditions. Further, they can provide a hygienic barrier, keeping infectious and toxic materials away from the body. Clothing also provides protection from harmful UV radiation.</Text>
+			<Text>{TXT_KEY_MISSION_CORP_CLOTHES}[NEWLINE][NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_CLOTHES}[NEWLINE][NEWLINE]Clothing is fiber and textile material worn on the body. The wearing of clothing is mostly restricted to human beings and is a feature of nearly all human societies. The amount and type of clothing worn depends on physical, social and geographic considerations. Some clothing types can be gender-specific, although this does not apply to cross dressers.	Physically, clothing serves many purposes: it can serve as protection from the elements, and can enhance safety during hazardous activities such as hiking and cooking. It protects the wearer from rough surfaces, rash-causing plants, insect bites, splinters, thorns and prickles by providing a barrier between the skin and the environment. Clothes can insulate against cold or hot conditions. Further, they can provide a hygienic barrier, keeping infectious and toxic materials away from the body. Clothing also provides protection from harmful UV radiation.</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

@@ -43,7 +43,13 @@
 			<Yield>5</Yield>
 		</Row>
 	</Building_YieldChanges>
-
+	<Building_ResourceQuantity>
+		<Row>
+			<BuildingType>BUILDING_CORP_COLA_HQ</BuildingType>
+			<ResourceType>RESOURCE_CORP_COLA</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+	</Building_ResourceQuantity>
 	<Building_Flavors>
 		<Row>
 			<BuildingType>BUILDING_CORP_COLA_HQ</BuildingType>
@@ -74,10 +80,10 @@
 			<Text>[NEWLINE][TAB][TAB]"If life gives you lemons, make some sort of fruity juice."[NEWLINE] - Conan O'Brien[NEWLINE][TAB]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_COLA_HQ_HELP">
-			<Text>Incorporates Think Drink, allowing all Civilizations to build franchises in their Cities. +5 [ICON_GOLD] Gold from every Think Drink in the World.[NEWLINE][NEWLINE][COLOR_WARNING_TEXT]Computers is also required.[ENDCOLOR]</Text>
+			<Text>Incorporates Think Drink, allowing all Civilizations to build franchises in their Cities. Provides 5 [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_COLA} Shares. +1 [ICON_GOLD] Gold from every Think Drink in the World per [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_COLA} Share owned.[NEWLINE][COLOR_WARNING_TEXT]Computers is also required.[ENDCOLOR]</Text>
 		</Row>
 		<Row Tag="TXT_KEY_WONDER_CORP_COLA_HQ_DESC">
-			<Text>{TXT_KEY_MISSION_CORP_COLA}[NEWLINE][NEWLINE]A soft drink (also called soda, pop, coke, soda pop, fizzy drink, tonic, seltzer, mineral, sparkling water, or carbonated beverage) is a beverage that typically contains water (often, but not always carbonated water), usually a sweetener, and usually a flavoring agent. The sweetener may be sugar, high-fructose corn syrup, fruit juice, sugar substitutes (in the case of diet drinks) or some combination of these. Soft drinks may also contain caffeine, colorings, preservatives and other ingredients. Widely sold soft drink flavors are cola, cherry, lemon-lime, root beer, orange, grape, vanilla, ginger ale, fruit punch, and lemonade.</Text>
+			<Text>{TXT_KEY_MISSION_CORP_COLA}[NEWLINE][NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_COLA}[NEWLINE][NEWLINE]A soft drink (also called soda, pop, coke, soda pop, fizzy drink, tonic, seltzer, mineral, sparkling water, or carbonated beverage) is a beverage that typically contains water (often, but not always carbonated water), usually a sweetener, and usually a flavoring agent. The sweetener may be sugar, high-fructose corn syrup, fruit juice, sugar substitutes (in the case of diet drinks) or some combination of these. Soft drinks may also contain caffeine, colorings, preservatives and other ingredients. Widely sold soft drink flavors are cola, cherry, lemon-lime, root beer, orange, grape, vanilla, ginger ale, fruit punch, and lemonade.</Text>
 		</Row>
 	</Language_en_US>
 </GameData>

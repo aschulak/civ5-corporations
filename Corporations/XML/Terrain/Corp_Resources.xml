@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Resources>
+		<Row>
+			<Type>RESOURCE_CORP_SUSHI</Type>
+			<TechCityTrade>TECH_COMPASS</TechCityTrade>
+			<Happiness>4</Happiness>
+			<Description>TXT_KEY_RESOURCE_CORP_SUSHI</Description>
+			<Civilopedia>TXT_KEY_RESOURCE_CORP_SHARES_TEXT</Civilopedia>
+			<Help>TXT_KEY_RESOURCE_CORP_SUSHI_HELP</Help>
+			<ResourceClassType>RESOURCECLASS_LUXURY</ResourceClassType>
+			<AITradeModifier>20</AITradeModifier>
+			<AIObjective>1</AIObjective>
+			<IconString>[ICON_RES_CORP_SHARES]</IconString>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>20</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>RESOURCE_CORP_JEWELER</Type>
+			<TechCityTrade>TECH_METAL_CASTING</TechCityTrade>
+			<Happiness>4</Happiness>
+			<Description>TXT_KEY_RESOURCE_CORP_JEWELER</Description>
+			<Civilopedia>TXT_KEY_RESOURCE_CORP_SHARES_TEXT</Civilopedia>
+			<Help>TXT_KEY_RESOURCE_CORP_JEWELER_HELP</Help>
+			<ResourceClassType>RESOURCECLASS_LUXURY</ResourceClassType>
+			<AITradeModifier>20</AITradeModifier>
+			<AIObjective>1</AIObjective>
+			<IconString>[ICON_RES_CORP_SHARES]</IconString>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>20</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>RESOURCE_CORP_PERFUME</Type>
+			<TechCityTrade>TECH_CHEMISTRY</TechCityTrade>
+			<Happiness>4</Happiness>
+			<Description>TXT_KEY_RESOURCE_CORP_PERFUME</Description>
+			<Civilopedia>TXT_KEY_RESOURCE_CORP_SHARES_TEXT</Civilopedia>
+			<Help>TXT_KEY_RESOURCE_CORP_PERFUME_HELP</Help>
+			<ResourceClassType>RESOURCECLASS_LUXURY</ResourceClassType>
+			<AITradeModifier>20</AITradeModifier>
+			<AIObjective>1</AIObjective>
+			<IconString>[ICON_RES_CORP_SHARES]</IconString>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>20</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>RESOURCE_CORP_CLOTHES</Type>
+			<TechCityTrade>TECH_INDUSTRIALIZATION</TechCityTrade>
+			<Happiness>4</Happiness>
+			<Description>TXT_KEY_RESOURCE_CORP_CLOTHES</Description>
+			<Civilopedia>TXT_KEY_RESOURCE_CORP_SHARES_TEXT</Civilopedia>
+			<Help>TXT_KEY_RESOURCE_CORP_CLOTHES_HELP</Help>
+			<ResourceClassType>RESOURCECLASS_LUXURY</ResourceClassType>
+			<AITradeModifier>20</AITradeModifier>
+			<AIObjective>1</AIObjective>
+			<IconString>[ICON_RES_CORP_SHARES]</IconString>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>20</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>RESOURCE_CORP_MINING</Type>
+			<TechCityTrade>TECH_RAILROAD</TechCityTrade>
+			<Happiness>4</Happiness>
+			<Description>TXT_KEY_RESOURCE_CORP_MINING</Description>
+			<Civilopedia>TXT_KEY_RESOURCE_CORP_SHARES_TEXT</Civilopedia>
+			<Help>TXT_KEY_RESOURCE_CORP_MINING_HELP</Help>
+			<ResourceClassType>RESOURCECLASS_LUXURY</ResourceClassType>
+			<AITradeModifier>20</AITradeModifier>
+			<AIObjective>1</AIObjective>
+			<IconString>[ICON_RES_CORP_SHARES]</IconString>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>20</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>RESOURCE_CORP_HAMBURGER</Type>
+			<TechCityTrade>TECH_REFRIGERATION</TechCityTrade>
+			<Happiness>4</Happiness>
+			<Description>TXT_KEY_RESOURCE_CORP_HAMBURGER</Description>
+			<Civilopedia>TXT_KEY_RESOURCE_CORP_SHARES_TEXT</Civilopedia>
+			<Help>TXT_KEY_RESOURCE_CORP_HAMBURGER_HELP</Help>
+			<ResourceClassType>RESOURCECLASS_LUXURY</ResourceClassType>
+			<AITradeModifier>20</AITradeModifier>
+			<AIObjective>1</AIObjective>
+			<IconString>[ICON_RES_CORP_SHARES]</IconString>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>20</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>RESOURCE_CORP_COLA</Type>
+			<TechCityTrade>TECH_COMPUTERS</TechCityTrade>
+			<Happiness>4</Happiness>
+			<Description>TXT_KEY_RESOURCE_CORP_COLA</Description>
+			<Civilopedia>TXT_KEY_RESOURCE_CORP_SHARES_TEXT</Civilopedia>
+			<Help>TXT_KEY_RESOURCE_CORP_COLA_HELP</Help>
+			<ResourceClassType>RESOURCECLASS_LUXURY</ResourceClassType>
+			<AITradeModifier>20</AITradeModifier>
+			<AIObjective>1</AIObjective>
+			<IconString>[ICON_RES_CORP_SHARES]</IconString>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>20</PortraitIndex>
+		</Row>
+	</Resources>
+	<Resource_Flavors>
+		<Row>
+			<ResourceType>RESOURCE_CORP_SUSHI</ResourceType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_SUSHI</ResourceType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_JEWELER</ResourceType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_JEWELER</ResourceType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_PERFUME</ResourceType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_PERFUME</ResourceType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_CLOTHES</ResourceType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_CLOTHES</ResourceType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_MINING</ResourceType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_MINING</ResourceType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_HAMBURGER</ResourceType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_HAMBURGER</ResourceType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_COLA</ResourceType>
+			<FlavorType>FLAVOR_HAPPINESS</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<ResourceType>RESOURCE_CORP_COLA</ResourceType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+	</Resource_Flavors>
+	<IconFontTextures>
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_CORP_STOCK</IconFontTexture>
+			<IconFontTextureFile>SharesFontIcon</IconFontTextureFile>
+		</Row>
+	</IconFontTextures>
+	<IconFontMapping>
+		<Row>
+			<IconName>ICON_RES_CORP_SHARES</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CORP_STOCK</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</Row>
+	</IconFontMapping>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_SUSHI">
+			<Text>{TXT_KEY_SHARES_CORP_SUSHI} Shares</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_SUSHI_HELP">
+			<Text>{TXT_KEY_SHARES_CORP_SUSHI} Shares are granted to the civilization who incorpoates {TXT_KEY_WONDER_CORP_SUSHI_HQ}. Owners of {TXT_KEY_SHARES_CORP_SUSHI} Shares get a percentage of the Corporation franchise revenue.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_JEWELER">
+			<Text>{TXT_KEY_SHARES_CORP_JEWELER} Shares</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_JEWELER_HELP">
+			<Text>{TXT_KEY_SHARES_CORP_JEWELER} Shares are granted to the civilization who incorpoates {TXT_KEY_WONDER_CORP_JEWELER_HQ}. Owners of {TXT_KEY_SHARES_CORP_JEWELER} Shares get a percentage of the Corporation franchise revenue.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_PERFUME">
+			<Text>{TXT_KEY_SHARES_CORP_PERFUME} Shares</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_PERFUME_HELP">
+			<Text>{TXT_KEY_SHARES_CORP_PERFUME} Shares are granted to the civilization who incorpoates {TXT_KEY_WONDER_CORP_PERFUME_HQ}. Owners of {TXT_KEY_SHARES_CORP_PERFUME} Shares get a percentage of the Corporation franchise revenue.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_CLOTHES">
+			<Text>{TXT_KEY_SHARES_CORP_CLOTHES} Shares</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_CLOTHES_HELP">
+			<Text>{TXT_KEY_SHARES_CORP_CLOTHES} Shares are granted to the civilization who incorpoates {TXT_KEY_WONDER_CORP_CLOTHES_HQ}. Owners of {TXT_KEY_SHARES_CORP_CLOTHES} Shares get a percentage of the Corporation franchise revenue.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_MINING">
+			<Text>{TXT_KEY_SHARES_CORP_MINING} Shares</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_MINING_HELP">
+			<Text>{TXT_KEY_SHARES_CORP_MINING} Shares are granted to the civilization who incorpoates {TXT_KEY_WONDER_CORP_MINING_HQ}. Owners of {TXT_KEY_SHARES_CORP_MINING} Shares get a percentage of the Corporation franchise revenue.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_HAMBURGER">
+			<Text>{TXT_KEY_SHARES_CORP_HAMBURGER} Shares</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_HAMBURGER_HELP">
+			<Text>{TXT_KEY_SHARES_CORP_HAMBURGER} Shares are granted to the civilization who incorpoates {TXT_KEY_WONDER_CORP_HAMBURGER_HQ}. Owners of {TXT_KEY_SHARES_CORP_HAMBURGER} Shares get a percentage of the Corporation franchise revenue.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_COLA">
+			<Text>{TXT_KEY_SHARES_CORP_COLA} Shares</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_COLA_HELP">
+			<Text>{TXT_KEY_SHARES_CORP_COLA} Shares are granted to the civilization who incorpoates {TXT_KEY_WONDER_CORP_COLA_HQ}. Owners of {TXT_KEY_SHARES_CORP_COLA} Shares get a percentage of the Corporation franchise revenue.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_RESOURCE_CORP_SHARES_TEXT">
+			<Text>A corporation divides its capital into shares, which are offered for sale to raise capital, termed as issuing shares. Thus, a share is an indivisible unit of capital, expressing the contractual relationship between the company and the shareholder. The denominated value of a share is its face value: the total capital of a company is divided into a number of shares.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>
