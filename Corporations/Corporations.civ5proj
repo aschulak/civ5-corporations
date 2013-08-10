@@ -13,14 +13,16 @@
 [NEWLINE][NEWLINE]
 
 This mod provides an alternate way for your civilization to amass a fortune in [ICON_GOLD] Gold, including:
-[NEWLINE][ICON_BULLET] 8 new Buildings, and 1 upgraded Building
+[NEWLINE][ICON_BULLET] 8 new Buildings, 1 enhanced
 [NEWLINE][ICON_BULLET] 7 new World Wonders
 [NEWLINE][ICON_BULLET] 7 new Luxury Resources
 [NEWLINE][ICON_BULLET] 3 new Religious Beliefs
 [NEWLINE][ICON_BULLET] 3 new Ideology Policies
-[NEWLINE][ICON_BULLET] 2 new Technologies
+[NEWLINE][ICON_BULLET] 3 enhanced Social Policies
+[NEWLINE][ICON_BULLET] 2 new Technologies, 1 enhanced
 [NEWLINE][ICON_BULLET] 2 new National Wonders
-[NEWLINE][ICON_BULLET] 1 upgraded Leader Trait
+[NEWLINE][ICON_BULLET] 1 enhanced Leader Trait
+
 
 [NEWLINE][NEWLINE]
 
@@ -260,6 +262,7 @@ Special thanks:
     <Folder Include="SQL" />
     <Folder Include="UI" />
     <Folder Include="UI\InGame" />
+    <Folder Include="UI\InGame\WorldView" />
     <Folder Include="UI\InGame\Popups" />
     <Folder Include="XML" />
     <Folder Include="XML\Buildings" />
@@ -360,6 +363,10 @@ Special thanks:
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="Lua\Corp_Revenue.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="Lua\Corp_UI.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -388,6 +395,14 @@ Special thanks:
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="UI\InGame\Popups\DiploRelationships.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\InGame\Popups\DiploRelationships.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="UI\InGame\Popups\EconomicGeneralInfo.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -401,6 +416,10 @@ Special thanks:
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI\InGame\TopPanel.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="UI\InGame\WorldView\TradeLogic.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

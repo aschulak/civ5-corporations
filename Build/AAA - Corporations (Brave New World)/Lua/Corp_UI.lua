@@ -30,17 +30,26 @@ if not MapModData.gCorpUiInitted then
 	end	
 	MapModData.gT = gT;
 
+	print("a");
+	-- TODO remove
+	--gT.gFranchiseCityPressureMap = {};
+	--gT.gFranchiseCityFanMap = {};	
+	
 	PrintCorpOwnerRevenue();
 	UpdateCorpHqOwners(nil);
 	PrintCorpHqOwners();
 	UpdateCorpSharesOwners(nil);	
 	PrintCorpSharesOwners();
 	
+	print("b");
+	
 	function SaveFranchiseSpreadData()
 		print("--SaveFranchiseSpreadData");
 		TableSave(gT, "CorporationsBNW");
 	end
 	GameEvents.PlayerDoTurn.Add(SaveFranchiseSpreadData);
+	
+	print("c");
 	
 	MapModData.gCorpUiInitted = true;
 end
@@ -51,6 +60,10 @@ end
 
 function GetCorporationCityTooltip(player, city)
 	local tooltip = nil;
+	
+	-- TODO remove
+	--tooltip = "CityID " .. city:GetID() .. "[NEWLINE]";
+	--tooltip = tooltip .. "Unique CityID " .. GetUniqueCityId(city) .. "[NEWLINE]";
 	
 	-- Do Corp HQ listings first
 	for corp in GameInfo.Corporations() do 
@@ -108,13 +121,11 @@ function GetCorporationCityTooltip(player, city)
 end
 
 function GetCorporationRevenue(player)
-	print("--GetCorporationRevenue");
-	PrintCorpOwnerRevenue();
-	
+	--print("--GetCorporationRevenue");		
 	local gCorpOwnerRevenue = gT.gCorpOwnerRevenue;
 	
 	-- these are stored when rewarded for faster UI display
-	return gCorpOwnerRevenue[player:GetID()] or 1337;	
+	return gCorpOwnerRevenue[player:GetID()] or 0;	
 end
 
 print("Corp_UI.lua loaded.");

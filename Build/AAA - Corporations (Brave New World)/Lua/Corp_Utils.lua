@@ -65,14 +65,53 @@ function round(x)
   return x-0.5;
 end
 
+-- Compatibility: Lua-5.1
+function split(str, pat)
+   local t = {}  -- NOTE: use {n = 0} in Lua-5.0
+   local fpat = "(.-)" .. pat
+   local last_end = 1
+   local s, e, cap = str:find(fpat, 1)
+   while s do
+      if s ~= 1 or cap ~= "" then
+	 table.insert(t,cap)
+      end
+      last_end = e+1
+      s, e, cap = str:find(fpat, last_end)
+   end
+   if last_end <= #str then
+      cap = str:sub(last_end)
+      table.insert(t, cap)
+   end
+   return t
+end
+
+-- City ids are NOT unique
+function GetUniqueCityId(city)
+	return city:GetID() .. ":" .. city:GetX() .. ":" .. city:GetY();
+end
+
 -- look through all the players and return the city
-function GetCityById(cityId)	
+-- cityId is unique id from above
+function GetCityById(uniqueCityId)	
+	--print("--GetCityById");
+	--print("gcbi cityId", uniqueCityId);
+	local uniqueCityIdInfo = split(uniqueCityId, ":");
+	local cityId = tonumber(uniqueCityIdInfo[1]);
+	local cityX = tonumber(uniqueCityIdInfo[2]);
+	local cityY = tonumber(uniqueCityIdInfo[3]);
+	
+	--print("cityId", cityId);
+	--print("cityX", cityX);
+	--print("cityY", cityY);
 	
 	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
 		local player = Players[playerNum];					
 		if (player ~= nil and player:IsAlive() and player:GetNumCities() > 0) then			
 			city = player:GetCityByID(cityId);
-			if city ~= nil then				
+			if city ~= nil and city:GetX() == cityX and city:GetY() == cityY then
+				--print("looking at city id", city:GetID());
+				--print("looking at city name", city:GetName());
+				--print("got city");
 				return city;
 			end
 		end
@@ -89,13 +128,13 @@ function UpdateCorpHqOwners(iPlayer)
 	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
 		local player = Players[playerNum];					
 		if (player ~= nil and player:IsAlive() and not player:IsMinorCiv() and not player:IsBarbarian() and player:GetNumCities() > 0) then			
-			print("UCHO Player", player:GetName());		
+			--print("UCHO Player", player:GetName());		
 			for corp in GameInfo.Corporations() do
 				gCorpHqOwners[corp.ID] = gCorpHqOwners[corp.ID] or nil;
-				print("UCHO Corp", corp.Type);
+				--print("UCHO Corp", corp.Type);
 				local corpHq = GameInfo.Buildings[corp.HeadquartersBuildingType];
 				if player:CountNumBuildings(corpHq.ID) > 0 then
-					print("UCHO Owns Hq", player:GetName());
+					--print("UCHO Owns Hq", player:GetName());
 					gCorpHqOwners[corp.ID] = player:GetID();
 				end
 			end
@@ -203,11 +242,13 @@ end
 function GetPressureForCity(corpFranchise, city)
 	local pressure = 0;
 	
+	local uniqueCityId = GetUniqueCityId(city);
 	local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;		
 	
-	if gFranchiseCityPressureMap[corpFranchise.Type] ~= nil then		
-		if gFranchiseCityPressureMap[corpFranchise.Type][city:GetID()] ~= nil then
-			pressure = gFranchiseCityPressureMap[corpFranchise.Type][city:GetID()];
+	if gFranchiseCityPressureMap[corpFranchise.Type] ~= nil then	
+		local cityPressureMap = gFranchiseCityPressureMap[corpFranchise.Type];
+		if cityPressureMap[uniqueCityId] ~= nil then
+			pressure = cityPressureMap[uniqueCityId];
 		end		
 	end
 	
@@ -218,11 +259,13 @@ end
 function GetFansForCity(corpFranchise, city)
 	local fans = 0;
 		
+	local uniqueCityId = GetUniqueCityId(city);
 	local gFranchiseCityFanMap = gT.gFranchiseCityFanMap;
 	
-	if gFranchiseCityFanMap[corpFranchise.Type] ~= nil then		
-		if gFranchiseCityFanMap[corpFranchise.Type][city:GetID()] ~= nil then				
-			fans = gFranchiseCityFanMap[corpFranchise.Type][city:GetID()];
+	if gFranchiseCityFanMap[corpFranchise.Type] ~= nil then
+		local cityFanMap = gFranchiseCityFanMap[corpFranchise.Type];
+		if cityFanMap[uniqueCityId] ~= nil then				
+			fans = cityFanMap[uniqueCityId];
 		end
 	end
 	
@@ -456,10 +499,13 @@ function PrintFranchisePressureMap()
 	print("--PrintFranchisePressureMap");	
 	local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;
 	
-	for franchiseId, cityPressureMap in pairs(gFranchiseCityPressureMap) do					
+	for franchiseId, cityPressureMap in pairs(gFranchiseCityPressureMap) do		
+		print("---franchise id", franchiseId);
 		for cityId, pressure in pairs(cityPressureMap) do
-			local city = GetCityById(cityId);
-			print(city:GetName() .. " = f[" .. franchiseId .. "] Pressure:" .. pressure);
+			print("----unique city id", cityId);
+			print("----pressure", pressure);
+			--local city = GetCityById(cityId);
+			--print(city:GetName() .. " = f[" .. franchiseId .. "] Pressure:" .. pressure);
 		end		
 	end
 	print("--PrintFranchisePressureMap DONE");	
@@ -469,10 +515,13 @@ function PrintFranchiseFanMap()
 	print("--PrintFranchiseFanMap");	
 	
 	local gFranchiseCityFanMap = gT.gFranchiseCityFanMap;
-	for franchiseId, cityFanMap in pairs(gFranchiseCityFanMap) do		
-		for cityId, fan in pairs(cityFanMap) do
-			local city = GetCityById(cityId);
-			print(city:GetName() .. " = f[" .. franchiseId .. "] Fans:" .. fan);
+	for franchiseId, cityFanMap in pairs(gFranchiseCityFanMap) do	
+		print("---franchise id", franchiseId);	
+		for cityId, fans in pairs(cityFanMap) do
+			print("----unique city id", cityId);
+			print("----fans", fans);
+			--local city = GetCityById(cityId);
+			--print(city:GetName() .. " = f[" .. franchiseId .. "] Fans:" .. fans);
 		end		
 	end
 	print("--PrintFranchiseFanMap DONE");	

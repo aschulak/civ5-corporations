@@ -4,6 +4,7 @@
 --------------------------------------------------------------
 include("Corp_UI.lua");
 include("Corp_Utils.lua");
+include("Corp_Revenue.lua");
 include("Corp_FranchiseSpread.lua");
 include("Corp_BuildingConstructs.lua");
 
@@ -11,10 +12,7 @@ include("Corp_BuildingConstructs.lua");
 -- GLOBALS
 --
 
-gSendNotifications = true;
-gSendNotificationsTurnCounter = 5;
-
-MapModData.gT = MapModData.gT or {};
+--MapModData.gT = MapModData.gT or {};
 local gT = MapModData.gT;
 	
 --
@@ -22,159 +20,16 @@ local gT = MapModData.gT;
 --
 
 GameEvents.PlayerDoTurn.Add(UpdateCorpHqOwners);
-GameEvents.PlayerDoTurn.Add(PrintCorpHqOwners);
 GameEvents.PlayerDoTurn.Add(UpdateCorpSharesOwners);
-GameEvents.PlayerDoTurn.Add(PrintCorpSharesOwners);
-
+--GameEvents.PlayerDoTurn.Add(PrintCorpHqOwners);
+--GameEvents.PlayerDoTurn.Add(PrintCorpSharesOwners);
+--GameEvents.PlayerDoTurn.Add(PrintFranchisePressureMap);
+--GameEvents.PlayerDoTurn.Add(PrintFranchiseFanMap);	
+	
 -- do franchise spread
-function FranchiseSpread(iPlayer) 		
-	print("--FranchiseSpread");
-	local gCorpHqOwners = gT.gCorpHqOwners;
-	local player = Players[iPlayer];
-	
-	-- quit if the player doesn't even have the Technology that allows corpoation spread
-	if not HasCorporationSpreadAllowedTechnology(player) then
-		return;
-	end
-	
-	for corp in GameInfo.Corporations() do		
-		local corpOwnerID = gCorpHqOwners[corp.ID];
-		local corpOwner = Players[corpOwnerID];
-		
-		if corpOwner ~= nil and corpOwner:GetID() == iPlayer then
-			local corpHq = GameInfo.Buildings[corp.HeadquartersBuildingType];
-			local corpFranchise = GameInfo.Buildings[corp.FranchiseBuildingType];
-			local hqCity = GetCityWithCorporationHq(corp, corpOwner);	
-			ApplyFranchisePressure(corpOwner, corpHq, hqCity, corpFranchise);
-			ConvertFranchisePressureIntoFans(corpFranchise);
-			SpreadFranchisesToCities(corpFranchise);
-		end	
-	end
-
-	--SaveFranchiseSpreadData();
-	PrintFranchisePressureMap();
-	PrintFranchiseFanMap();
-end
---GameEvents.PlayerDoTurn.Add(FranchiseSpread);
+GameEvents.PlayerDoTurn.Add(FranchiseSpread);
 
 -- reward all corporation owners with their corporation revenue
-function RewardCorporationOwners(iPlayer)
-	print("--RewardCorporationOwners");
-	local player = Players[iPlayer];
-	
-	-- quit if minor or barb
-	if player:IsMinorCiv() or player:IsBarbarian() then
-		return;
-	end
-			
-	local gCorpHqOwners = gT.gCorpHqOwners;
-	local gCorpSharesOwners = gT.gCorpSharesOwners;
-	local gCorpOwnerRevenue = gT.gCorpOwnerRevenue;
-	
-	-- reset value for this turn
-	gCorpOwnerRevenue[player:GetID()] = 0;
-	
-	for corpId, playerCorpShares in pairs(gCorpSharesOwners) do
-		local corp = GameInfo.Corporations[corpId];
-		print("1corp", corp.Type);
-		local corpHqOwnerId = gCorpHqOwners[corpId];
-		print("2owner id", corpHqOwnerId);
-		
-		-- loop only if there is an owner of the hq
-		if corpHqOwnerId ~= nil then						
-			local corpHqOwner = Players[corpHqOwnerId];
-			local corpCity = GetCityWithCorporationHq(corp, corpHqOwner);		
-
-			for corpOwnerId, numCorpShares in pairs(playerCorpShares) do				
-				local corpOwner = Players[corpOwnerId];
-				print("numCorpShares", numCorpShares);
-										
-				if corpOwner ~= nil and corpOwner:GetID() == iPlayer and numCorpShares > 0 then
-					local franchiseCount, corporationRevenue = ProcessCorporationRevenue(corp, corpOwner, numCorpShares);
-										
-					-- store total with modifier for UI tooltip
-					gCorpOwnerRevenue[corpOwner:GetID()] = gCorpOwnerRevenue[corpOwner:GetID()] or 0;
-					gCorpOwnerRevenue[corpOwner:GetID()] = gCorpOwnerRevenue[corpOwner:GetID()] + corporationRevenue;
-					gT.gCorpOwnerRevenue = gCorpOwnerRevenue; -- probably not needed anymore
-
-					-- give the corp owner the gold
-					corpOwner:ChangeGold(corporationRevenue);						
-					print("gave " .. corpOwner:GetName() .. " " .. corporationRevenue .. " gold in corporation revenue.");
-
-					local sendNotifications = ShouldSendNotifications();
-					if sendNotifications then
-						local corpHq = GameInfo.Buildings[corp.HeadquartersBuildingType];
-						local corpFranchise = GameInfo.Buildings[corp.FranchiseBuildingType];
-						
-						local header = "Financial update from " .. Locale.ConvertTextKey(corpHq.Description);
-						local message = 'You gain ' .. corporationRevenue .. ' [ICON_GOLD] Gold per turn from the ' .. franchiseCount .. ' ' .. Locale.ConvertTextKey(corpFranchise.Description) .. ' franchises in the world.';
-						print(message);
-						corpOwner:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, message, header);
-						
-						-- keep around in case someone fixes custom notifications
-						--local hqCity = GetCityWithCorporationHq(gCorpHamburgerHqId, gPlayerWithHamburgerHq);
-						--local notificationTable = {{"Building1", gCorpHamburgerHqId, 80, false, 0}}
-						--CustomNotification("CorpFinancialUpdate", header, message, 0, hqCity, 0, notificationTable);
-					end		
-				end
-			end
-		end
-	end
-	
-	PrintCorpOwnerRevenue();
-end
 GameEvents.PlayerDoTurn.Add(RewardCorporationOwners);
-
---
--- HELPERS
---
-
--- cycle through all players to determine how much gold in corporation revenue to collect
-function ProcessCorporationRevenue(corp, corpSharesOwner, numCorpShares)
-	print('--ProcessCorporationRevenue');
-	print("corp", corp.Type);
-	
-	local corpFranchise = GameInfo.Buildings[corp.FranchiseBuildingType];
-		
-	local totalFranchises = 0;
-	local totalCorporationRevenue = 0;		
-	
-	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do		
-		local player = Players[playerNum];
-		if (player ~= nil and player:IsAlive() and player:GetNumCities() > 0) then		
-			for city in player:Cities() do
-				local buildingCount = city:GetNumBuilding(corpFranchise.ID);
-				local corporationRevenue = 0;
-				
-				-- local
-				if player:GetID() == corpSharesOwner:GetID() then
-					corporationRevenue = corp.LocalFranchiseGoldRevenuePerShare * buildingCount;
-					corporationRevenue = corporationRevenue + round(corporationRevenue * (GetLocalFranchiseGoldRevenueModifier(corpSharesOwner) / 100));
-					
-					-- apply modifier from buildings only for franchises of owned corporations
-					corporationRevenue = corporationRevenue + round(corporationRevenue * (GetCorporationFranchiseGoldRevenueModifierFromBuildings(city) / 100));				
-				else -- foreign
-					corporationRevenue = corp.ForeignFranchiseGoldRevenuePerShare * buildingCount;
-					corporationRevenue = corporationRevenue + round(corporationRevenue * (GetForeignFranchiseGoldRevenueModifier(corpSharesOwner) / 100));			
-				end				
-								
-				-- multiply by number of stock
-				corporationRevenue = corporationRevenue * numCorpShares;
-				
-				totalFranchises = totalFranchises + buildingCount;
-				totalCorporationRevenue = totalCorporationRevenue + corporationRevenue;						
-			end
-		end
-	end
-		
-	print("total franchises", totalFranchises);		
-	print("total corp. revenue", totalCorporationRevenue);
-	return totalFranchises, totalCorporationRevenue;
-end
-
--- Should a notification be sent?
-function ShouldSendNotifications()
-	return gSendNotifications and (Game.GetGameTurn() % gSendNotificationsTurnCounter == 0)
-end
 
 print("Corporations.lua loaded.");

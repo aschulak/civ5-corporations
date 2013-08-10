@@ -24,11 +24,11 @@ UPDATE Eras SET CorporationSpreadDistanceModifier=66 WHERE Type='ERA_POSTMODERN'
 UPDATE Eras SET CorporationSpreadDistanceModifier=100 WHERE Type='ERA_FUTURE';
 
 -- Game Speeds
-ALTER TABLE GameSpeeds ADD COLUMN 'CorporationPressureNeededToCreateFan' INTEGER DEFAULT 3000; -- Set Standard as default for game speed modders
-UPDATE GameSpeeds SET CorporationPressureNeededToCreateFan=1500 WHERE Type='GAMESPEED_QUICK';
-UPDATE GameSpeeds SET CorporationPressureNeededToCreateFan=3000 WHERE Type='GAMESPEED_STANDARD';
-UPDATE GameSpeeds SET CorporationPressureNeededToCreateFan=6000 WHERE Type='GAMESPEED_EPIC';
-UPDATE GameSpeeds SET CorporationPressureNeededToCreateFan=12000 WHERE Type='GAMESPEED_MARATHON';
+ALTER TABLE GameSpeeds ADD COLUMN 'CorporationPressureNeededToCreateFan' INTEGER DEFAULT 2000; -- Set Standard as default for game speed modders
+UPDATE GameSpeeds SET CorporationPressureNeededToCreateFan=1000 WHERE Type='GAMESPEED_QUICK';
+UPDATE GameSpeeds SET CorporationPressureNeededToCreateFan=2000 WHERE Type='GAMESPEED_STANDARD';
+UPDATE GameSpeeds SET CorporationPressureNeededToCreateFan=4000 WHERE Type='GAMESPEED_EPIC';
+UPDATE GameSpeeds SET CorporationPressureNeededToCreateFan=8000 WHERE Type='GAMESPEED_MARATHON';
 
 -- Technologies
 ALTER TABLE Technologies ADD COLUMN 'AllowsCorporationSpread' BOOLEAN DEFAULT 0;

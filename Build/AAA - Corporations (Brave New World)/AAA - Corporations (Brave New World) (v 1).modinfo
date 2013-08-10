@@ -9,14 +9,16 @@
 [NEWLINE][NEWLINE]
 
 This mod provides an alternate way for your civilization to amass a fortune in [ICON_GOLD] Gold, including:
-[NEWLINE][ICON_BULLET] 8 new Buildings, and 1 upgraded Building
+[NEWLINE][ICON_BULLET] 8 new Buildings, 1 enhanced
 [NEWLINE][ICON_BULLET] 7 new World Wonders
 [NEWLINE][ICON_BULLET] 7 new Luxury Resources
 [NEWLINE][ICON_BULLET] 3 new Religious Beliefs
 [NEWLINE][ICON_BULLET] 3 new Ideology Policies
-[NEWLINE][ICON_BULLET] 2 new Technologies
+[NEWLINE][ICON_BULLET] 3 enhanced Social Policies
+[NEWLINE][ICON_BULLET] 2 new Technologies, 1 enhanced
 [NEWLINE][ICON_BULLET] 2 new National Wonders
-[NEWLINE][ICON_BULLET] 1 upgraded Leader Trait
+[NEWLINE][ICON_BULLET] 1 enhanced Leader Trait
+
 
 [NEWLINE][NEWLINE]
 
@@ -89,21 +91,25 @@ Special thanks:
     <File md5="6ED8204CCE30D0BA6DDBB20810D1C01C" import="0">CorporationsBNWSteam.jpg</File>
     <File md5="6CAB9BB5211943A75146A91B4CB72EA7" import="0">Ideas.txt</File>
     <File md5="36BF5848A97A36B5BBA7AFAFECF165AC" import="1">Lua/Corp_BuildingConstructs.lua</File>
-    <File md5="EC48EC9C5541D4584BDCA25C74BC0572" import="0">Lua/Corporations.lua</File>
+    <File md5="021E808F475E77AD1F0512C19487F451" import="0">Lua/Corporations.lua</File>
     <File md5="2DF2961627D9444166EDF1C4E764F5A0" import="1">Lua/Corp_Defines.lua</File>
-    <File md5="DDF7C36624B0AFAA7D34DA31E11F49D1" import="1">Lua/Corp_FranchiseSpread.lua</File>
-    <File md5="82B05AC1161176ABD2D22F2EBA7F7663" import="1">Lua/Corp_UI.lua</File>
-    <File md5="A799CBF6DE454074933C072D50BF8094" import="1">Lua/Corp_Utils.lua</File>
+    <File md5="DFDB146CD980A90D9403922FB5752E16" import="1">Lua/Corp_FranchiseSpread.lua</File>
+    <File md5="88C2EFE6994AB988A999C3483153E98E" import="1">Lua/Corp_Revenue.lua</File>
+    <File md5="133A6FB036FD122DDE9A45F00DA49856" import="1">Lua/Corp_UI.lua</File>
+    <File md5="B50A2AF5EF0BC923E2FFB7BAB7C960B4" import="1">Lua/Corp_Utils.lua</File>
     <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="0">Lua/SaveUtils.lua</File>
     <File md5="4B97DB1E8B8AACCFD3F4D33F8DF3AB14" import="1">Lua/TableSaverLoader.lua</File>
-    <File md5="EFA7462C5618A0F2203B36A48E8AB580" import="0">SQL/Corp_TableUpdates.sql</File>
+    <File md5="3B81078AD15D0DD8CE09E9178F423931" import="0">SQL/Corp_TableUpdates.sql</File>
     <File md5="0D2A16105354F7C3D83944745F32B618" import="1">UI/Corporations.xml</File>
     <File md5="71E0A7E9065143BADEDEBF9C75D9D648" import="1">UI/InGame/CityBannerManager.lua</File>
+    <File md5="B9E367FF4C5CFF68F3E74036D147E1FE" import="1">UI/InGame/Popups/DiploRelationships.lua</File>
+    <File md5="C490D02A42BFC71013B12CED3759430C" import="1">UI/InGame/Popups/DiploRelationships.xml</File>
     <File md5="A04F0A8FF9ED7F4A7F35D8DA8EFC9B46" import="1">UI/InGame/Popups/EconomicGeneralInfo.lua</File>
-    <File md5="D73E7D3F432D3F4A485776D5B0742507" import="1">UI/InGame/Popups/EconomicGeneralInfo.xml</File>
+    <File md5="924CA8ED5739B6F17437A5F6225D83CA" import="1">UI/InGame/Popups/EconomicGeneralInfo.xml</File>
     <File md5="AD5F997424BFF67A691EFDFC1072DECB" import="1">UI/InGame/TechButtonInclude.lua</File>
     <File md5="73CE07DD3F04036D5E169E5A881E6C84" import="1">UI/InGame/TopPanel.lua</File>
-    <File md5="8F84286A42B357EB56C8B969A14DAC1F" import="0">XML/BasicInfos/Corp_Concepts.xml</File>
+    <File md5="6816D3B91FAB38B1A03D5A5CA62C1092" import="1">UI/InGame/WorldView/TradeLogic.lua</File>
+    <File md5="94903799A504CA7118C483F9673F28F8" import="0">XML/BasicInfos/Corp_Concepts.xml</File>
     <File md5="7E5BF83B3B17B4D2A102F601DFBB36FA" import="0">XML/Buildings/Corp_BroadcastTower.xml</File>
     <File md5="45810716CB34080CB4E7481F6529AEF3" import="0">XML/Buildings/Corp_Clothes.xml</File>
     <File md5="31FB386BAC35B84932E7814859B48765" import="0">XML/Buildings/Corp_ClothesHQ.xml</File>
@@ -128,7 +134,7 @@ Special thanks:
     <File md5="F48051E02F79D3F266575FAFDD07D0D5" import="0">XML/Corporations/Corp_Corporations.xml</File>
     <File md5="9C4E862385687254BBAA9FA823A14B49" import="0">XML/Corporations/Corp_FontIcons.xml</File>
     <File md5="2CBBBCC90835055DCF47386BD373D484" import="0">XML/Corporations/Corp_Settings.xml</File>
-    <File md5="558E45A62BB701D3D1DA3759FC72E5A6" import="0">XML/Corporations/Corp_UIText.xml</File>
+    <File md5="0CC6356DCF6AB273D582375171FA6F79" import="0">XML/Corporations/Corp_UIText.xml</File>
     <File md5="7B45D749EBFB43C7C59FC180B7CB1121" import="0">XML/GameInfo/Corp_Policies.xml</File>
     <File md5="622DD841483FADB5A0254FC6025A7413" import="0">XML/Religions/Corp_Beliefs.xml</File>
     <File md5="96C4CB6D4EEF2246FE363621A568F6A2" import="0">XML/Technologies/Corp_Technologies.xml</File>

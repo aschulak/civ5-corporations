@@ -13,9 +13,6 @@
 		<Row Tag="TXT_KEY_TP_GOLD_FROM_CORP">
 			<Text>{1_Num} from Corporations.</Text>
 		</Row>
-		<Row Tag="TXT_KEY_YIELD_FROM_CORP">
-			<Text>{1_Num} {2_IconString} from Corporations</Text>
-		</Row>		
 		<Row Tag="TXT_KEY_EO_CORP">
 			<Text>Corporations</Text>
 		</Row>

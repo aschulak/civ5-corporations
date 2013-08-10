@@ -134,6 +134,7 @@
 					<Label Offset="10,0" Font="TwCenMT18" Anchor="L,C" String="TXT_KEY_EO_RELIGION"/>
 					<Label Offset="10,0" Font="TwCenMT18" Anchor="R,C" ID="ReligionIncomeValue"/>
 				</Box>
+				<!-- Corporations -->
 				<Box Size="215,24" Anchor="c,c" Color="0.0.0.0" ID="CorporationIncome" ToolTip="TXT_KEY_EO_INCOME_CORP">
 					<Label Offset="10,0" Font="TwCenMT18" Anchor="L,C" String="TXT_KEY_EO_CORP"/>
 					<Label Offset="10,0" Font="TwCenMT18" Anchor="R,C" ID="CorporationIncomeValue"/>
