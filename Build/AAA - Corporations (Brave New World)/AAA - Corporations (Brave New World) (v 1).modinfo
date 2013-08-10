@@ -90,16 +90,17 @@ Special thanks:
     <File md5="F5E8C60FFC7600FC1E1A8A2E57E38220" import="1">ART/YoungArmySplash.dds</File>
     <File md5="6ED8204CCE30D0BA6DDBB20810D1C01C" import="0">CorporationsBNWSteam.jpg</File>
     <File md5="6CAB9BB5211943A75146A91B4CB72EA7" import="0">Ideas.txt</File>
+    <File md5="4D09DD0B4235DB7A3779447BF01CDEC3" import="1">Lua/Corp_Bootstrap.lua</File>
     <File md5="36BF5848A97A36B5BBA7AFAFECF165AC" import="1">Lua/Corp_BuildingConstructs.lua</File>
-    <File md5="021E808F475E77AD1F0512C19487F451" import="0">Lua/Corporations.lua</File>
+    <File md5="EE80ED2B0C10AF31F689DF6605C7F1A4" import="0">Lua/Corporations.lua</File>
     <File md5="2DF2961627D9444166EDF1C4E764F5A0" import="1">Lua/Corp_Defines.lua</File>
-    <File md5="DFDB146CD980A90D9403922FB5752E16" import="1">Lua/Corp_FranchiseSpread.lua</File>
+    <File md5="EF7DE3284A7CB34AAC2987D9D586790A" import="1">Lua/Corp_FranchiseSpread.lua</File>
     <File md5="88C2EFE6994AB988A999C3483153E98E" import="1">Lua/Corp_Revenue.lua</File>
-    <File md5="133A6FB036FD122DDE9A45F00DA49856" import="1">Lua/Corp_UI.lua</File>
+    <File md5="9B7F85539559EAD8923E1138659FF4D4" import="1">Lua/Corp_UI.lua</File>
     <File md5="B50A2AF5EF0BC923E2FFB7BAB7C960B4" import="1">Lua/Corp_Utils.lua</File>
     <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="0">Lua/SaveUtils.lua</File>
     <File md5="4B97DB1E8B8AACCFD3F4D33F8DF3AB14" import="1">Lua/TableSaverLoader.lua</File>
-    <File md5="3B81078AD15D0DD8CE09E9178F423931" import="0">SQL/Corp_TableUpdates.sql</File>
+    <File md5="4C6EE1111EAE45671C635AFEF0DEFBB8" import="0">SQL/Corp_TableUpdates.sql</File>
     <File md5="0D2A16105354F7C3D83944745F32B618" import="1">UI/Corporations.xml</File>
     <File md5="71E0A7E9065143BADEDEBF9C75D9D648" import="1">UI/InGame/CityBannerManager.lua</File>
     <File md5="B9E367FF4C5CFF68F3E74036D147E1FE" import="1">UI/InGame/Popups/DiploRelationships.lua</File>

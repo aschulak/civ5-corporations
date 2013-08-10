@@ -2,60 +2,13 @@
 -- Author: Envoy (@fourfourhero)
 -- DateCreated: 7/28/2013 5:05:52 PM
 --------------------------------------------------------------
-include("Corp_Defines.lua");
+include("Corp_Bootstrap.lua");
 include("Corp_Utils.lua");
-include("TableSaverLoader.lua");
 
-MapModData.gT = MapModData.gT or {};
 local gT = MapModData.gT;
 
 --
--- INIT
---
-MapModData.gCorpUiInitted = MapModData.gCorpUiInitted or false;
-print("MapModData.gCorpUiInitted", MapModData.gCorpUiInitted);
-
--- only do this once regardless of how many times this file gets included
-if not MapModData.gCorpUiInitted then			
-	-- load data
-	local DBQuery = Modding.OpenSaveData().Query;
-	local bNewGame = true;
-	for row in DBQuery("SELECT name FROM sqlite_master WHERE name='CorporationsBNW_Info'") do
-		if row.name then bNewGame = false end
-	end
-	if bNewGame then
-		TableSave(gT, "CorporationsBNW");		
-	else
-		TableLoad(gT, "CorporationsBNW");		
-	end	
-	MapModData.gT = gT;
-
-	print("a");
-	-- TODO remove
-	--gT.gFranchiseCityPressureMap = {};
-	--gT.gFranchiseCityFanMap = {};	
-	
-	PrintCorpOwnerRevenue();
-	UpdateCorpHqOwners(nil);
-	PrintCorpHqOwners();
-	UpdateCorpSharesOwners(nil);	
-	PrintCorpSharesOwners();
-	
-	print("b");
-	
-	function SaveFranchiseSpreadData()
-		print("--SaveFranchiseSpreadData");
-		TableSave(gT, "CorporationsBNW");
-	end
-	GameEvents.PlayerDoTurn.Add(SaveFranchiseSpreadData);
-	
-	print("c");
-	
-	MapModData.gCorpUiInitted = true;
-end
-
---
--- UI CALLS
+-- MAIN
 --
 
 function GetCorporationCityTooltip(player, city)

@@ -2,7 +2,7 @@
 -- Author: Envoy (@fourfourhero)
 -- DateCreated: 7/26/2013 8:35:47 PM
 --------------------------------------------------------------
-include("Corp_UI.lua");
+include("Corp_Bootstrap.lua");
 include("Corp_Utils.lua");
 include("Corp_Revenue.lua");
 include("Corp_FranchiseSpread.lua");
@@ -12,7 +12,6 @@ include("Corp_BuildingConstructs.lua");
 -- GLOBALS
 --
 
---MapModData.gT = MapModData.gT or {};
 local gT = MapModData.gT;
 	
 --
