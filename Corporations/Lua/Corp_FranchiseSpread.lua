@@ -134,21 +134,25 @@ function CalculatePressureToSpread(city, corpOwner, hqCity, corpHq)
 	local hqCivFranchiseSpreadRadius = GetFranchiseSpreadRadius(corpOwner);		
 	print("radius", hqCivFranchiseSpreadRadius);
 	
-	local corporationSpreadDistanceModifierFromBuildings = GetCorporationSpreadDistanceModifierFromBuildings(hqCity);
-	print("corporationSpreadDistanceModifierFromBuildings", corporationSpreadDistanceModifierFromBuildings);
-	hqCivFranchiseSpreadRadius = hqCivFranchiseSpreadRadius + round(hqCivFranchiseSpreadRadius * corporationSpreadDistanceModifierFromBuildings / 100);
-	print("radius after building modifiers", hqCivFranchiseSpreadRadius);
+	-- only use distance modifiers if the radius is limited
+	if hqCivFranchiseSpreadRadius ~= -1 then	
+		local corporationSpreadDistanceModifierFromBuildings = GetCorporationSpreadDistanceModifierFromBuildings(hqCity);
+		print("corporationSpreadDistanceModifierFromBuildings", corporationSpreadDistanceModifierFromBuildings);
+		hqCivFranchiseSpreadRadius = hqCivFranchiseSpreadRadius + round(hqCivFranchiseSpreadRadius * corporationSpreadDistanceModifierFromBuildings / 100);
+		print("radius after building modifiers", hqCivFranchiseSpreadRadius);
+	end
 	
 	-- reduce pressure based on how far away the city is from the corporation hq
 	local distPercent = distance / hqCivFranchiseSpreadRadius;
 	distPercent = round(distPercent * 100);
 	
-	-- max cap at 90
-	if distPercent > 90 then
-		distPercent = 90;
+	-- max cap at 80
+	if distPercent > 80 then
+		distPercent = 80;
 	end
 
 	-- min cap at 1
+	-- grants the effect that if the radius is unlimited, pressure spread is full and not reduced
 	if distPercent < 1 then
 		distPercent = 1;
 	end
@@ -319,14 +323,13 @@ function CityCanBuildFranchise(city, corpFranchise)
 end
 
 -- how many tiles away can a corporation spread franchises to?
--- return value of -1 means unlimited
 function GetFranchiseSpreadRadius(player)
-
+	
 	-- Technologies can unlock unlimited spread distance
 	if HasUnlimitedCorporationSpreadDistanceTechnology(player) then		
 		return -1; 
 	end	
-	
+
 	-- get world	
 	local world = GameInfo.Worlds[Map.GetWorldSize()];
 	
