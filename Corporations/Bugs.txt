@@ -1,0 +1,8 @@
+-- Bugs
+-- Author: aschulak
+-- DateCreated: 8/10/2013 6:26:12 PM
+--------------------------------------------------------------
+
+Taking over a city with fans and pressure needs to be cleared
+
+

@@ -1083,8 +1083,7 @@ function ResetDisplay()
 
 	-- Us
 	local iGoldPerTurn = g_pUs:CalculateGoldRate();
-	-- CORPORATIONS Start
-	print("adjusting gpt trade us");
+	-- CORPORATIONS Start	
 	local usCorpGold = GetCorporationRevenue(g_pUs);
 	iGoldPerTurn = iGoldPerTurn + usCorpGold;
 	-- CORPORATIONS End
@@ -1103,8 +1102,7 @@ function ResetDisplay()
     
     -- Them
 	iGoldPerTurn = g_pThem:CalculateGoldRate();
-	-- CORPORATIONS Start
-	print("adjusting gpt trade them");
+	-- CORPORATIONS Start	
 	local themCorpGold = GetCorporationRevenue(g_pThem);
 	iGoldPerTurn = iGoldPerTurn + themCorpGold;
 	-- CORPORATIONS End

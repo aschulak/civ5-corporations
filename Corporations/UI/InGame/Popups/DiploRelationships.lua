@@ -302,8 +302,7 @@ function PopulateTrade(iPlayer, pStack)
 	
     -- if (bGPTAllowed) then
 		local iGoldPerTurn = Players[iPlayer]:CalculateGoldRate();
-		-- CORPORATIONS Start
-		print("adjusting gpt trade");
+		-- CORPORATIONS Start		
 		local fCorpGold = GetCorporationRevenue(Players[iPlayer]);					
 		iGoldPerTurn = iGoldPerTurn + fCorpGold;
 		-- CORPORATIONS End

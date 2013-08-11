@@ -339,6 +339,10 @@ Special thanks:
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="Bugs.txt">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="CorporationsBNWSteam.jpg">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
@@ -381,7 +385,7 @@ Special thanks:
     </Content>
     <Content Include="Lua\SaveUtils.lua">
       <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Lua\TableSaverLoader.lua">
       <SubType>Lua</SubType>

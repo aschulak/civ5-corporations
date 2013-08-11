@@ -5,6 +5,7 @@
 include("Corp_Defines.lua");
 include("Corp_Utils.lua");
 include("TableSaverLoader.lua");
+include("SaveUtils.lua"); MY_MOD_NAME = "CorporationsBNW";
 
 --
 -- GLOBALS
@@ -30,7 +31,22 @@ if not MapModData.gCorpBootstrapInitted then
 	if bNewGame then
 		TableSave(gT, "CorporationsBNW");		
 	else
-		TableLoad(gT, "CorporationsBNW");		
+		TableLoad(gT, "CorporationsBNW");
+		
+		local activePlayer = Players[Game.GetActivePlayer()];
+		if activePlayer ~= nil then
+			gT = {};
+			gT = load(activePlayer, "gT" ) or {};
+			print("load from save utils");
+			print("load from save utils");
+			print("load from save utils");
+		else
+			print("no active player available yet!");
+			print("no active player available yet!");
+			print("no active player available yet!");
+			print("no active player available yet!");
+			print("no active player available yet!");
+		end
 	end	
 	MapModData.gT = gT;
 
@@ -47,6 +63,14 @@ if not MapModData.gCorpBootstrapInitted then
 	function SaveCorporationsData()
 		print("--SaveCorporationsData");
 		TableSave(gT, "CorporationsBNW");
+		local activePlayer = Players[Game.GetActivePlayer()];
+		if activePlayer ~= nil then
+			print("saving to active player", activePlayer:GetName());
+			save(activePlayer, "gT", gT);
+		else
+			print("no active player for save");
+		end
+		
 	end
 	GameEvents.PlayerDoTurn.Add(SaveCorporationsData);	
 	

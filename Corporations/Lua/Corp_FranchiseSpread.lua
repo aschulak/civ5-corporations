@@ -15,7 +15,7 @@ local gT = MapModData.gT;
 
 -- run once for each player on their turn
 function FranchiseSpread(iPlayer) 		
-	print("--FranchiseSpread");
+	--print("--FranchiseSpread");
 	local gCorpHqOwners = gT.gCorpHqOwners;
 	local player = Players[iPlayer];
 	
@@ -55,10 +55,10 @@ function CalculatePressureToSpread(city, corpOwner, hqCity, corpHq)
 	local civHasHq = cityPlayer:GetID() == corpOwner:GetID();
 	local hqTeam = Teams[corpOwner:GetTeam()];
 	
-	print("-------------------");
-	print("--CalculatePressureToSpread");
-	print("city team", cityTeam:GetName());
-	print("hq team", hqTeam:GetName());
+	--print("-------------------");
+	--print("--CalculatePressureToSpread");
+	--print("city team", cityTeam:GetName());
+	--print("hq team", hqTeam:GetName());
 
 	-- minor modifiers
 	local openBorders = false;	
@@ -83,21 +83,21 @@ function CalculatePressureToSpread(city, corpOwner, hqCity, corpHq)
 	local corporationSpreadModifierFromReligion = GetCorporationSpreadModifierFromReligion(corpOwner, city);
 	local corporationSpreadModifierFromIdeologies = GetCorporationSpreadModifierFromIdeologies(corpOwner, cityPlayer);	
 	
-	print("pressured city name", city:GetName());
-	print("hq civ", corpOwner:GetName());
-	print("hq city", hqCity:GetName());	
-	print("open borders?", tostring(openBorders));		
-	print("is friends?", tostring(isFriends));
-	print("is allies?", tostring(isAllies));
-	print("modifier from traits", corporationSpreadModifierFromTraits); 	
-	print("modifier from buildings", corporationSpreadModifierFromBuildings); 
-	print("modifier from religion", corporationSpreadModifierFromReligion);
-	print("modifier from ideologies", corporationSpreadModifierFromIdeologies); 
+	--print("pressured city name", city:GetName());
+	--print("hq civ", corpOwner:GetName());
+	--print("hq city", hqCity:GetName());	
+	--print("open borders?", tostring(openBorders));		
+	--print("is friends?", tostring(isFriends));
+	--print("is allies?", tostring(isAllies));
+	--print("modifier from traits", corporationSpreadModifierFromTraits); 	
+	--print("modifier from buildings", corporationSpreadModifierFromBuildings); 
+	--print("modifier from religion", corporationSpreadModifierFromReligion);
+	--print("modifier from ideologies", corporationSpreadModifierFromIdeologies); 
 
 	-- start with base pressure
 	local basePressure = GameInfo.CorporationSettings["BasePressureModifier"].Value;
 	local pressure = basePressure;
-	print("base pressure", pressure);
+	--print("base pressure", pressure);
 
 	-- apply modifiers from game settings	
 	if openBorders then
@@ -126,20 +126,20 @@ function CalculatePressureToSpread(city, corpOwner, hqCity, corpHq)
 	-- ideologies
 	pressure = pressure + round(pressure * corporationSpreadModifierFromIdeologies / 100);
 	
-	print("pressure before dist", pressure);
+	--print("pressure before dist", pressure);
 	
 	-- modify pressure based on distance
 	local distance = Map.PlotDistance(city:GetX(), city:GetY(), hqCity:GetX(), hqCity:GetY());
-	print("distance", distance);
+	----print("distance", distance);
 	local hqCivFranchiseSpreadRadius = GetFranchiseSpreadRadius(corpOwner);		
-	print("radius", hqCivFranchiseSpreadRadius);
+	----print("radius", hqCivFranchiseSpreadRadius);
 	
 	-- only use distance modifiers if the radius is limited
 	if hqCivFranchiseSpreadRadius ~= -1 then	
 		local corporationSpreadDistanceModifierFromBuildings = GetCorporationSpreadDistanceModifierFromBuildings(hqCity);
-		print("corporationSpreadDistanceModifierFromBuildings", corporationSpreadDistanceModifierFromBuildings);
+		----print("corporationSpreadDistanceModifierFromBuildings", corporationSpreadDistanceModifierFromBuildings);
 		hqCivFranchiseSpreadRadius = hqCivFranchiseSpreadRadius + round(hqCivFranchiseSpreadRadius * corporationSpreadDistanceModifierFromBuildings / 100);
-		print("radius after building modifiers", hqCivFranchiseSpreadRadius);
+		--print("radius after building modifiers", hqCivFranchiseSpreadRadius);
 	end
 	
 	-- reduce pressure based on how far away the city is from the corporation hq
@@ -157,10 +157,10 @@ function CalculatePressureToSpread(city, corpOwner, hqCity, corpHq)
 		distPercent = 1;
 	end
 	
-	print("distance percent", distPercent);
+	----print("distance percent", distPercent);
 	pressure = pressure - round((pressure * (distPercent / 100)));
-	print("pressure after dist", pressure);	
-	print("pressure final", pressure);
+	----print("pressure after dist", pressure);	
+	--print("pressure final", pressure);
 	return pressure;
 end
 
@@ -188,22 +188,18 @@ function GetCitiesToSpreadFranchise(corpFranchise, corpOwner, hqCity)
 		if (playerIsValid and playerDoesNotOwnHq and playerHasMetHqOwner) then
 			for city in player:Cities() do
 				local cityHasFranchise = city:GetNumBuilding(corpFranchise.ID) > 0;
-				print("city", city:GetName());
-				print("has franchise", tostring(cityHasFranchise));
+				--print("city", city:GetName());
+				--print("has franchise", tostring(cityHasFranchise));
+				
 				-- make sure pressure and fans gets reset to 0 if the city has a franchise
 				if cityHasFranchise then
-					local uniqueCityId = GetUniqueCityId(city);
-					local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;	
-					local cityPressureMap = gFranchiseCityPressureMap[corpFranchise.Type] or {};	
-					cityPressureMap[uniqueCityId] = -1;
-					local gFranchiseCityFanMap = gT.gFranchiseCityFanMap;
-					local cityFanMap = gFranchiseCityFanMap[corpFranchise.Type] or {};
-					cityFanMap[uniqueCityId] = -1;
+					ResetPressureAndFans(corpFranchise, city);
 				end
+				
 				local cityCanBuildFranchise = CityCanBuildFranchise(city, corpFranchise);
 				local distance = Map.PlotDistance(city:GetX(), city:GetY(), hqCity:GetX(), hqCity:GetY());
 				local cityIsInRange = (hqPressureRadius == -1 or distance <= hqPressureRadius);
-				print("city in range:" .. city:GetName() .. ":" .. tostring(cityIsInRange));
+				--print("city in range:" .. city:GetName() .. ":" .. tostring(cityIsInRange));
 				if (not cityHasFranchise) and cityIsInRange and cityCanBuildFranchise then
 					cities[cityCount] = city;
 					cityCount = cityCount + 1;
@@ -212,19 +208,19 @@ function GetCitiesToSpreadFranchise(corpFranchise, corpOwner, hqCity)
 		end
 	end
 	
-	print("num cities to spread ", cityCount - 1);
+	--print("num cities to spread ", cityCount - 1);
 	return cities;
 end
 
 -- Increases the city's franchise pressure by the passed amount
 function IncreaseFranchisePressure(city, corpFranchise, pressure)
-	print("--IncreaseFranchisePressure");
+	--print("--IncreaseFranchisePressure");
 	local uniqueCityId = GetUniqueCityId(city);
-	print("city", city:GetName());
-	print("city id", city:GetID());
-	print("city unique id", uniqueCityId);
-	print("franchise", corpFranchise.Type);
-	print("pressure", pressure);	
+	--print("city", city:GetName());
+	--print("city id", city:GetID());
+	--print("city unique id", uniqueCityId);
+	--print("franchise", corpFranchise.Type);
+	--print("pressure", pressure);	
 	local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;	
 	local cityPressureMap = gFranchiseCityPressureMap[corpFranchise.Type] or {};	
 	local currentCityPressure = cityPressureMap[uniqueCityId] or 0;
@@ -234,17 +230,17 @@ end
 
 -- Spreads calculated franchise pressure to a city
 function SpreadFranchisePressure(city, corpOwner, hqCity, corpHq, corpFranchise)
-	print("--SpreadFranchisePressure");
+	--print("--SpreadFranchisePressure");
 	local pressure = CalculatePressureToSpread(city, corpOwner, hqCity, corpHq);
 	IncreaseFranchisePressure(city, corpFranchise, pressure);
 end
 
 function ApplyFranchisePressure(corpOwner, corpHq, hqCity, corpFranchise)
-	print("--ApplyFranchisePressure");
+	--print("--ApplyFranchisePressure");
 	local cities = GetCitiesToSpreadFranchise(corpFranchise, corpOwner, hqCity);	
 	for i, city in ipairs(cities) do
-		print("spread city", city:GetName());
-		print("spread city id", city:GetID());
+		--print("spread city", city:GetName());
+		--print("spread city id", city:GetID());
 		local cityPlayer = Players[city:GetOwner()];
 		SpreadFranchisePressure(city, corpOwner, hqCity, corpHq, corpFranchise);		
 	end
@@ -261,18 +257,18 @@ function IncreaseFranchiseFans(city, corpFranchise)
 end
 
 function ConvertFranchisePressureIntoFans(corpFranchise)
-	print("--ConvertFranchisePressureIntoFans");
+	--print("--ConvertFranchisePressureIntoFans");
 	
 	local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;		
 	local pressureBucketSize = GetPressureBucketSize();
 	
 	cityPressureMap = gFranchiseCityPressureMap[corpFranchise.Type] or {};
 	for uniqueCityId, pressure in pairs(cityPressureMap) do
-		print("unique city id", uniqueCityId);
-		print("pressure", pressure);
+		--print("unique city id", uniqueCityId);
+		--print("pressure", pressure);
 		local city = GetCityById(uniqueCityId);
 		if pressure >= pressureBucketSize then
-			print("converting pressure into a fan:" .. city:GetName() .. ":f[" .. corpFranchise.Type .."]");
+			--print("converting pressure into a fan:" .. city:GetName() .. ":f[" .. corpFranchise.Type .."]");
 			IncreaseFranchiseFans(city, corpFranchise);
 			cityPressureMap[uniqueCityId] = 0;					
 		end
@@ -281,7 +277,7 @@ function ConvertFranchisePressureIntoFans(corpFranchise)
 end
 
 function BuildFranchiseAndNotify(city, corpFranchise)
-	print("--BuildFranchiseAndNotify");
+	--print("--BuildFranchiseAndNotify");
 	
 	-- build
 	city:SetNumRealBuilding(corpFranchise.ID, 1);
@@ -290,7 +286,7 @@ function BuildFranchiseAndNotify(city, corpFranchise)
 	local franchiseName = Locale.ConvertTextKey(corpFranchise.Description);
 	local header = franchiseName .. " Corporation spreads to " .. city:GetName() .. "!";
 	local message = "Due to popular demand, the people of " .. city:GetName() .. " have built a " .. franchiseName .. " franchise.";
-	print(message);	
+	--print(message);	
 	local activePlayer = Players[Game.GetActivePlayer()];
 	activePlayer:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, message, header, city:GetX(), city:GetY());
 	
@@ -302,7 +298,7 @@ function BuildFranchiseAndNotify(city, corpFranchise)
 end
 
 function SpreadFranchisesToCities(corpFranchise)	
-	print("--SpreadFranchisesToCities");
+	--print("--SpreadFranchisesToCities");
 	local gFranchiseCityFanMap = gT.gFranchiseCityFanMap;
 	
 	cityFanMap = gFranchiseCityFanMap[corpFranchise.Type] or {};	
@@ -338,12 +334,12 @@ function GetFranchiseSpreadRadius(player)
 	
 	-- base radius based on world size
 	local radius = world.CorporationSpreadDistance;	
-	print("radius start", radius);
+	--print("radius start", radius);
 	
 	-- apply era modifier to radius
 	radius = radius + round(radius * era.CorporationSpreadDistanceModifier / 100);
 		
-	print("radius final", radius);
+	--print("radius final", radius);
 	return radius;
 end
 

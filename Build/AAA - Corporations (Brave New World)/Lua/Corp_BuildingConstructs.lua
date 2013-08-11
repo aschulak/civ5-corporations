@@ -27,7 +27,7 @@ GameEvents.PlayerCanConstruct.Add(CanConstructFranchise);
 
 -- can the player contruct a building that requires corporation ownership?
 function CanConstructCorporationOwnershipRequiredBuilding(iPlayer, buildingTypeID)
-	--print("--CanConstructCorporationOwnershipRequiredBuilding");	
+	----print("--CanConstructCorporationOwnershipRequiredBuilding");	
 	local gCorpHqOwners = gT.gCorpHqOwners;
 	local corporationOwnershipRequired = GameInfo.Buildings[buildingTypeID].CorporationOwnershipRequired;
 	
@@ -36,7 +36,7 @@ function CanConstructCorporationOwnershipRequiredBuilding(iPlayer, buildingTypeI
 			local corpOwnerID = gCorpHqOwners[corp.ID];
 			local corpOwner = Players[corpOwnerID];
 
-			print("corpOwner", corpOwner);
+			--print("corpOwner", corpOwner);
 			if corpOwner ~= nil then				
 				if corpOwner:GetID() == iPlayer then
 					return true;
@@ -52,7 +52,7 @@ GameEvents.PlayerCanConstruct.Add(CanConstructCorporationOwnershipRequiredBuildi
 
 -- can the player construct a building that requires a corporation headquarters be in that city?
 function CanConstructCorporationHeadquartersCityBuilding(iPlayer, iCity, buildingTypeID)
-	--print("--CanConstructCorporationHeadquartersCityBuilding");
+	----print("--CanConstructCorporationHeadquartersCityBuilding");
 	local gCorpHqOwners = gT.gCorpHqOwners;
 	local corporationHeadquartersCity = GameInfo.Buildings[buildingTypeID].CorporationHeadquartersCity;
 	
@@ -60,7 +60,7 @@ function CanConstructCorporationHeadquartersCityBuilding(iPlayer, iCity, buildin
 		for corp in GameInfo.Corporations() do	
 			local corpOwnerID = gCorpHqOwners[corp.ID];
 			local corpOwner = Players[corpOwnerID];
-			print("corpOwner", corpOwner);
+			--print("corpOwner", corpOwner);
 			if corpOwner ~= nil then				
 				if corpOwner:GetID() == iPlayer then					
 					local city = corpOwner:GetCityByID(iCity);

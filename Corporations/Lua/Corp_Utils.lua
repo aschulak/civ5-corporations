@@ -13,7 +13,7 @@ local gT = MapModData.gT;
 --
 
 MapModData.gCorpUtilsInitted = MapModData.gCorpUtilsInitted or false;
-print("MapModData.gCorpUtilsInitted", MapModData.gCorpUtilsInitted);
+--print("MapModData.gCorpUtilsInitted", MapModData.gCorpUtilsInitted);
 
 -- only do this once regardless of how many times this file gets included
 if not MapModData.gCorpUtilsInitted then
@@ -23,7 +23,7 @@ if not MapModData.gCorpUtilsInitted then
 	for building in GameInfo.Buildings() do
 		if building.CorporationSpreadPressureModifier ~= 0 then
 			MapModData.gCorporationSpreadPressureBuildings[i] = building;
-			print("stored corp spread pressure building", building.Type);
+			--print("stored corp spread pressure building", building.Type);
 		end
 		i = i + 1;
 	end	
@@ -34,7 +34,7 @@ if not MapModData.gCorpUtilsInitted then
 	for building in GameInfo.Buildings() do
 		if building.CorporationSpreadDistanceModifier ~= 0 then
 			MapModData.gCorporationSpreadDistanceBuildings[i] = building;
-			print("stored corp spread distance building", building.Type);
+			--print("stored corp spread distance building", building.Type);
 		end
 		i = i + 1;
 	end	
@@ -45,7 +45,7 @@ if not MapModData.gCorpUtilsInitted then
 	for building in GameInfo.Buildings() do
 		if building.CorporationFranchiseGoldRevenueModifier ~= 0 then
 			MapModData.gCorporationFranchiseGoldRevenueModifierBuildings[i] = building;
-			print("stored corp franchise gold building", building.Type);
+			--print("stored corp franchise gold building", building.Type);
 		end
 		i = i + 1;
 	end	
@@ -93,25 +93,25 @@ end
 -- look through all the players and return the city
 -- cityId is unique id from above
 function GetCityById(uniqueCityId)	
-	--print("--GetCityById");
-	--print("gcbi cityId", uniqueCityId);
+	----print("--GetCityById");
+	----print("gcbi cityId", uniqueCityId);
 	local uniqueCityIdInfo = split(uniqueCityId, ":");
 	local cityId = tonumber(uniqueCityIdInfo[1]);
 	local cityX = tonumber(uniqueCityIdInfo[2]);
 	local cityY = tonumber(uniqueCityIdInfo[3]);
 	
-	--print("cityId", cityId);
-	--print("cityX", cityX);
-	--print("cityY", cityY);
+	----print("cityId", cityId);
+	----print("cityX", cityX);
+	----print("cityY", cityY);
 	
 	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
 		local player = Players[playerNum];					
 		if (player ~= nil and player:IsAlive() and player:GetNumCities() > 0) then			
 			city = player:GetCityByID(cityId);
 			if city ~= nil and city:GetX() == cityX and city:GetY() == cityY then
-				--print("looking at city id", city:GetID());
-				--print("looking at city name", city:GetName());
-				--print("got city");
+				----print("looking at city id", city:GetID());
+				----print("looking at city name", city:GetName());
+				----print("got city");
 				return city;
 			end
 		end
@@ -122,19 +122,19 @@ end
 
 -- update all the corp hq owners
 function UpdateCorpHqOwners(iPlayer)
-	print("--UpdateCorpHqOwners");
+	--print("--UpdateCorpHqOwners");
 	local gCorpHqOwners = gT.gCorpHqOwners;
 				
 	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
 		local player = Players[playerNum];					
 		if (player ~= nil and player:IsAlive() and not player:IsMinorCiv() and not player:IsBarbarian() and player:GetNumCities() > 0) then			
-			--print("UCHO Player", player:GetName());		
+			----print("UCHO Player", player:GetName());		
 			for corp in GameInfo.Corporations() do
 				gCorpHqOwners[corp.ID] = gCorpHqOwners[corp.ID] or nil;
-				--print("UCHO Corp", corp.Type);
+				----print("UCHO Corp", corp.Type);
 				local corpHq = GameInfo.Buildings[corp.HeadquartersBuildingType];
 				if player:CountNumBuildings(corpHq.ID) > 0 then
-					--print("UCHO Owns Hq", player:GetName());
+					----print("UCHO Owns Hq", player:GetName());
 					gCorpHqOwners[corp.ID] = player:GetID();
 				end
 			end
@@ -155,19 +155,19 @@ end
 
 -- update all the corp share owners
 function UpdateCorpSharesOwners(iPlayer)
-	print("--UpdateCorpSharesOwners");
+	--print("--UpdateCorpSharesOwners");
 	local gCorpSharesOwners = gT.gCorpSharesOwners;
 	
 	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
 		local player = Players[playerNum];					
 		if (player ~= nil and player:IsAlive() and not player:IsMinorCiv() and not player:IsBarbarian() and player:GetNumCities() > 0) then			
-			--print("UCHO Player", player:GetName());		
+			----print("UCHO Player", player:GetName());		
 			for corp in GameInfo.Corporations() do
-				--print("UCHO Corp", corp.Type);				
+				----print("UCHO Corp", corp.Type);				
 				local corpShares = GameInfo.Resources[corp.SharesResourceType];
-				--print("UCHO Corp Shares", corpShares.Type);
+				----print("UCHO Corp Shares", corpShares.Type);
 				local numCorpShares = player:GetNumResourceTotal(corpShares.ID, true);
-				--print("UCHO Num Shares", numCorpShares);
+				----print("UCHO Num Shares", numCorpShares);
 				gCorpSharesOwners[corp.ID] = gCorpSharesOwners[corp.ID] or {};
 				gCorpSharesOwners[corp.ID][player:GetID()] = numCorpShares;
 			end
@@ -197,13 +197,13 @@ end
 
 -- get the city with a corporation building id
 function GetCityWithCorporationHq(corp, playerWithCorporation)
-	print("--GetCityWithCorporationHq");
+	--print("--GetCityWithCorporationHq");
 		
 	if playerWithCorporation == nil then
 		return nil;
 	end		
 	
-	print("corp hq type", corp.HeadquartersBuildingType);
+	--print("corp hq type", corp.HeadquartersBuildingType);
 	local corpHq = GameInfo.Buildings[corp.HeadquartersBuildingType];	
 	for city in playerWithCorporation:Cities() do
 		if city:GetNumBuilding(corpHq.ID) > 0 then
@@ -217,7 +217,7 @@ end
 -- Does the Player have this Policy?
 -- Borrowed from Emigration mod
 function HasPolicy(player, policyType)	-- policyType is a string, e.g. "POLICY_LIBERTY"
-	print("--HasPolicy");
+	--print("--HasPolicy");
 	for policy in GameInfo.Policies() do
 		if policy.Type == policyType then
 			return player:HasPolicy(policy.ID);
@@ -228,7 +228,7 @@ end
 
 -- Does the Player have all the policies in the Commerce tree?
 function HasAllCommercePolicies(player)
-	print("--HasAllCommercePolicies");	
+	--print("--HasAllCommercePolicies");	
 	local commerce = "POLICY_COMMERCE";	
 	local tradeUnions = "POLICY_TRADE_UNIONS";
 	local entepreneurship = "POLICY_ENTREPRENEURSHIP";	
@@ -272,6 +272,17 @@ function GetFansForCity(corpFranchise, city)
 	return fans;
 end
 
+-- reset pressure and fans to 0 for a city and corp
+function ResetPressureAndFans(corpFranchise, city)
+	local uniqueCityId = GetUniqueCityId(city);
+	local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;	
+	local cityPressureMap = gFranchiseCityPressureMap[corpFranchise.Type] or {};	
+	cityPressureMap[uniqueCityId] = 0;
+	local gFranchiseCityFanMap = gT.gFranchiseCityFanMap;
+	local cityFanMap = gFranchiseCityFanMap[corpFranchise.Type] or {};
+	cityFanMap[uniqueCityId] = 0;
+end
+
 -- Get the profit modifier for corporation profits from local franchises
 function GetLocalFranchiseGoldRevenueModifier(player)
 	local modifier = 0;
@@ -300,7 +311,7 @@ end
 
 -- Does the Player have a Technology that allows the spread of corporations?
 function HasCorporationSpreadAllowedTechnology(player)
-	print("--HasCorporationSpreadAllowedTechnology");
+	--print("--HasCorporationSpreadAllowedTechnology");
 	
 	-- quick cheat to save time
 	local massMediaTech = GameInfo.Technologies["TECH_MASS_MEDIA"];
@@ -326,7 +337,7 @@ end
 
 -- Does the Player have a Technology that allows unlimited Corporation spread distance?
 function HasUnlimitedCorporationSpreadDistanceTechnology(player)
-	print("--HasUnlimitedCorporationSpreadDistanceTechnology");
+	--print("--HasUnlimitedCorporationSpreadDistanceTechnology");
 	
 	-- quick cheat to save time
 	local globalTech = GameInfo.Technologies["TECH_GLOBALIZATION"];
@@ -351,7 +362,7 @@ end
 
 -- spread distance modifier based on buildings
 function GetCorporationSpreadDistanceModifierFromBuildings(city) 
-	print("--GetCorporationSpreadDistanceModifierFromBuildings");
+	--print("--GetCorporationSpreadDistanceModifierFromBuildings");
 	local modifier = 0;
 	
 	for i, building in pairs(MapModData.gCorporationSpreadDistanceBuildings) do		
@@ -365,7 +376,7 @@ end
 
 -- spread pressure modifier based on buildings
 function GetCorporationSpreadModifierFromBuildings(city)
-	print("--GetCorporationSpreadModifierFromBuildings");
+	--print("--GetCorporationSpreadModifierFromBuildings");
 	local modifier = 0;
 	
 	for i, building in pairs(MapModData.gCorporationSpreadPressureBuildings) do		
@@ -379,7 +390,7 @@ end
 
 -- spread distance modifier based on buildings
 function GetCorporationFranchiseGoldRevenueModifierFromBuildings(city) 
-	print("--GetCorporationFranchiseGoldRevenueModifierFromBuildings");
+	--print("--GetCorporationFranchiseGoldRevenueModifierFromBuildings");
 	local modifier = 0;
 		
 	for i, building in pairs(MapModData.gCorporationFranchiseGoldRevenueModifierBuildings) do		
@@ -436,7 +447,7 @@ function GetIdeology(player)
 end
 
 function GetCorporationSpreadModifierFromIdeologies(hqPlayer, cityPlayer)
-	print("--GetCorporationSpreadModifierFromIdeologies");	
+	--print("--GetCorporationSpreadModifierFromIdeologies");	
 	local modifier = 0;
 	
 	local hqIdeology = GetIdeology(hqPlayer);
@@ -459,7 +470,7 @@ function GetCorporationSpreadModifierFromIdeologies(hqPlayer, cityPlayer)
 end
 
 function GetCorporationSpreadModifierFromTraits(player)
-	print("--GetCorporationSpreadModifierFromTraits");	
+	--print("--GetCorporationSpreadModifierFromTraits");	
 	local leader = GameInfo.Leaders[player:GetLeaderType()];
 	local leaderTrait = GameInfo.Leader_Traits("LeaderType ='" .. leader.Type .. "'")();
 	local traitType = leaderTrait.TraitType;
@@ -468,25 +479,25 @@ function GetCorporationSpreadModifierFromTraits(player)
 end
 
 function GetCorporationSpreadModifierFromReligion(hqPlayer, city)
-	print("--GetCorporationSpreadModifierFromReligion");	
+	--print("--GetCorporationSpreadModifierFromReligion");	
 	local modifier = 0;
 	
 	local religionId = hqPlayer:GetReligionCreatedByPlayer();
-	print("religionId", religionId);
+	--print("religionId", religionId);
 	if religionId > 0 then
 		if religionId == city:GetReligiousMajority() then
-			print("same religion as city");
+			--print("same religion as city");
 			for i, beliefId in ipairs(Game.GetBeliefsInReligion(religionId)) do
-				print("beliefId", beliefId);
+				--print("beliefId", beliefId);
 				local belief = GameInfo.Beliefs[beliefId];
-				print("belief type", belief.Type);
-				print("belief csm", belief.CorporationSpreadPressureModifier);
+				--print("belief type", belief.Type);
+				--print("belief csm", belief.CorporationSpreadPressureModifier);
 				modifier = modifier + belief.CorporationSpreadPressureModifier;
 			end
 		end
 	end
 	
-	print("religious mod", modifier);
+	--print("religious mod", modifier);
 	return modifier;
 end
 
@@ -496,35 +507,35 @@ function SaveFranchiseSpreadData()
 end
 
 function PrintFranchisePressureMap()
-	print("--PrintFranchisePressureMap");	
+	--print("--PrintFranchisePressureMap");	
 	local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;
 	
 	for franchiseId, cityPressureMap in pairs(gFranchiseCityPressureMap) do		
-		print("---franchise id", franchiseId);
+		--print("---franchise id", franchiseId);
 		for cityId, pressure in pairs(cityPressureMap) do
-			print("----unique city id", cityId);
-			print("----pressure", pressure);
+			--print("----unique city id", cityId);
+			--print("----pressure", pressure);
 			--local city = GetCityById(cityId);
-			--print(city:GetName() .. " = f[" .. franchiseId .. "] Pressure:" .. pressure);
+			----print(city:GetName() .. " = f[" .. franchiseId .. "] Pressure:" .. pressure);
 		end		
 	end
-	print("--PrintFranchisePressureMap DONE");	
+	--print("--PrintFranchisePressureMap DONE");	
 end
 
 function PrintFranchiseFanMap()
-	print("--PrintFranchiseFanMap");	
+	--print("--PrintFranchiseFanMap");	
 	
 	local gFranchiseCityFanMap = gT.gFranchiseCityFanMap;
 	for franchiseId, cityFanMap in pairs(gFranchiseCityFanMap) do	
-		print("---franchise id", franchiseId);	
+		--print("---franchise id", franchiseId);	
 		for cityId, fans in pairs(cityFanMap) do
-			print("----unique city id", cityId);
-			print("----fans", fans);
+			--print("----unique city id", cityId);
+			--print("----fans", fans);
 			--local city = GetCityById(cityId);
-			--print(city:GetName() .. " = f[" .. franchiseId .. "] Fans:" .. fans);
+			----print(city:GetName() .. " = f[" .. franchiseId .. "] Fans:" .. fans);
 		end		
 	end
-	print("--PrintFranchiseFanMap DONE");	
+	--print("--PrintFranchiseFanMap DONE");	
 end
 
 print("Corp_Utils.lua loaded.");

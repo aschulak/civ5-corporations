@@ -17,7 +17,7 @@ local gSendNotificationsTurnCounter = 5;
 -- reward all corporation owners with their corporation revenue
 -- run once for each player on their turn
 function RewardCorporationOwners(iPlayer)
-	print("--RewardCorporationOwners");
+	--print("--RewardCorporationOwners");
 	local player = Players[iPlayer];
 	
 	-- quit if minor or barb
@@ -34,9 +34,9 @@ function RewardCorporationOwners(iPlayer)
 	
 	for corpId, playerCorpShares in pairs(gCorpSharesOwners) do
 		local corp = GameInfo.Corporations[corpId];
-		print("1corp", corp.Type);
+		--print("1corp", corp.Type);
 		local corpHqOwnerId = gCorpHqOwners[corpId];
-		print("2owner id", corpHqOwnerId);
+		--print("2owner id", corpHqOwnerId);
 		
 		-- loop only if there is an owner of the hq
 		if corpHqOwnerId ~= nil then						
@@ -45,7 +45,7 @@ function RewardCorporationOwners(iPlayer)
 
 			for corpOwnerId, numCorpShares in pairs(playerCorpShares) do				
 				local corpOwner = Players[corpOwnerId];
-				print("numCorpShares", numCorpShares);
+				--print("numCorpShares", numCorpShares);
 										
 				if corpOwner ~= nil and corpOwner:GetID() == iPlayer and numCorpShares > 0 then
 					local franchiseCount, corporationRevenue = ProcessCorporationRevenue(corp, corpOwner, numCorpShares);
@@ -57,7 +57,7 @@ function RewardCorporationOwners(iPlayer)
 
 					-- give the corp owner the gold
 					corpOwner:ChangeGold(corporationRevenue);						
-					print("gave " .. corpOwner:GetName() .. " " .. corporationRevenue .. " gold in corporation revenue.");
+					--print("gave " .. corpOwner:GetName() .. " " .. corporationRevenue .. " gold in corporation revenue.");
 
 					local sendNotifications = ShouldSendNotifications();
 					if sendNotifications then
@@ -66,7 +66,7 @@ function RewardCorporationOwners(iPlayer)
 						
 						local header = "Financial update from " .. Locale.ConvertTextKey(corpHq.Description);
 						local message = 'You gain ' .. corporationRevenue .. ' [ICON_GOLD] Gold per turn from the ' .. franchiseCount .. ' ' .. Locale.ConvertTextKey(corpFranchise.Description) .. ' franchises in the world.';
-						print(message);
+						--print(message);
 						corpOwner:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, message, header);
 						
 						-- keep around in case someone fixes custom notifications
@@ -87,7 +87,7 @@ end
 
 -- cycle through all players to determine how much gold in corporation revenue to collect
 function ProcessCorporationRevenue(corp, corpSharesOwner, numCorpShares)
-	print('--ProcessCorporationRevenue');
+	--print('--ProcessCorporationRevenue');
 	
 	local corpFranchise = GameInfo.Buildings[corp.FranchiseBuildingType];
 		
@@ -122,8 +122,8 @@ function ProcessCorporationRevenue(corp, corpSharesOwner, numCorpShares)
 		end
 	end
 		
-	print("total franchises", totalFranchises);		
-	print("total corp. revenue", totalCorporationRevenue);
+	--print("total franchises", totalFranchises);		
+	--print("total corp. revenue", totalCorporationRevenue);
 	return totalFranchises, totalCorporationRevenue;
 end
 
@@ -131,3 +131,5 @@ end
 function ShouldSendNotifications()
 	return (Game.GetGameTurn() % gSendNotificationsTurnCounter == 0)
 end
+
+print("Corp_Revenue.lua loaded.");
