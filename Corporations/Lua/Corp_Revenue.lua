@@ -34,9 +34,7 @@ function RewardCorporationOwners(iPlayer)
 	
 	for corpId, playerCorpShares in pairs(gCorpSharesOwners) do
 		local corp = GameInfo.Corporations[corpId];
-		--print("1corp", corp.Type);
 		local corpHqOwnerId = gCorpHqOwners[corpId];
-		--print("2owner id", corpHqOwnerId);
 		
 		-- loop only if there is an owner of the hq
 		if corpHqOwnerId ~= nil then						
@@ -45,7 +43,6 @@ function RewardCorporationOwners(iPlayer)
 
 			for corpOwnerId, numCorpShares in pairs(playerCorpShares) do				
 				local corpOwner = Players[corpOwnerId];
-				--print("numCorpShares", numCorpShares);
 										
 				if corpOwner ~= nil and corpOwner:GetID() == iPlayer and numCorpShares > 0 then
 					local franchiseCount, corporationRevenue = ProcessCorporationRevenue(corp, corpOwner, numCorpShares);
@@ -66,7 +63,6 @@ function RewardCorporationOwners(iPlayer)
 						
 						local header = "Financial update from " .. Locale.ConvertTextKey(corpHq.Description);
 						local message = 'You gain ' .. corporationRevenue .. ' [ICON_GOLD] Gold per turn from the ' .. franchiseCount .. ' ' .. Locale.ConvertTextKey(corpFranchise.Description) .. ' franchises in the world.';
-						--print(message);
 						corpOwner:AddNotification(NotificationTypes.NOTIFICATION_GENERIC, message, header);
 						
 						-- keep around in case someone fixes custom notifications

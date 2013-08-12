@@ -188,23 +188,21 @@ function GetCitiesToSpreadFranchise(corpFranchise, corpOwner, hqCity)
 		if (playerIsValid and playerDoesNotOwnHq and playerHasMetHqOwner) then
 			for city in player:Cities() do
 				local cityHasFranchise = city:GetNumBuilding(corpFranchise.ID) > 0;
-				--print("city", city:GetName());
-				--print("has franchise", tostring(cityHasFranchise));
+				
 				-- make sure pressure and fans gets reset to 0 if the city has a franchise
 				if cityHasFranchise then
-					local uniqueCityId = GetUniqueCityId(city);
-					local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;	
-					local cityPressureMap = gFranchiseCityPressureMap[corpFranchise.Type] or {};	
-					cityPressureMap[uniqueCityId] = -1;
-					local gFranchiseCityFanMap = gT.gFranchiseCityFanMap;
-					local cityFanMap = gFranchiseCityFanMap[corpFranchise.Type] or {};
-					cityFanMap[uniqueCityId] = -1;
+					--print("city already has franchise!");
+					ResetPressureAndFansForCity(corpFranchise, city);
 				end
+				
 				local cityCanBuildFranchise = CityCanBuildFranchise(city, corpFranchise);
+				--print("can build", cityCanBuildFranchise);
 				local distance = Map.PlotDistance(city:GetX(), city:GetY(), hqCity:GetX(), hqCity:GetY());
 				local cityIsInRange = (hqPressureRadius == -1 or distance <= hqPressureRadius);
-				--print("city in range:" .. city:GetName() .. ":" .. tostring(cityIsInRange));
+				--print("city is in range", tostring(cityIsInRange));
+				
 				if (not cityHasFranchise) and cityIsInRange and cityCanBuildFranchise then
+					--print("can spread to", city:GetName());
 					cities[cityCount] = city;
 					cityCount = cityCount + 1;
 				end
@@ -220,11 +218,6 @@ end
 function IncreaseFranchisePressure(city, corpFranchise, pressure)
 	--print("--IncreaseFranchisePressure");
 	local uniqueCityId = GetUniqueCityId(city);
-	--print("city", city:GetName());
-	--print("city id", city:GetID());
-	--print("city unique id", uniqueCityId);
-	--print("franchise", corpFranchise.Type);
-	--print("pressure", pressure);	
 	local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;	
 	local cityPressureMap = gFranchiseCityPressureMap[corpFranchise.Type] or {};	
 	local currentCityPressure = cityPressureMap[uniqueCityId] or 0;
@@ -243,8 +236,6 @@ function ApplyFranchisePressure(corpOwner, corpHq, hqCity, corpFranchise)
 	--print("--ApplyFranchisePressure");
 	local cities = GetCitiesToSpreadFranchise(corpFranchise, corpOwner, hqCity);	
 	for i, city in ipairs(cities) do
-		--print("spread city", city:GetName());
-		--print("spread city id", city:GetID());
 		local cityPlayer = Players[city:GetOwner()];
 		SpreadFranchisePressure(city, corpOwner, hqCity, corpHq, corpFranchise);		
 	end
@@ -268,14 +259,17 @@ function ConvertFranchisePressureIntoFans(corpFranchise)
 	
 	cityPressureMap = gFranchiseCityPressureMap[corpFranchise.Type] or {};
 	for uniqueCityId, pressure in pairs(cityPressureMap) do
-		--print("unique city id", uniqueCityId);
-		--print("pressure", pressure);
 		local city = GetCityById(uniqueCityId);
-		if pressure >= pressureBucketSize then
-			--print("converting pressure into a fan:" .. city:GetName() .. ":f[" .. corpFranchise.Type .."]");
-			IncreaseFranchiseFans(city, corpFranchise);
-			cityPressureMap[uniqueCityId] = 0;					
-		end
+				
+		if city ~= nil then
+			if pressure >= pressureBucketSize then
+				IncreaseFranchiseFans(city, corpFranchise);
+				cityPressureMap[uniqueCityId] = 0;					
+			end	
+		else
+			-- city might have been razed
+			cityPressureMap[uniqueCityId] = nil;
+		end				
 	end
 	
 end
@@ -306,19 +300,26 @@ function SpreadFranchisesToCities(corpFranchise)
 	local gFranchiseCityFanMap = gT.gFranchiseCityFanMap;
 	
 	cityFanMap = gFranchiseCityFanMap[corpFranchise.Type] or {};	
-	for cityId, fans in pairs(cityFanMap) do
-		local city = GetCityById(cityId);
-		local population = city:GetPopulation();						
-		if fans >= round(population / 2) then
-			BuildFranchiseAndNotify(city, corpFranchise);
-			cityFanMap[cityId] = 0;
-		end	
+	for uniqueCityId, fans in pairs(cityFanMap) do
+		local city = GetCityById(uniqueCityId);
+		
+		if city ~= nil then
+			local population = city:GetPopulation();						
+			if fans > 0 and fans >= round(population / 2) then
+				BuildFranchiseAndNotify(city, corpFranchise);
+				cityFanMap[uniqueCityId] = nil;
+			end	
+		else
+			-- city might have been razed
+			cityFanMap[uniqueCityId] = nil;			
+		end
 	end	
 end
 
 -- Can the city build the franchise?
 function CityCanBuildFranchise(city, corpFranchise)
-	local player = Players[city:GetOwner()];	
+	--print("--CityCanBuildFranchise");
+	local player = Players[city:GetOwner()];
 	return player:CanConstruct(corpFranchise.ID) and city:CanConstruct(corpFranchise.ID);
 end
 
@@ -338,12 +339,10 @@ function GetFranchiseSpreadRadius(player)
 	
 	-- base radius based on world size
 	local radius = world.CorporationSpreadDistance;	
-	--print("radius start", radius);
 	
 	-- apply era modifier to radius
 	radius = radius + round(radius * era.CorporationSpreadDistanceModifier / 100);
 		
-	--print("radius final", radius);
 	return radius;
 end
 

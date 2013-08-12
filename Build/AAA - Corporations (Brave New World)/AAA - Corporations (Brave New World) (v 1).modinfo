@@ -13,7 +13,7 @@ This mod provides an alternate way for your civilization to amass a fortune in [
 [NEWLINE][ICON_BULLET] 7 new World Wonders
 [NEWLINE][ICON_BULLET] 7 new Luxury Resources
 [NEWLINE][ICON_BULLET] 3 new Religious Beliefs
-[NEWLINE][ICON_BULLET] 3 new Ideology Policies
+[NEWLINE][ICON_BULLET] 3 new Ideological Tenets
 [NEWLINE][ICON_BULLET] 3 enhanced Social Policies
 [NEWLINE][ICON_BULLET] 2 new Technologies, 1 enhanced
 [NEWLINE][ICON_BULLET] 2 new National Wonders
@@ -88,16 +88,17 @@ Special thanks:
     <File md5="342108F0060503AA0146C7B7720B65E7" import="1">ART/SharesFontIcon.ggxml</File>
     <File md5="03A3163BE4BB680A2237A94678CE47B9" import="1">ART/ThinkDrinkSplash.dds</File>
     <File md5="F5E8C60FFC7600FC1E1A8A2E57E38220" import="1">ART/YoungArmySplash.dds</File>
+    <File md5="024CC3B6373D9341D48594157C4B5048" import="0">Bugs.txt</File>
     <File md5="6ED8204CCE30D0BA6DDBB20810D1C01C" import="0">CorporationsBNWSteam.jpg</File>
     <File md5="6CAB9BB5211943A75146A91B4CB72EA7" import="0">Ideas.txt</File>
     <File md5="F9C2566BF75551758E6C712BBF6F8A75" import="1">Lua/Corp_Bootstrap.lua</File>
     <File md5="D345D3E18EA65DADFFC3D2586C9F49BE" import="1">Lua/Corp_BuildingConstructs.lua</File>
     <File md5="EE80ED2B0C10AF31F689DF6605C7F1A4" import="0">Lua/Corporations.lua</File>
     <File md5="2DF2961627D9444166EDF1C4E764F5A0" import="1">Lua/Corp_Defines.lua</File>
-    <File md5="6D01E8A316C759724C482C75AECF5770" import="1">Lua/Corp_FranchiseSpread.lua</File>
-    <File md5="77226D449DF2BA1CECB62D33E46A2FE9" import="1">Lua/Corp_Revenue.lua</File>
-    <File md5="9B7F85539559EAD8923E1138659FF4D4" import="1">Lua/Corp_UI.lua</File>
-    <File md5="E1D64FEC8490120BCD84C57059BCE974" import="1">Lua/Corp_Utils.lua</File>
+    <File md5="3B28303DE61979D20990C4B7E000FF9E" import="1">Lua/Corp_FranchiseSpread.lua</File>
+    <File md5="7E5CDED5911CDF1D7604EE327769239B" import="1">Lua/Corp_Revenue.lua</File>
+    <File md5="B7C4F236A4F14FB62F89871269280577" import="1">Lua/Corp_UI.lua</File>
+    <File md5="ADC345D14781F68D3D33BCF5A48342E6" import="1">Lua/Corp_Utils.lua</File>
     <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="1">Lua/SaveUtils.lua</File>
     <File md5="4B97DB1E8B8AACCFD3F4D33F8DF3AB14" import="1">Lua/TableSaverLoader.lua</File>
     <File md5="4C6EE1111EAE45671C635AFEF0DEFBB8" import="0">SQL/Corp_TableUpdates.sql</File>
@@ -110,7 +111,7 @@ Special thanks:
     <File md5="AD5F997424BFF67A691EFDFC1072DECB" import="1">UI/InGame/TechButtonInclude.lua</File>
     <File md5="73CE07DD3F04036D5E169E5A881E6C84" import="1">UI/InGame/TopPanel.lua</File>
     <File md5="4C69F87ACBB790BB7FA8D4D05D6F30E4" import="1">UI/InGame/WorldView/TradeLogic.lua</File>
-    <File md5="94903799A504CA7118C483F9673F28F8" import="0">XML/BasicInfos/Corp_Concepts.xml</File>
+    <File md5="F37C5834D0D4EEC40E43876DC87CDFB3" import="0">XML/BasicInfos/Corp_Concepts.xml</File>
     <File md5="7E5BF83B3B17B4D2A102F601DFBB36FA" import="0">XML/Buildings/Corp_BroadcastTower.xml</File>
     <File md5="45810716CB34080CB4E7481F6529AEF3" import="0">XML/Buildings/Corp_Clothes.xml</File>
     <File md5="31FB386BAC35B84932E7814859B48765" import="0">XML/Buildings/Corp_ClothesHQ.xml</File>
