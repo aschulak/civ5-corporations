@@ -15,7 +15,7 @@ local gSendNotificationsTurnCounter = 5;
 --
 
 -- reward all corporation owners with their corporation revenue
--- run once for each player on their turn
+-- GameEvents.PlayerDoTurn
 function RewardCorporationOwners(iPlayer)
 	--print("--RewardCorporationOwners");
 	local player = Players[iPlayer];

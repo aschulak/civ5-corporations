@@ -46,6 +46,10 @@ Requires Brave New World.
 
 [NEWLINE][NEWLINE]
 
+The code for this mod can be found on GitHub: https://github.com/Envoy/civ5-corporations
+
+[NEWLINE][NEWLINE]
+
 Follow me on twitter @fourfourhero to get notifications about updates to this mod as well as others. 
 
 [NEWLINE][NEWLINE]
@@ -53,8 +57,10 @@ Follow me on twitter @fourfourhero to get notifications about updates to this mo
 Special thanks:
 [NEWLINE][ICON_BULLET] EUGENE
 [NEWLINE][ICON_BULLET] DJ_MD5
-[NEWLINE][ICON_BULLET] Pazyryk</Description>
+[NEWLINE][ICON_BULLET] Pazyryk
+[NEWLINE][ICON_BULLET] framedarchitecture</Description>
     <Authors>[COLOR_PLAYER_ORANGE]Envoy[ENDCOLOR] [COLOR_CYAN](@fourfourhero)[ENDCOLOR]</Authors>
+    <SpecialThanks>EUGENE, DJ_MD5</SpecialThanks>
     <HideSetupGame>0</HideSetupGame>
     <AffectsSavedGames>1</AffectsSavedGames>
     <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
@@ -90,15 +96,14 @@ Special thanks:
     <File md5="F5E8C60FFC7600FC1E1A8A2E57E38220" import="1">ART/YoungArmySplash.dds</File>
     <File md5="024CC3B6373D9341D48594157C4B5048" import="0">Bugs.txt</File>
     <File md5="6ED8204CCE30D0BA6DDBB20810D1C01C" import="0">CorporationsBNWSteam.jpg</File>
-    <File md5="6CAB9BB5211943A75146A91B4CB72EA7" import="0">Ideas.txt</File>
     <File md5="F9C2566BF75551758E6C712BBF6F8A75" import="1">Lua/Corp_Bootstrap.lua</File>
-    <File md5="D345D3E18EA65DADFFC3D2586C9F49BE" import="1">Lua/Corp_BuildingConstructs.lua</File>
-    <File md5="EE80ED2B0C10AF31F689DF6605C7F1A4" import="0">Lua/Corporations.lua</File>
+    <File md5="66451B548E00F566FFD643B007987B61" import="1">Lua/Corp_BuildingConstructs.lua</File>
+    <File md5="41E4A9D25063A335B2C0461D033A110E" import="0">Lua/Corporations.lua</File>
     <File md5="2DF2961627D9444166EDF1C4E764F5A0" import="1">Lua/Corp_Defines.lua</File>
-    <File md5="3B28303DE61979D20990C4B7E000FF9E" import="1">Lua/Corp_FranchiseSpread.lua</File>
-    <File md5="7E5CDED5911CDF1D7604EE327769239B" import="1">Lua/Corp_Revenue.lua</File>
-    <File md5="B7C4F236A4F14FB62F89871269280577" import="1">Lua/Corp_UI.lua</File>
-    <File md5="ADC345D14781F68D3D33BCF5A48342E6" import="1">Lua/Corp_Utils.lua</File>
+    <File md5="3120B794ACBD3EDE8E6F1473511A72C6" import="1">Lua/Corp_FranchiseSpread.lua</File>
+    <File md5="75D539EF1494B6C1BDFA308517A29A68" import="1">Lua/Corp_Revenue.lua</File>
+    <File md5="9B7F85539559EAD8923E1138659FF4D4" import="1">Lua/Corp_UI.lua</File>
+    <File md5="C85BA260AB559CC479700DB96A201FBD" import="1">Lua/Corp_Utils.lua</File>
     <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="1">Lua/SaveUtils.lua</File>
     <File md5="4B97DB1E8B8AACCFD3F4D33F8DF3AB14" import="1">Lua/TableSaverLoader.lua</File>
     <File md5="4C6EE1111EAE45671C635AFEF0DEFBB8" import="0">SQL/Corp_TableUpdates.sql</File>
@@ -113,31 +118,31 @@ Special thanks:
     <File md5="4C69F87ACBB790BB7FA8D4D05D6F30E4" import="1">UI/InGame/WorldView/TradeLogic.lua</File>
     <File md5="F37C5834D0D4EEC40E43876DC87CDFB3" import="0">XML/BasicInfos/Corp_Concepts.xml</File>
     <File md5="7E5BF83B3B17B4D2A102F601DFBB36FA" import="0">XML/Buildings/Corp_BroadcastTower.xml</File>
-    <File md5="45810716CB34080CB4E7481F6529AEF3" import="0">XML/Buildings/Corp_Clothes.xml</File>
+    <File md5="FBE1B26FCAD8CB82DD04A0EAB9F4B20E" import="0">XML/Buildings/Corp_Clothes.xml</File>
     <File md5="31FB386BAC35B84932E7814859B48765" import="0">XML/Buildings/Corp_ClothesHQ.xml</File>
-    <File md5="E00EACF3CE18FBD6E77F2DC7E87660DD" import="0">XML/Buildings/Corp_Cola.xml</File>
+    <File md5="D0A1A624C6BA7E562EF734BCD2F77F4A" import="0">XML/Buildings/Corp_Cola.xml</File>
     <File md5="E310DC3B54955870402F9ED02CD26E84" import="0">XML/Buildings/Corp_ColaHQ.xml</File>
-    <File md5="F93F9648A97E1EFDBF30E77677E57523" import="0">XML/Buildings/Corp_Hamburger.xml</File>
+    <File md5="1FF2B940B235834257877135AF775ED8" import="0">XML/Buildings/Corp_Hamburger.xml</File>
     <File md5="30D01091AA44A23400BEEE871EF174DB" import="0">XML/Buildings/Corp_HamburgerHQ.xml</File>
     <File md5="00E2345A1C792BED248FC5C4E3395C7F" import="0">XML/Buildings/Corp_IconAtlases.xml</File>
-    <File md5="06B4DF828ACEB166107DEF2645789F8E" import="0">XML/Buildings/Corp_Jeweler.xml</File>
+    <File md5="9011B4A6AEB1746A25631D4CD5926F66" import="0">XML/Buildings/Corp_Jeweler.xml</File>
     <File md5="608097BF27C3AFC47FEE4295336ECC16" import="0">XML/Buildings/Corp_JewelerHQ.xml</File>
-    <File md5="F9E95DA3A1DCE7C3F8E2FBF54915460C" import="0">XML/Buildings/Corp_MadisonAvenue.xml</File>
+    <File md5="21F112C183353711A6730B96D195FF8D" import="0">XML/Buildings/Corp_MadisonAvenue.xml</File>
     <File md5="41D4FB4D4ADFF6B05D9BB52E07A30574" import="0">XML/Buildings/Corp_AdvertisingAgency.xml</File>
-    <File md5="A02FFBDBE643FCB7FA80EE0004FE5B7A" import="0">XML/Buildings/Corp_Mining.xml</File>
+    <File md5="DE1446BB3C7ED551E5A6E98AADFE0FDA" import="0">XML/Buildings/Corp_Mining.xml</File>
     <File md5="BA97D4ACE153C02DADF63BFA11392C61" import="0">XML/Buildings/Corp_MiningHQ.xml</File>
-    <File md5="44F8B0F574437A8D68641B1800F2E83D" import="0">XML/Buildings/Corp_Perfume.xml</File>
+    <File md5="97A873638CCA55CB4455E707B9CF8E03" import="0">XML/Buildings/Corp_Perfume.xml</File>
     <File md5="5B91518F201A1F74DC01A951701E21AB" import="0">XML/Buildings/Corp_PerfumeHQ.xml</File>
     <File md5="30F8314A7E6E0F61FC8F04F7E7C8ACC7" import="0">XML/Buildings/Corp_SushiHQ.xml</File>
-    <File md5="B8F08F749A433D6C36783745D871DFA7" import="0">XML/Buildings/Corp_Sushi.xml</File>
+    <File md5="11B159088F52B5AFD6B56F743FE44047" import="0">XML/Buildings/Corp_Sushi.xml</File>
     <File md5="C1647EA9D7CD11D6A71FA4A894CF794D" import="0">XML/Buildings/Corp_WallStreet.xml</File>
     <File md5="9173BFE28556B4770D989D52E96B5F9B" import="0">XML/Civilizations/Corp_Civilizations.xml</File>
     <File md5="CDF7332AFDD9054770411C3DADE551FC" import="0">XML/Civilizations/Corp_Traits.xml</File>
     <File md5="F48051E02F79D3F266575FAFDD07D0D5" import="0">XML/Corporations/Corp_Corporations.xml</File>
     <File md5="9C4E862385687254BBAA9FA823A14B49" import="0">XML/Corporations/Corp_FontIcons.xml</File>
     <File md5="2CBBBCC90835055DCF47386BD373D484" import="0">XML/Corporations/Corp_Settings.xml</File>
-    <File md5="0CC6356DCF6AB273D582375171FA6F79" import="0">XML/Corporations/Corp_UIText.xml</File>
-    <File md5="7B45D749EBFB43C7C59FC180B7CB1121" import="0">XML/GameInfo/Corp_Policies.xml</File>
+    <File md5="B68827261B50F75B7FFC6C1C047A89BA" import="0">XML/Corporations/Corp_UIText.xml</File>
+    <File md5="4DAEA1A451BB4EC12A0BACA079CCFBE5" import="0">XML/GameInfo/Corp_Policies.xml</File>
     <File md5="622DD841483FADB5A0254FC6025A7413" import="0">XML/Religions/Corp_Beliefs.xml</File>
     <File md5="96C4CB6D4EEF2246FE363621A568F6A2" import="0">XML/Technologies/Corp_Technologies.xml</File>
     <File md5="576DF51B2F27530E7E9B080F36A7547E" import="0">XML/Terrain/Corp_Resources.xml</File>

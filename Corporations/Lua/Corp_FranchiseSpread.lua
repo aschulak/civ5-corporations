@@ -13,7 +13,8 @@ local gT = MapModData.gT;
 -- MAIN
 --
 
--- run once for each player on their turn
+-- executes franchise spread
+-- GameEvents.PlayerDoTurn
 function FranchiseSpread(iPlayer) 		
 	--print("--FranchiseSpread");
 	local gCorpHqOwners = gT.gCorpHqOwners;
@@ -43,6 +44,29 @@ function FranchiseSpread(iPlayer)
 		end	
 	end
 	
+end
+
+-- resets pressure and fans for a new city 
+-- Events.SerialEventCityCreated
+function ResetPressureAndFansForNewCities(hexPos, playerID, cityID, cultureType, eraType, continent, populationSize, size, fowState)
+	print("--ResetPressureAndFansForNewCities");
+	local player = Players[playerID];
+	local city = player:GetCityByID(cityID);
+	
+	-- get previous owner of city
+	local prevOwnerId = city:GetPreviousOwner();
+	
+	-- since unique city ids are based on plot x and y location, reset pressure and fans 
+	-- for all new cities. this should prevent new cities being created on top of old 
+	-- cities to start fresh
+	if (prevOwnerId < 0) then
+		print("No previous owner for city, resetting pressure and fans", city:GetName());
+		for corp in GameInfo.Corporations() do
+			local corpFranchise = GameInfo.Buildings[corp.FranchiseBuildingType];
+			ResetPressureAndFansForCity(corpFranchise, city);
+		end		
+	end
+
 end
 
 --
@@ -234,8 +258,10 @@ end
 
 function ApplyFranchisePressure(corpOwner, corpHq, hqCity, corpFranchise)
 	--print("--ApplyFranchisePressure");
+	--print("corp franchise", corpFranchise.Type);
 	local cities = GetCitiesToSpreadFranchise(corpFranchise, corpOwner, hqCity);	
 	for i, city in ipairs(cities) do
+		print("city", city:GetName());
 		local cityPlayer = Players[city:GetOwner()];
 		SpreadFranchisePressure(city, corpOwner, hqCity, corpHq, corpFranchise);		
 	end
@@ -243,6 +269,10 @@ end
 
 -- Increase number of franchise fans in a city by 1
 function IncreaseFranchiseFans(city, corpFranchise)
+	--print("IncreaseFranchiseFans");
+	--print("city", city:GetName());
+	--print("corp", corpFranchise.Type);
+
 	local uniqueCityId = GetUniqueCityId(city);
 	local gFranchiseCityFanMap = gT.gFranchiseCityFanMap;
 	local cityFanMap = gFranchiseCityFanMap[corpFranchise.Type] or {};	
@@ -253,6 +283,7 @@ end
 
 function ConvertFranchisePressureIntoFans(corpFranchise)
 	--print("--ConvertFranchisePressureIntoFans");
+	--print("corpFranchise", corpFranchise.Type);
 	
 	local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;		
 	local pressureBucketSize = GetPressureBucketSize();
@@ -324,6 +355,7 @@ function CityCanBuildFranchise(city, corpFranchise)
 end
 
 -- how many tiles away can a corporation spread franchises to?
+-- TODO the tech bonus should be separated out
 function GetFranchiseSpreadRadius(player)
 	
 	-- Technologies can unlock unlimited spread distance

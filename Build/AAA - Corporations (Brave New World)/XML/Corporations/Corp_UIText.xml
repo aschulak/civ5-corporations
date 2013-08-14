@@ -5,7 +5,7 @@
 			<Text>Headquarters of {1_CorpIcon} {2_CorpName}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CORP_TOOLTIP_FRANCHISE">
-			<Text>{1_CorpIcon} {2_CorpName} franchise</Text>
+			<Text>{1_CorpIcon} {2_CorpName}</Text>
 		</Row>
 		<Row Tag="TXT_KEY_CORP_TOOLTIP_PRESSURED">
 			<Text>{1_CorpIcon} {2_CorpName} {3_PressureString}</Text>

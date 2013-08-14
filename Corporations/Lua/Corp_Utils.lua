@@ -6,6 +6,7 @@
 --
 -- GLOBALS
 --
+
 local gT = MapModData.gT;
 
 --
@@ -51,6 +52,50 @@ if not MapModData.gCorpUtilsInitted then
 end
 
 --
+-- MAIN
+--
+
+-- update all the corp hq owners
+-- GameEvents.PlayerDoTurn
+function UpdateCorpHqOwners(iPlayer)
+	--print("--UpdateCorpHqOwners");
+	local gCorpHqOwners = gT.gCorpHqOwners;
+				
+	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
+		local player = Players[playerNum];					
+		if (player ~= nil and player:IsAlive() and not player:IsMinorCiv() and not player:IsBarbarian() and player:GetNumCities() > 0) then			
+			for corp in GameInfo.Corporations() do
+				gCorpHqOwners[corp.ID] = gCorpHqOwners[corp.ID] or nil;
+				local corpHq = GameInfo.Buildings[corp.HeadquartersBuildingType];
+				if player:CountNumBuildings(corpHq.ID) > 0 then
+					gCorpHqOwners[corp.ID] = player:GetID();
+				end
+			end
+		end
+	end	
+end
+
+-- update all the corp share owners
+-- GameEvents.PlayerDoTurn
+function UpdateCorpSharesOwners(iPlayer)
+	--print("--UpdateCorpSharesOwners");
+	local gCorpSharesOwners = gT.gCorpSharesOwners;
+	
+	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
+		local player = Players[playerNum];					
+		if (player ~= nil and player:IsAlive() and not player:IsMinorCiv() and not player:IsBarbarian() and player:GetNumCities() > 0) then			
+			
+			for corp in GameInfo.Corporations() do
+				local corpShares = GameInfo.Resources[corp.SharesResourceType];
+				local numCorpShares = player:GetNumResourceTotal(corpShares.ID, true);
+				gCorpSharesOwners[corp.ID] = gCorpSharesOwners[corp.ID] or {};
+				gCorpSharesOwners[corp.ID][player:GetID()] = numCorpShares;
+			end
+		end
+	end	
+end
+
+--
 -- HELPERS
 --
 
@@ -81,22 +126,18 @@ function split(str, pat)
    return t
 end
 
--- City ids are NOT unique
--- TODO remove id
-function GetUniqueCityId(city)
-	return city:GetID() .. ":" .. city:GetX() .. ":" .. city:GetY();
-	--return city:GetX() .. ":" .. city:GetY();
+-- city ids are NOT unique, make a new one based on the x and y location
+function GetUniqueCityId(city)	
+	return city:GetX() .. ":" .. city:GetY();
 end
 
 -- look through all the players and return the city
 -- cityId is unique id from above
--- TODO remove id
 function GetCityById(uniqueCityId)	
 	----print("--GetCityById");
-	local uniqueCityIdInfo = split(uniqueCityId, ":");
-	local cityId = tonumber(uniqueCityIdInfo[1]);
-	local cityX = tonumber(uniqueCityIdInfo[2]);
-	local cityY = tonumber(uniqueCityIdInfo[3]);
+	local uniqueCityIdInfo = split(uniqueCityId, ":");	
+	local cityX = tonumber(uniqueCityIdInfo[1]);
+	local cityY = tonumber(uniqueCityIdInfo[2]);
 		
 	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
 		local player = Players[playerNum];					
@@ -110,75 +151,6 @@ function GetCityById(uniqueCityId)
 	end
 		
 	return nil;
-end
-
--- update all the corp hq owners
-function UpdateCorpHqOwners(iPlayer)
-	--print("--UpdateCorpHqOwners");
-	local gCorpHqOwners = gT.gCorpHqOwners;
-				
-	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
-		local player = Players[playerNum];					
-		if (player ~= nil and player:IsAlive() and not player:IsMinorCiv() and not player:IsBarbarian() and player:GetNumCities() > 0) then			
-			for corp in GameInfo.Corporations() do
-				gCorpHqOwners[corp.ID] = gCorpHqOwners[corp.ID] or nil;
-				local corpHq = GameInfo.Buildings[corp.HeadquartersBuildingType];
-				if player:CountNumBuildings(corpHq.ID) > 0 then
-					gCorpHqOwners[corp.ID] = player:GetID();
-				end
-			end
-		end
-	end	
-end
-
-function PrintCorpHqOwners(iPlayer)
-	print("--PrintCorpHqOwners");
-	local gCorpHqOwners = gT.gCorpHqOwners;
-	
-	for corp in GameInfo.Corporations() do
-		local playerId = gCorpHqOwners[corp.ID];	
-		print("Corp: " .. corp.ID .. " - " .. tostring(playerId));		
-	end
-	
-end
-
--- update all the corp share owners
-function UpdateCorpSharesOwners(iPlayer)
-	--print("--UpdateCorpSharesOwners");
-	local gCorpSharesOwners = gT.gCorpSharesOwners;
-	
-	for playerNum = 0, GameDefines.MAX_CIV_PLAYERS - 1 do
-		local player = Players[playerNum];					
-		if (player ~= nil and player:IsAlive() and not player:IsMinorCiv() and not player:IsBarbarian() and player:GetNumCities() > 0) then			
-			
-			for corp in GameInfo.Corporations() do
-				local corpShares = GameInfo.Resources[corp.SharesResourceType];
-				local numCorpShares = player:GetNumResourceTotal(corpShares.ID, true);
-				gCorpSharesOwners[corp.ID] = gCorpSharesOwners[corp.ID] or {};
-				gCorpSharesOwners[corp.ID][player:GetID()] = numCorpShares;
-			end
-		end
-	end	
-end
-
-function PrintCorpSharesOwners(iPlayer)
-	print("--PrintCorpSharesOwners");
-	local gCorpSharesOwners = gT.gCorpSharesOwners;
-	
-	for corpId, playerCorpShares in pairs(gCorpSharesOwners) do
-		for playerId, numCorpShares in pairs(playerCorpShares) do
-			print("Corp: " .. corpId .. " - " .. playerId .. " #" .. numCorpShares);
-		end
-	end
-	
-end
-
-function PrintCorpOwnerRevenue()
-	print("--PrintCorpOwnerRevenue");
-	local gCorpOwnerRevenue = gT.gCorpOwnerRevenue;
-	for playerId, revenue in pairs(gCorpOwnerRevenue) do
-		print("player id: " .. playerId .. " rev: " .. revenue);
-	end	
 end
 
 -- get the city with a corporation building id
@@ -478,6 +450,10 @@ function GetCorporationSpreadModifierFromReligion(hqPlayer, city)
 	return modifier;
 end
 
+--
+-- PRINT
+--
+
 function PrintFranchisePressureMap()
 	print("--PrintFranchisePressureMap");	
 	local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;
@@ -508,6 +484,38 @@ function PrintFranchiseFanMap()
 		end		
 	end
 	print("--PrintFranchiseFanMap DONE");	
+end
+
+
+function PrintCorpHqOwners(iPlayer)
+	print("--PrintCorpHqOwners");
+	local gCorpHqOwners = gT.gCorpHqOwners;
+	
+	for corp in GameInfo.Corporations() do
+		local playerId = gCorpHqOwners[corp.ID];	
+		print("Corp: " .. corp.ID .. " - " .. tostring(playerId));		
+	end
+	
+end
+
+function PrintCorpSharesOwners(iPlayer)
+	print("--PrintCorpSharesOwners");
+	local gCorpSharesOwners = gT.gCorpSharesOwners;
+	
+	for corpId, playerCorpShares in pairs(gCorpSharesOwners) do
+		for playerId, numCorpShares in pairs(playerCorpShares) do
+			print("Corp: " .. corpId .. " - " .. playerId .. " #" .. numCorpShares);
+		end
+	end
+	
+end
+
+function PrintCorpOwnerRevenue()
+	print("--PrintCorpOwnerRevenue");
+	local gCorpOwnerRevenue = gT.gCorpOwnerRevenue;
+	for playerId, revenue in pairs(gCorpOwnerRevenue) do
+		print("player id: " .. playerId .. " rev: " .. revenue);
+	end	
 end
 
 print("Corp_Utils.lua loaded.");

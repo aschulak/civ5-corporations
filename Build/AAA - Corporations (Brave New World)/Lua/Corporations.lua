@@ -18,8 +18,10 @@ local gT = MapModData.gT;
 -- GAME EVENTS
 --
 
+-- update all corp hq owners and share owners
 GameEvents.PlayerDoTurn.Add(UpdateCorpHqOwners);
 GameEvents.PlayerDoTurn.Add(UpdateCorpSharesOwners);
+
 --GameEvents.PlayerDoTurn.Add(PrintCorpHqOwners);
 --GameEvents.PlayerDoTurn.Add(PrintCorpSharesOwners);
 --GameEvents.PlayerDoTurn.Add(PrintFranchisePressureMap);
@@ -30,5 +32,17 @@ GameEvents.PlayerDoTurn.Add(FranchiseSpread);
 
 -- reward all corporation owners with their corporation revenue
 GameEvents.PlayerDoTurn.Add(RewardCorporationOwners);
+
+-- building constructs
+GameEvents.PlayerCanConstruct.Add(CanConstructFranchise);
+GameEvents.PlayerCanConstruct.Add(CanConstructCorporationOwnershipRequiredBuilding);
+GameEvents.CityCanConstruct.Add(CanConstructCorporationHeadquartersCityBuilding);
+
+--
+-- EVENTS
+--
+
+-- reset pressure and fans for new cities
+Events.SerialEventCityCreated.Add(ResetPressureAndFansForNewCities);
 
 print("Corporations.lua loaded.");

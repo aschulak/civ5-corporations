@@ -15,8 +15,8 @@ function GetCorporationCityTooltip(player, city)
 	local tooltip = nil;
 	
 	-- TODO remove
-	tooltip = "CityID " .. city:GetID() .. "[NEWLINE]";
-	tooltip = tooltip .. "Unique CityID " .. GetUniqueCityId(city) .. "[NEWLINE]";
+	--tooltip = "CityID " .. city:GetID() .. "[NEWLINE]";
+	--tooltip = tooltip .. "Unique CityID " .. GetUniqueCityId(city) .. "[NEWLINE]";
 	
 	-- Do Corp HQ listings first
 	for corp in GameInfo.Corporations() do 

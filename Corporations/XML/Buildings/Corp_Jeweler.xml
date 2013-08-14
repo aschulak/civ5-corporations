@@ -19,8 +19,8 @@
 			<Strategy>TXT_KEY_BUILDING_CORP_JEWELER_STRATEGY</Strategy>
 			<Civilopedia>TXT_KEY_WONDER_CORP_JEWELER_HQ_DESC</Civilopedia>
 			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-			<SpecialistCount>1</SpecialistCount>			
-			<HurryCostModifier>5</HurryCostModifier>
+			<SpecialistCount>1</SpecialistCount>
+			<HurryCostModifier>50</HurryCostModifier>
 			<MinAreaSize>-1</MinAreaSize>
 			<ConquestProb>100</ConquestProb>
 			<IconAtlas>CORPORATION_ATLAS</IconAtlas>

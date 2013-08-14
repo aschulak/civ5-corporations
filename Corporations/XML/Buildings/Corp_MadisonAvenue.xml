@@ -10,6 +10,7 @@
 	</BuildingClasses>
 	<Buildings>
 		<Row>
+			<!-- TODO Move to Mass Media -->
 			<Type>BUILDING_MADISON_AVE</Type>
 			<BuildingClass>BUILDINGCLASS_MADISON_AVE</BuildingClass>
 			<Cost>125</Cost>

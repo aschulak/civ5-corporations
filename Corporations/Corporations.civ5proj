@@ -50,6 +50,10 @@ Requires Brave New World.
 
 [NEWLINE][NEWLINE]
 
+The code for this mod can be found on GitHub: https://github.com/Envoy/civ5-corporations
+
+[NEWLINE][NEWLINE]
+
 Follow me on twitter @fourfourhero to get notifications about updates to this mod as well as others. 
 
 [NEWLINE][NEWLINE]
@@ -57,10 +61,10 @@ Follow me on twitter @fourfourhero to get notifications about updates to this mo
 Special thanks:
 [NEWLINE][ICON_BULLET] EUGENE
 [NEWLINE][ICON_BULLET] DJ_MD5
-[NEWLINE][ICON_BULLET] Pazyryk</Description>
+[NEWLINE][ICON_BULLET] Pazyryk
+[NEWLINE][ICON_BULLET] framedarchitecture</Description>
     <Authors>[COLOR_PLAYER_ORANGE]Envoy[ENDCOLOR] [COLOR_CYAN](@fourfourhero)[ENDCOLOR]</Authors>
-    <SpecialThanks>
-    </SpecialThanks>
+    <SpecialThanks>EUGENE, DJ_MD5</SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
     <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
     <SupportsSinglePlayer>true</SupportsSinglePlayer>
@@ -344,10 +348,6 @@ Special thanks:
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="CorporationsBNWSteam.jpg">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
-    </Content>
-    <Content Include="Ideas.txt">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

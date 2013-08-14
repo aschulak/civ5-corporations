@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameData>
 	<Policy_BuildingClassHappiness>
+		<!-- Entrepreneurship -->
 		<Row>
 			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CORP_HAMBURGER_HQ</BuildingClassType>
@@ -35,7 +36,7 @@
 			<PolicyType>POLICY_ENTREPRENEURSHIP</PolicyType>
 			<BuildingClassType>BUILDINGCLASS_CORP_COLA_HQ</BuildingClassType>
 			<Happiness>5</Happiness>
-		</Row>
+		</Row>		
 	</Policy_BuildingClassHappiness>
 	<Policies>
 		<Row>
