@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<BuildingClasses>
+		<Row>
+			<Type>BUILDINGCLASS_CORP_HAMBURGER</Type>
+			<DefaultBuilding>BUILDING_CORP_HAMBURGER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CORP_HAMBURGER</Description>
+		</Row>
+	</BuildingClasses>
+	<Buildings>
+		<Row>
+			<Type>BUILDING_CORP_HAMBURGER</Type>
+			<BuildingClass>BUILDINGCLASS_CORP_HAMBURGER</BuildingClass>
+			<Cost>500</Cost>
+			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
+			<GoldMaintenance>4</GoldMaintenance>
+			<Help>TXT_KEY_BUILDING_CORP_HAMBURGER_HELP</Help>
+			<Description>TXT_KEY_BUILDING_CORP_HAMBURGER</Description>
+			<Strategy>TXT_KEY_BUILDING_CORP_HAMBURGER_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_WONDER_CORP_HAMBURGER_HQ_DESC</Civilopedia>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<HurryCostModifier>50</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>3</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_LockedBuildingClasses>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CORP_SUSHI</BuildingClassType>
+		</Row>
+	</Building_LockedBuildingClasses>
+	<Building_LocalResourceOrs>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER</BuildingType>
+			<ResourceType>RESOURCE_COW</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER</BuildingType>
+			<ResourceType>RESOURCE_WHEAT</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER</BuildingType>
+			<ResourceType>RESOURCE_FISH</ResourceType>
+		</Row>
+	</Building_LocalResourceOrs>
+	<Building_ResourceYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER</BuildingType>
+			<ResourceType>RESOURCE_COW</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER</BuildingType>
+			<ResourceType>RESOURCE_WHEAT</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER</BuildingType>
+			<ResourceType>RESOURCE_FISH</ResourceType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>3</Yield>
+		</Row>	
+	</Building_ResourceYieldChanges>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER</BuildingType>
+			<YieldType>YIELD_FOOD</YieldType>
+			<Yield>3</Yield>
+		</Row>
+	</Building_YieldChanges>
+	<Building_Flavors>
+		<Row>
+			<BuildingType>BUILDING_CORP_HAMBURGER</BuildingType>
+			<FlavorType>FLAVOR_GROWTH</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+	</Building_Flavors>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BUILDING_CORP_HAMBURGER">
+			<Text>Burger Shack</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CORP_HAMBURGER_STRATEGY">
+			<Text>Burger Shack can only be constructed in a city with an improved source of [ICON_RES_COW] Cow, [ICON_RES_FISH] Fish, or [ICON_RES_WHEAT] Wheat nearby.[NEWLINE][NEWLINE]Burger Shack competes with Sid's Sushi and cannot be built in the same city. The Burger Shack Corporation Wonder must be built by any civilization before Burger Shack can be constructed.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CORP_HAMBURGER_HELP">
+			<Text>Each source of [ICON_RES_COW] Cow, [ICON_RES_FISH] Fish, and [ICON_RES_WHEAT] Wheat worked by this City produces +3 [ICON_FOOD] Food.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

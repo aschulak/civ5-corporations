@@ -8,7 +8,6 @@
 --
 
 local gT = MapModData.gT;
-local gSendNotificationsTurnCounter = 5;
 
 --
 -- MAIN
@@ -109,7 +108,7 @@ function ProcessCorporationRevenue(corp, corpSharesOwner, numCorpShares)
 					corporationRevenue = corporationRevenue + round(corporationRevenue * (GetForeignFranchiseGoldRevenueModifier(corpSharesOwner) / 100));			
 				end				
 								
-				-- multiply by number of stock
+				-- multiply by number of shares
 				corporationRevenue = corporationRevenue * numCorpShares;
 				
 				totalFranchises = totalFranchises + buildingCount;
@@ -125,7 +124,12 @@ end
 
 -- Should a notification be sent?
 function ShouldSendNotifications()
-	return (Game.GetGameTurn() % gSendNotificationsTurnCounter == 0)
+	local financialNotificationUpdateTurns = GameInfo.CorporationSettings["FinancialNotificationUpdateTurns"].Value;
+	if financialNotificationUpdateTurns == -1 then
+		return false;
+	else
+		return (Game.GetGameTurn() % financialNotificationUpdateTurns == 0)
+	end
 end
 
 print("Corp_Revenue.lua loaded.");

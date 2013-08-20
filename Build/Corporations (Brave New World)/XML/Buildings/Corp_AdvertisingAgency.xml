@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<BuildingClasses>
+		<Row>
+			<Type>BUILDINGCLASS_ADVERTISING_AGENCY</Type>
+			<DefaultBuilding>BUILDING_ADVERTISING_AGENCY</DefaultBuilding>
+			<Description>TXT_KEY_ADVERTISING_AGENCY</Description>
+		</Row>
+	</BuildingClasses>
+	<Buildings>
+		<Row>
+			<Type>BUILDING_ADVERTISING_AGENCY</Type>
+			<BuildingClass>BUILDINGCLASS_ADVERTISING_AGENCY</BuildingClass>
+			<Cost>360</Cost>			
+			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
+			<GoldMaintenance>3</GoldMaintenance>
+			<Help>TXT_KEY_BUILDING_ADVERTISING_AGENCY_HELP</Help>
+			<Description>TXT_KEY_BUILDING_ADVERTISING_AGENCY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ADVERTISING_AGENCY_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ADVERTISING_AGENCY_STRATEGY</Strategy>			
+			<CorporationOwnershipRequired>true</CorporationOwnershipRequired>
+			<CorporationFranchiseGoldRevenueModifier>100</CorporationFranchiseGoldRevenueModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>66</ConquestProb>
+			<HurryCostModifier>0</HurryCostModifier>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>18</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_ADVERTISING_AGENCY</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Building_YieldChanges>
+	<Building_Flavors>
+		<Row>
+			<BuildingType>BUILDING_ADVERTISING_AGENCY</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ADVERTISING_AGENCY</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+	</Building_Flavors>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BUILDING_ADVERTISING_AGENCY">
+			<Text>Advertising Agency</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_ADVERTISING_AGENCY_HELP">
+			<Text>Doubles Corporate [ICON_GOLD] Gold revenue from owned Corporation franchises in this City.[NEWLINE][NEWLINE]Civilization must own a Corporation.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_ADVERTISING_AGENCY_STRATEGY">
+			<Text>The Advertising Agency is an Insdustrial-era building which increases the Corporate [ICON_GOLD] Gold revenue from your civilization's owned Corporation franchises in this city.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_ADVERTISING_AGENCY_TEXT">
+			<Text>An advertising agency is a service business dedicated to creating, planning, and handling advertising (and sometimes other forms of promotion) for its clients. An ad agency is independent from the client and provides an outside point of view to the effort of selling the client's products or services. An agency can also handle overall marketing and branding strategies and sales promotions for its clients. Typical ad agency clients include businesses and corporations, non-profit organizations and government agencies. Agencies may be hired to produce television commercials and radio commercials as part of an advertising campaign.[NEWLINE][NEWLINE]The first acknowledged advertising agency was William Taylor in 1786. Another early agency, started by James "Jem" White in Fleet Street, London, in 1800, eventually evolved into White Bull Holmes, a recruitment advertising agency, that went out of business in the late 1980s. In 1812 George Reynell, an officer at the London Gazette, set up another of the early advertising agencies, also in London. This remained a family business until 1993, as "Reynell and Son," and is now part of the TMP Worldwide agency (UK and Ireland) under the brand TMP Reynell. Another early agency that traded until recently, was founded by Charles Barker, and the firm he established traded as "Barkers" until 2009 when it went into Administration.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

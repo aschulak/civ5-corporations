@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
     <ProjectGuid>{5972408e-2a94-4ed2-b295-7b7c1ed390a3}</ProjectGuid>
-    <Name>AAA - Corporations (Brave New World)</Name>
+    <Name>Corporations (Brave New World)</Name>
     <Guid>199bbbf8-f80e-449e-a67e-036a7248fb13</Guid>
     <ModVersion>1</ModVersion>
     <Stability>Alpha</Stability>
@@ -62,9 +62,10 @@ Special thanks:
 [NEWLINE][ICON_BULLET] EUGENE
 [NEWLINE][ICON_BULLET] DJ_MD5
 [NEWLINE][ICON_BULLET] Pazyryk
-[NEWLINE][ICON_BULLET] framedarchitecture</Description>
+[NEWLINE][ICON_BULLET] framedarchitecture
+[NEWLINE][ICON_BULLET] killmeplease</Description>
     <Authors>[COLOR_PLAYER_ORANGE]Envoy[ENDCOLOR] [COLOR_CYAN](@fourfourhero)[ENDCOLOR]</Authors>
-    <SpecialThanks>EUGENE, DJ_MD5</SpecialThanks>
+    <SpecialThanks>EUGENE, DJ_MD5, Pazyryk, framedarchitecture, killmeplease</SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
     <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
     <SupportsSinglePlayer>true</SupportsSinglePlayer>
@@ -291,6 +292,10 @@ Special thanks:
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
+    <Content Include="ART\CorporationIconAtlas214.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
     <Content Include="ART\CorporationIconAtlas256.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -380,10 +385,6 @@ Special thanks:
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Lua\Corp_Utils.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="Lua\SaveUtils.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

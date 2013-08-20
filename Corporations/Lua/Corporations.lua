@@ -7,12 +7,6 @@ include("Corp_Utils.lua");
 include("Corp_Revenue.lua");
 include("Corp_FranchiseSpread.lua");
 include("Corp_BuildingConstructs.lua");
-
---
--- GLOBALS
---
-
-local gT = MapModData.gT;
 	
 --
 -- GAME EVENTS
@@ -30,13 +24,16 @@ GameEvents.PlayerDoTurn.Add(UpdateCorpSharesOwners);
 -- do franchise spread
 GameEvents.PlayerDoTurn.Add(FranchiseSpread);
 
--- reward all corporation owners with their corporation revenue
+-- reward all corporation share owners with revenue
 GameEvents.PlayerDoTurn.Add(RewardCorporationOwners);
 
 -- building constructs
 GameEvents.PlayerCanConstruct.Add(CanConstructFranchise);
 GameEvents.PlayerCanConstruct.Add(CanConstructCorporationOwnershipRequiredBuilding);
 GameEvents.CityCanConstruct.Add(CanConstructCorporationHeadquartersCityBuilding);
+
+-- Save the mod data every turn to be safe
+GameEvents.PlayerDoTurn.Add(SaveCorporationsData);	
 
 --
 -- EVENTS

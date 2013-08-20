@@ -49,7 +49,7 @@ end
 -- resets pressure and fans for a new city 
 -- Events.SerialEventCityCreated
 function ResetPressureAndFansForNewCities(hexPos, playerID, cityID, cultureType, eraType, continent, populationSize, size, fowState)
-	print("--ResetPressureAndFansForNewCities");
+	--print("--ResetPressureAndFansForNewCities");
 	local player = Players[playerID];
 	local city = player:GetCityByID(cityID);
 	
@@ -59,8 +59,7 @@ function ResetPressureAndFansForNewCities(hexPos, playerID, cityID, cultureType,
 	-- since unique city ids are based on plot x and y location, reset pressure and fans 
 	-- for all new cities. this should prevent new cities being created on top of old 
 	-- cities to start fresh
-	if (prevOwnerId < 0) then
-		print("No previous owner for city, resetting pressure and fans", city:GetName());
+	if (prevOwnerId < 0) then		
 		for corp in GameInfo.Corporations() do
 			local corpFranchise = GameInfo.Buildings[corp.FranchiseBuildingType];
 			ResetPressureAndFansForCity(corpFranchise, city);
@@ -257,11 +256,9 @@ function SpreadFranchisePressure(city, corpOwner, hqCity, corpHq, corpFranchise)
 end
 
 function ApplyFranchisePressure(corpOwner, corpHq, hqCity, corpFranchise)
-	--print("--ApplyFranchisePressure");
-	--print("corp franchise", corpFranchise.Type);
+	--print("--ApplyFranchisePressure");	
 	local cities = GetCitiesToSpreadFranchise(corpFranchise, corpOwner, hqCity);	
-	for i, city in ipairs(cities) do
-		print("city", city:GetName());
+	for i, city in ipairs(cities) do		
 		local cityPlayer = Players[city:GetOwner()];
 		SpreadFranchisePressure(city, corpOwner, hqCity, corpHq, corpFranchise);		
 	end
@@ -270,9 +267,6 @@ end
 -- Increase number of franchise fans in a city by 1
 function IncreaseFranchiseFans(city, corpFranchise)
 	--print("IncreaseFranchiseFans");
-	--print("city", city:GetName());
-	--print("corp", corpFranchise.Type);
-
 	local uniqueCityId = GetUniqueCityId(city);
 	local gFranchiseCityFanMap = gT.gFranchiseCityFanMap;
 	local cityFanMap = gFranchiseCityFanMap[corpFranchise.Type] or {};	
@@ -283,8 +277,7 @@ end
 
 function ConvertFranchisePressureIntoFans(corpFranchise)
 	--print("--ConvertFranchisePressureIntoFans");
-	--print("corpFranchise", corpFranchise.Type);
-	
+		
 	local gFranchiseCityPressureMap = gT.gFranchiseCityPressureMap;		
 	local pressureBucketSize = GetPressureBucketSize();
 	

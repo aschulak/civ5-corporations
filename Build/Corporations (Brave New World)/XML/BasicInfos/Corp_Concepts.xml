@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Concepts>
+		<Row>
+			<Type>CONCEPT_CORP_1</Type>
+			<Topic>TXT_KEY_TOPIC_GOLD</Topic>
+			<Description>TXT_KEY_CORP_1_HEADING3_TITLE</Description>
+			<Summary>TXT_KEY_CORP_1_HEADING3_BODY</Summary>
+			<AdvisorQuestion>TXT_KEY_GOLD_ADV_QUEST</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_GOLD</CivilopediaHeaderType>
+		</Row>
+		<Row>
+			<Type>CONCEPT_CORP_2</Type>
+			<Topic>TXT_KEY_TOPIC_GOLD</Topic>
+			<Description>TXT_KEY_CORP_2_HEADING3_TITLE</Description>
+			<Summary>TXT_KEY_CORP_2_HEADING3_BODY</Summary>
+			<AdvisorQuestion>TXT_KEY_GOLD_ADV_QUEST</AdvisorQuestion>
+			<Advisor>ECONOMIC</Advisor>
+			<CivilopediaHeaderType>HEADER_GOLD</CivilopediaHeaderType>
+		</Row>
+	</Concepts>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_CORP_1_HEADING3_TITLE">
+			<Text>Corporations</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CORP_1_HEADING3_BODY">
+			<Text>Corporations provide an alternate way for your civilization to amass a fortune in [ICON_GOLD] Gold.[NEWLINE][NEWLINE]Corporations are incorporated by building a Corporation World Wonder. Incorporating a Corporation allows every civilization to build franchises of that Corporation. While everyone can build franchises, only the owners of Corporation [ICON_RES_CORP_SHARES] Shares collect the [ICON_GOLD] Gold revenue.[NEWLINE][NEWLINE]Currently there are seven Corporations:[NEWLINE][NEWLINE][ICON_CORP_SUSHI] {TXT_KEY_MISSION_CORP_SUSHI}[NEWLINE]Franchise benefit: {TXT_KEY_BUILDING_CORP_SUSHI_HELP}[NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_SUSHI}[NEWLINE][NEWLINE][ICON_CORP_JEWELER] {TXT_KEY_MISSION_CORP_JEWELER}[NEWLINE]Franchise benefit: {TXT_KEY_BUILDING_CORP_JEWELER_HELP}[NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_JEWELER}[NEWLINE][NEWLINE][ICON_CORP_PERFUME] {TXT_KEY_MISSION_CORP_PERFUME}[NEWLINE]Franchise benefit: {TXT_KEY_BUILDING_CORP_PERFUME_HELP}[NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_PERFUME}[NEWLINE][NEWLINE][ICON_CORP_CLOTHES] {TXT_KEY_MISSION_CORP_CLOTHES}[NEWLINE]Franchise benefit: {TXT_KEY_BUILDING_CORP_CLOTHES_HELP}[NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_CLOTHES}[NEWLINE][NEWLINE][ICON_CORP_MINING] {TXT_KEY_MISSION_CORP_MINING}[NEWLINE]Franchise benefit: {TXT_KEY_BUILDING_CORP_MINING_HELP}[NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_MINING}[NEWLINE][NEWLINE][ICON_CORP_HAMBURGER] {TXT_KEY_MISSION_CORP_HAMBURGER}[NEWLINE]Franchise benefit: {TXT_KEY_BUILDING_CORP_HAMBURGER_HELP}[NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_HAMBURGER}[NEWLINE][NEWLINE][ICON_CORP_COLA] {TXT_KEY_MISSION_CORP_COLA}[NEWLINE]Franchise benefit: {TXT_KEY_BUILDING_CORP_COLA_HELP}[NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_COLA}[NEWLINE][NEWLINE]A few factors can have a positive or negative impact on the amount of Corporate [ICON_GOLD] Gold revenue received per franchise:[NEWLINE][ICON_BULLET] Social Policies[NEWLINE][ICON_BULLET] Buildings</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CORP_2_HEADING3_TITLE">
+			<Text>Corporation Franchise Spread</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CORP_2_HEADING3_BODY">
+			<Text>Starting with the Mass Media technology, Corporations start automatically spreading their franchises to other civilizations. One of the benefits of owning a Corporation is that its franchises will never automatically spread to your own cities -- you are in control of your own corporate destiny![NEWLINE][NEWLINE]Every turn a Corporation will exert a certain amount of pressure against eligible cities. Once enough pressure has accumulated, a fan of the Corporation will be created in that city. Once the number of fans reaches 1/2 the population of the city or greater, the franchise will successfully spread and be created in the city.[NEWLINE][NEWLINE]Many factors can have a positive or negative impact on Corporation franchise spread:[NEWLINE][ICON_BULLET] Buildings[NEWLINE][ICON_BULLET] Diplomacy[NEWLINE][ICON_BULLET] Technologies[NEWLINE][ICON_BULLET] Leader Traits[NEWLINE][ICON_BULLET] Religious Beliefs[NEWLINE][ICON_BULLET] Ideological Tenets</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

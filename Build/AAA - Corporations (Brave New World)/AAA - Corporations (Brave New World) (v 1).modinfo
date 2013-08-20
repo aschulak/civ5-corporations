@@ -58,9 +58,10 @@ Special thanks:
 [NEWLINE][ICON_BULLET] EUGENE
 [NEWLINE][ICON_BULLET] DJ_MD5
 [NEWLINE][ICON_BULLET] Pazyryk
-[NEWLINE][ICON_BULLET] framedarchitecture</Description>
+[NEWLINE][ICON_BULLET] framedarchitecture
+[NEWLINE][ICON_BULLET] killmeplease</Description>
     <Authors>[COLOR_PLAYER_ORANGE]Envoy[ENDCOLOR] [COLOR_CYAN](@fourfourhero)[ENDCOLOR]</Authors>
-    <SpecialThanks>EUGENE, DJ_MD5</SpecialThanks>
+    <SpecialThanks>EUGENE, DJ_MD5, Pazyryk, framedarchitecture, killmeplease</SpecialThanks>
     <HideSetupGame>0</HideSetupGame>
     <AffectsSavedGames>1</AffectsSavedGames>
     <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
@@ -96,15 +97,14 @@ Special thanks:
     <File md5="F5E8C60FFC7600FC1E1A8A2E57E38220" import="1">ART/YoungArmySplash.dds</File>
     <File md5="024CC3B6373D9341D48594157C4B5048" import="0">Bugs.txt</File>
     <File md5="6ED8204CCE30D0BA6DDBB20810D1C01C" import="0">CorporationsBNWSteam.jpg</File>
-    <File md5="F9C2566BF75551758E6C712BBF6F8A75" import="1">Lua/Corp_Bootstrap.lua</File>
+    <File md5="4CF07030E85BDAA6B215CC9B3ACFDCA8" import="1">Lua/Corp_Bootstrap.lua</File>
     <File md5="66451B548E00F566FFD643B007987B61" import="1">Lua/Corp_BuildingConstructs.lua</File>
-    <File md5="41E4A9D25063A335B2C0461D033A110E" import="0">Lua/Corporations.lua</File>
+    <File md5="827322A36136C008C87BAFEF6B0917F7" import="0">Lua/Corporations.lua</File>
     <File md5="2DF2961627D9444166EDF1C4E764F5A0" import="1">Lua/Corp_Defines.lua</File>
-    <File md5="3120B794ACBD3EDE8E6F1473511A72C6" import="1">Lua/Corp_FranchiseSpread.lua</File>
-    <File md5="75D539EF1494B6C1BDFA308517A29A68" import="1">Lua/Corp_Revenue.lua</File>
-    <File md5="9B7F85539559EAD8923E1138659FF4D4" import="1">Lua/Corp_UI.lua</File>
-    <File md5="C85BA260AB559CC479700DB96A201FBD" import="1">Lua/Corp_Utils.lua</File>
-    <File md5="5754B1BE6E37A2F9D04D9D4149E5CDDF" import="1">Lua/SaveUtils.lua</File>
+    <File md5="1AB26CBBC872EF3ED29AD42E4005DCAA" import="1">Lua/Corp_FranchiseSpread.lua</File>
+    <File md5="0320D4D9B6BBB434191D0904CFB5DC89" import="1">Lua/Corp_Revenue.lua</File>
+    <File md5="C7F5FB2854EE1A1FFA612FCF447BD62E" import="1">Lua/Corp_UI.lua</File>
+    <File md5="FE144F2EBB4EAC011AE7CD45BB16EF5C" import="1">Lua/Corp_Utils.lua</File>
     <File md5="4B97DB1E8B8AACCFD3F4D33F8DF3AB14" import="1">Lua/TableSaverLoader.lua</File>
     <File md5="4C6EE1111EAE45671C635AFEF0DEFBB8" import="0">SQL/Corp_TableUpdates.sql</File>
     <File md5="0D2A16105354F7C3D83944745F32B618" import="1">UI/Corporations.xml</File>
@@ -140,7 +140,7 @@ Special thanks:
     <File md5="CDF7332AFDD9054770411C3DADE551FC" import="0">XML/Civilizations/Corp_Traits.xml</File>
     <File md5="F48051E02F79D3F266575FAFDD07D0D5" import="0">XML/Corporations/Corp_Corporations.xml</File>
     <File md5="9C4E862385687254BBAA9FA823A14B49" import="0">XML/Corporations/Corp_FontIcons.xml</File>
-    <File md5="2CBBBCC90835055DCF47386BD373D484" import="0">XML/Corporations/Corp_Settings.xml</File>
+    <File md5="95103E848BC3FF5EE7DE5382E3C0CF42" import="0">XML/Corporations/Corp_Settings.xml</File>
     <File md5="B68827261B50F75B7FFC6C1C047A89BA" import="0">XML/Corporations/Corp_UIText.xml</File>
     <File md5="4DAEA1A451BB4EC12A0BACA079CCFBE5" import="0">XML/GameInfo/Corp_Policies.xml</File>
     <File md5="622DD841483FADB5A0254FC6025A7413" import="0">XML/Religions/Corp_Beliefs.xml</File>

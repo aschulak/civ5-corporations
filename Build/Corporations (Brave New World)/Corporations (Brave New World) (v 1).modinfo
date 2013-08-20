@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="199bbbf8-f80e-449e-a67e-036a7248fb13" version="1">
+  <Properties>
+    <Name>Corporations (Brave New World)</Name>
+    <Stability>Alpha</Stability>
+    <Teaser>[COLOR_YIELD_GOLD]Build a Corporate empire and amass a fortune![ENDCOLOR]</Teaser>
+    <Description>Adds Corporations to Civilization V, Brave New World.
+
+[NEWLINE][NEWLINE]
+
+This mod provides an alternate way for your civilization to amass a fortune in [ICON_GOLD] Gold, including:
+[NEWLINE][ICON_BULLET] 8 new Buildings, 1 enhanced
+[NEWLINE][ICON_BULLET] 7 new World Wonders
+[NEWLINE][ICON_BULLET] 7 new Luxury Resources
+[NEWLINE][ICON_BULLET] 3 new Religious Beliefs
+[NEWLINE][ICON_BULLET] 3 new Ideological Tenets
+[NEWLINE][ICON_BULLET] 3 enhanced Social Policies
+[NEWLINE][ICON_BULLET] 2 new Technologies, 1 enhanced
+[NEWLINE][ICON_BULLET] 2 new National Wonders
+[NEWLINE][ICON_BULLET] 1 enhanced Leader Trait
+
+
+[NEWLINE][NEWLINE]
+
+As businesses grow, they often find it necessary to raise large amounts of operating capital in order to expand their operations beyond a certain point, or to meet operating expenses. In these cases, one option available is to form a corporation and "go public", or sell shares of the business to investors. This arrangement allows the business to expand rapidly, while spreading the risks of the expansion among many people, reducing individual risk. Corporations also have legal advantages such as the right to sue, and the limitation of liability for the corporation's debt to the amount originally invested by the owners. Corporations as legal entities have existed since ancient Rome, although the joint-stock company as it is known today didn't begin operating until sometime in the 16th century.
+
+[NEWLINE][NEWLINE]
+
+This mod attempts to translate the Corporations concept from CIV 4 to the world of CIV 5. Some of your old favorite Corporations return and are joined by new Corporations developed specially for this mod.
+
+[NEWLINE][NEWLINE]
+
+Be sure to check out the new entries in the Game Concepts section of the Civilopedia, under Gold and the Economy, to learn about the new mechanics introduced.
+
+[NEWLINE][NEWLINE]
+
+This mod overwrites several UI components to enhance gameplay. If these overrides conflict with one of your favorite mods, you may delete the files from the UI/InGame folder manually without causing the mod to break.
+
+[NEWLINE][NEWLINE]
+
+Architected and designed with a database centric view, this mod is built to enable other modders to quickly and easily incporporate Corporations game mechanics into their mods though easy to use XML tags. No Lua coding required!
+
+[NEWLINE][NEWLINE]
+
+Requires Brave New World.
+
+[NEWLINE][NEWLINE]
+
+The code for this mod can be found on GitHub: https://github.com/Envoy/civ5-corporations
+
+[NEWLINE][NEWLINE]
+
+Follow me on twitter @fourfourhero to get notifications about updates to this mod as well as others. 
+
+[NEWLINE][NEWLINE]
+
+Special thanks:
+[NEWLINE][ICON_BULLET] EUGENE
+[NEWLINE][ICON_BULLET] DJ_MD5
+[NEWLINE][ICON_BULLET] Pazyryk
+[NEWLINE][ICON_BULLET] framedarchitecture
+[NEWLINE][ICON_BULLET] killmeplease</Description>
+    <Authors>[COLOR_PLAYER_ORANGE]Envoy[ENDCOLOR] [COLOR_CYAN](@fourfourhero)[ENDCOLOR]</Authors>
+    <SpecialThanks>EUGENE, DJ_MD5, Pazyryk, framedarchitecture, killmeplease</SpecialThanks>
+    <HideSetupGame>0</HideSetupGame>
+    <AffectsSavedGames>1</AffectsSavedGames>
+    <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+    <SupportsSinglePlayer>1</SupportsSinglePlayer>
+    <SupportsMultiplayer>1</SupportsMultiplayer>
+    <SupportsHotSeat>1</SupportsHotSeat>
+    <SupportsMac>1</SupportsMac>
+    <ReloadLandmarkSystem>0</ReloadLandmarkSystem>
+    <ReloadStrategicViewSystem>0</ReloadStrategicViewSystem>
+    <ReloadUnitSystem>0</ReloadUnitSystem>
+  </Properties>
+  <Dependencies>
+    <Dlc id="6DA07636-4123-4018-B643-6575B4EC336B" minversion="0" maxversion="999" />
+  </Dependencies>
+  <References />
+  <Blocks />
+  <Files>
+    <File md5="B77E0F12A2F55E41AD32E882D05090CE" import="1">ART/BurgerShackSplash.dds</File>
+    <File md5="E42409EA6BDE362ECF7C84CA3BFF7966" import="1">ART/CivilizedJewelersSplash.dds</File>
+    <File md5="193DF6A2BCC864044C49FFD92BFC0C22" import="1">ART/CorporationIconAtlas128.dds</File>
+    <File md5="7F522BE2BD518B5B50A992450690C3FA" import="1">ART/CorporationIconAtlas214.dds</File>
+    <File md5="56705E5D49FE15C9AE73C649AEDEF5D1" import="1">ART/CorporationIconAtlas256.dds</File>
+    <File md5="6C80000DFE084F6F39BDABF4561EE80F" import="1">ART/CorporationIconAtlas45.dds</File>
+    <File md5="FB18A6A02AE111D433D87A27DDF97C1F" import="1">ART/CorporationIconAtlas64.dds</File>
+    <File md5="3FD2D7AD53F5FE6B5C1A315D80F6D349" import="1">ART/CorporationIconAtlas80.dds</File>
+    <File md5="F9269BEA72E6FC10E3B9BF8E326F91A7" import="1">ART/CorporationsFontIcon.dds</File>
+    <File md5="6144B25CC6F8C598819BAA43479F70C3" import="1">ART/CorporationsFontIcon.ggxml</File>
+    <File md5="C3C09924BE248AD44BB4C599542983EB" import="1">ART/GoodScentsSplash.dds</File>
+    <File md5="ABE4E7F66A9EB9C60BEFE259717343B9" import="1">ART/MiningIncSplash.dds</File>
+    <File md5="4F0EA71159083EE475080688BB3FA6ED" import="1">ART/SidsSushiSplash.dds</File>
+    <File md5="D59537B3A21AA2CB4102AB3747AAE501" import="1">ART/SharesFontIcon.dds</File>
+    <File md5="342108F0060503AA0146C7B7720B65E7" import="1">ART/SharesFontIcon.ggxml</File>
+    <File md5="03A3163BE4BB680A2237A94678CE47B9" import="1">ART/ThinkDrinkSplash.dds</File>
+    <File md5="F5E8C60FFC7600FC1E1A8A2E57E38220" import="1">ART/YoungArmySplash.dds</File>
+    <File md5="024CC3B6373D9341D48594157C4B5048" import="0">Bugs.txt</File>
+    <File md5="6ED8204CCE30D0BA6DDBB20810D1C01C" import="0">CorporationsBNWSteam.jpg</File>
+    <File md5="4CF07030E85BDAA6B215CC9B3ACFDCA8" import="1">Lua/Corp_Bootstrap.lua</File>
+    <File md5="66451B548E00F566FFD643B007987B61" import="1">Lua/Corp_BuildingConstructs.lua</File>
+    <File md5="827322A36136C008C87BAFEF6B0917F7" import="0">Lua/Corporations.lua</File>
+    <File md5="2DF2961627D9444166EDF1C4E764F5A0" import="1">Lua/Corp_Defines.lua</File>
+    <File md5="1AB26CBBC872EF3ED29AD42E4005DCAA" import="1">Lua/Corp_FranchiseSpread.lua</File>
+    <File md5="0320D4D9B6BBB434191D0904CFB5DC89" import="1">Lua/Corp_Revenue.lua</File>
+    <File md5="C7F5FB2854EE1A1FFA612FCF447BD62E" import="1">Lua/Corp_UI.lua</File>
+    <File md5="95001D9570AC4A0597D008E470DB4C00" import="1">Lua/Corp_Utils.lua</File>
+    <File md5="4B97DB1E8B8AACCFD3F4D33F8DF3AB14" import="1">Lua/TableSaverLoader.lua</File>
+    <File md5="4C6EE1111EAE45671C635AFEF0DEFBB8" import="0">SQL/Corp_TableUpdates.sql</File>
+    <File md5="0D2A16105354F7C3D83944745F32B618" import="1">UI/Corporations.xml</File>
+    <File md5="71E0A7E9065143BADEDEBF9C75D9D648" import="1">UI/InGame/CityBannerManager.lua</File>
+    <File md5="919576A785CA28AEBA99C2022EC31BB3" import="1">UI/InGame/Popups/DiploRelationships.lua</File>
+    <File md5="C490D02A42BFC71013B12CED3759430C" import="1">UI/InGame/Popups/DiploRelationships.xml</File>
+    <File md5="A04F0A8FF9ED7F4A7F35D8DA8EFC9B46" import="1">UI/InGame/Popups/EconomicGeneralInfo.lua</File>
+    <File md5="924CA8ED5739B6F17437A5F6225D83CA" import="1">UI/InGame/Popups/EconomicGeneralInfo.xml</File>
+    <File md5="AD5F997424BFF67A691EFDFC1072DECB" import="1">UI/InGame/TechButtonInclude.lua</File>
+    <File md5="73CE07DD3F04036D5E169E5A881E6C84" import="1">UI/InGame/TopPanel.lua</File>
+    <File md5="4C69F87ACBB790BB7FA8D4D05D6F30E4" import="1">UI/InGame/WorldView/TradeLogic.lua</File>
+    <File md5="F37C5834D0D4EEC40E43876DC87CDFB3" import="0">XML/BasicInfos/Corp_Concepts.xml</File>
+    <File md5="7E5BF83B3B17B4D2A102F601DFBB36FA" import="0">XML/Buildings/Corp_BroadcastTower.xml</File>
+    <File md5="FBE1B26FCAD8CB82DD04A0EAB9F4B20E" import="0">XML/Buildings/Corp_Clothes.xml</File>
+    <File md5="31FB386BAC35B84932E7814859B48765" import="0">XML/Buildings/Corp_ClothesHQ.xml</File>
+    <File md5="D0A1A624C6BA7E562EF734BCD2F77F4A" import="0">XML/Buildings/Corp_Cola.xml</File>
+    <File md5="E310DC3B54955870402F9ED02CD26E84" import="0">XML/Buildings/Corp_ColaHQ.xml</File>
+    <File md5="1FF2B940B235834257877135AF775ED8" import="0">XML/Buildings/Corp_Hamburger.xml</File>
+    <File md5="30D01091AA44A23400BEEE871EF174DB" import="0">XML/Buildings/Corp_HamburgerHQ.xml</File>
+    <File md5="8FA2FCF7E4000FCBA24703A063C8A3A6" import="0">XML/Buildings/Corp_IconAtlases.xml</File>
+    <File md5="9011B4A6AEB1746A25631D4CD5926F66" import="0">XML/Buildings/Corp_Jeweler.xml</File>
+    <File md5="608097BF27C3AFC47FEE4295336ECC16" import="0">XML/Buildings/Corp_JewelerHQ.xml</File>
+    <File md5="31843C4943A0FBE291B03AC467AE1AF6" import="0">XML/Buildings/Corp_MadisonAvenue.xml</File>
+    <File md5="41D4FB4D4ADFF6B05D9BB52E07A30574" import="0">XML/Buildings/Corp_AdvertisingAgency.xml</File>
+    <File md5="DE1446BB3C7ED551E5A6E98AADFE0FDA" import="0">XML/Buildings/Corp_Mining.xml</File>
+    <File md5="BA97D4ACE153C02DADF63BFA11392C61" import="0">XML/Buildings/Corp_MiningHQ.xml</File>
+    <File md5="97A873638CCA55CB4455E707B9CF8E03" import="0">XML/Buildings/Corp_Perfume.xml</File>
+    <File md5="5B91518F201A1F74DC01A951701E21AB" import="0">XML/Buildings/Corp_PerfumeHQ.xml</File>
+    <File md5="30F8314A7E6E0F61FC8F04F7E7C8ACC7" import="0">XML/Buildings/Corp_SushiHQ.xml</File>
+    <File md5="11B159088F52B5AFD6B56F743FE44047" import="0">XML/Buildings/Corp_Sushi.xml</File>
+    <File md5="C1647EA9D7CD11D6A71FA4A894CF794D" import="0">XML/Buildings/Corp_WallStreet.xml</File>
+    <File md5="9173BFE28556B4770D989D52E96B5F9B" import="0">XML/Civilizations/Corp_Civilizations.xml</File>
+    <File md5="CDF7332AFDD9054770411C3DADE551FC" import="0">XML/Civilizations/Corp_Traits.xml</File>
+    <File md5="F48051E02F79D3F266575FAFDD07D0D5" import="0">XML/Corporations/Corp_Corporations.xml</File>
+    <File md5="9C4E862385687254BBAA9FA823A14B49" import="0">XML/Corporations/Corp_FontIcons.xml</File>
+    <File md5="95103E848BC3FF5EE7DE5382E3C0CF42" import="0">XML/Corporations/Corp_Settings.xml</File>
+    <File md5="B68827261B50F75B7FFC6C1C047A89BA" import="0">XML/Corporations/Corp_UIText.xml</File>
+    <File md5="4DAEA1A451BB4EC12A0BACA079CCFBE5" import="0">XML/GameInfo/Corp_Policies.xml</File>
+    <File md5="622DD841483FADB5A0254FC6025A7413" import="0">XML/Religions/Corp_Beliefs.xml</File>
+    <File md5="96C4CB6D4EEF2246FE363621A568F6A2" import="0">XML/Technologies/Corp_Technologies.xml</File>
+    <File md5="576DF51B2F27530E7E9B080F36A7547E" import="0">XML/Terrain/Corp_Resources.xml</File>
+  </Files>
+  <Actions>
+    <OnModActivated>
+      <UpdateDatabase>XML/Corporations/Corp_Corporations.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Corporations/Corp_Settings.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Corporations/Corp_FontIcons.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Corporations/Corp_UIText.xml</UpdateDatabase>
+      <UpdateDatabase>SQL/Corp_TableUpdates.sql</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_WallStreet.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_AdvertisingAgency.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_MadisonAvenue.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_BroadcastTower.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_Jeweler.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_JewelerHQ.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_Sushi.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_SushiHQ.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_Perfume.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_PerfumeHQ.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_Clothes.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_ClothesHQ.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_Mining.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_MiningHQ.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_Hamburger.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_HamburgerHQ.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_Cola.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_ColaHQ.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Buildings/Corp_IconAtlases.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Civilizations/Corp_Traits.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Civilizations/Corp_Civilizations.xml</UpdateDatabase>
+      <UpdateDatabase>XML/GameInfo/Corp_Policies.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Religions/Corp_Beliefs.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Technologies/Corp_Technologies.xml</UpdateDatabase>
+      <UpdateDatabase>XML/Terrain/Corp_Resources.xml</UpdateDatabase>
+      <UpdateDatabase>XML/BasicInfos/Corp_Concepts.xml</UpdateDatabase>
+    </OnModActivated>
+  </Actions>
+  <EntryPoints>
+    <EntryPoint type="InGameUIAddin" file="Lua/Corporations.lua">
+      <Name>Corporations</Name>
+      <Description>Corporations</Description>
+    </EntryPoint>
+  </EntryPoints>
+</Mod>

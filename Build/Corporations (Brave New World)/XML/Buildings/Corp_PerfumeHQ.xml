@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<BuildingClasses>
+		<Row>
+			<Type>BUILDINGCLASS_CORP_PERFUME_HQ</Type>
+			<DefaultBuilding>BUILDING_CORP_PERFUME_HQ</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CORP_PERFUME_HQ</Description>
+			<MaxGlobalInstances>1</MaxGlobalInstances>
+		</Row>
+	</BuildingClasses>
+	<Buildings>
+		<Row>
+			<Type>BUILDING_CORP_PERFUME_HQ</Type>
+			<BuildingClass>BUILDINGCLASS_CORP_PERFUME_HQ</BuildingClass>
+			<Cost>1250</Cost>
+			<PrereqTech>TECH_CORPORATION</PrereqTech>
+			<Help>TXT_KEY_WONDER_CORP_PERFUME_HQ_HELP</Help>
+			<Description>TXT_KEY_WONDER_CORP_PERFUME_HQ</Description>
+			<Civilopedia>TXT_KEY_WONDER_CORP_PERFUME_HQ_DESC</Civilopedia>
+			<Quote>TXT_KEY_WONDER_CORP_PERFUME_HQ_QUOTE</Quote>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<GreatPeopleRateChange>3</GreatPeopleRateChange>
+			<NukeImmune>true</NukeImmune>
+			<HurryCostModifier>-1</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>12</PortraitIndex>
+			<WonderSplashImage>GoodScentsSplash.dds</WonderSplashImage>
+			<WonderSplashAnchor>L,B</WonderSplashAnchor>			
+		</Row>
+	</Buildings>
+	<Building_TechAndPrereqs>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME_HQ</BuildingType>
+			<TechType>TECH_CHEMISTRY</TechType>
+		</Row>
+	</Building_TechAndPrereqs>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME_HQ</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	</Building_YieldChanges>
+	<Building_ResourceQuantity>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME_HQ</BuildingType>
+			<ResourceType>RESOURCE_CORP_PERFUME</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
+	</Building_ResourceQuantity>
+	<Building_Flavors>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME_HQ</BuildingType>
+			<FlavorType>FLAVOR_GOLD</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME_HQ</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME_HQ</BuildingType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>50</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_PERFUME_HQ</BuildingType>
+			<FlavorType>FLAVOR_GREAT_PEOPLE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+	</Building_Flavors>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_WONDER_CORP_PERFUME_HQ">
+			<Text>Good Scents Corporation</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_PERFUME_HQ_QUOTE">
+			<Text>[NEWLINE][TAB][TAB]"A woman's perfume tells more about her than her handwriting."[NEWLINE] - Christian Dior[NEWLINE][TAB]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_PERFUME_HQ_HELP">
+			<Text>Incorporates Good Scents, allowing all Civilizations to build franchises in their Cities. Provides 5 [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_PERFUME} Shares. +1 [ICON_GOLD] Gold from every Good Scents in the World per [ICON_RES_CORP_SHARES] {TXT_KEY_SHARES_CORP_PERFUME} Share owned.[NEWLINE][COLOR_WARNING_TEXT]Chemistry is also required.[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="TXT_KEY_WONDER_CORP_PERFUME_HQ_DESC">
+			<Text>{TXT_KEY_MISSION_CORP_PERFUME}[NEWLINE][NEWLINE]Stock symbol: {TXT_KEY_SHARES_CORP_PERFUME}[NEWLINE][NEWLINE]Perfume is a mixture of fragrant essential oils or aroma compounds, fixatives and solvents used to give the human body, animals, objects, and living spaces "a pleasant scent."[1] The odoriferous compounds that make up a perfume can be manufactured synthetically or extracted from plant or animal sources. Perfumes have been known to exist in some of the earliest human civilizations, either through ancient texts or from archaeological digs. Modern perfumery began in the late 19th century with the commercial synthesis of aroma compounds such as vanillin or coumarin, which allowed for the composition of perfumes with smells previously unattainable solely from natural aromatics alone.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

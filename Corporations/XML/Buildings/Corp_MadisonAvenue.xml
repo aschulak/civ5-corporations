@@ -9,12 +9,11 @@
 		</Row>
 	</BuildingClasses>
 	<Buildings>
-		<Row>
-			<!-- TODO Move to Mass Media -->
+		<Row>			
 			<Type>BUILDING_MADISON_AVE</Type>
 			<BuildingClass>BUILDINGCLASS_MADISON_AVE</BuildingClass>
 			<Cost>125</Cost>
-			<PrereqTech>TECH_TELECOM</PrereqTech>
+			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<Help>TXT_KEY_BUILDING_MADISON_AVE_HELP</Help>
 			<Description>TXT_KEY_BUILDING_MADISON_AVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MADISON_AVE_TEXT</Civilopedia>

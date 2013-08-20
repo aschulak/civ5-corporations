@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<BuildingClasses>
+		<Row>
+			<Type>BUILDINGCLASS_CORP_JEWELER</Type>
+			<DefaultBuilding>BUILDING_CORP_JEWELER</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_CORP_JEWELER</Description>
+		</Row>
+	</BuildingClasses>
+	<Buildings>
+		<Row>
+			<Type>BUILDING_CORP_JEWELER</Type>
+			<BuildingClass>BUILDINGCLASS_CORP_JEWELER</BuildingClass>
+			<Cost>300</Cost>
+			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
+			<GoldMaintenance>4</GoldMaintenance>
+			<Help>TXT_KEY_BUILDING_CORP_JEWELER_HELP</Help>
+			<Description>TXT_KEY_BUILDING_CORP_JEWELER</Description>
+			<Strategy>TXT_KEY_BUILDING_CORP_JEWELER_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_WONDER_CORP_JEWELER_HQ_DESC</Civilopedia>
+			<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+			<SpecialistCount>1</SpecialistCount>
+			<HurryCostModifier>50</HurryCostModifier>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>100</ConquestProb>
+			<IconAtlas>CORPORATION_ATLAS</IconAtlas>
+			<PortraitIndex>4</PortraitIndex>
+		</Row>
+	</Buildings>	
+	<Building_LockedBuildingClasses>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CORP_MINING</BuildingClassType>
+		</Row>
+	</Building_LockedBuildingClasses>
+	<Building_LocalResourceOrs>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER</BuildingType>
+			<ResourceType>RESOURCE_PEARLS</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER</BuildingType>
+			<ResourceType>RESOURCE_GOLD</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER</BuildingType>
+			<ResourceType>RESOURCE_SILVER</ResourceType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER</BuildingType>
+			<ResourceType>RESOURCE_GEMS</ResourceType>
+		</Row>
+	</Building_LocalResourceOrs>
+	<Building_ResourceYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER</BuildingType>
+			<ResourceType>RESOURCE_GOLD</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER</BuildingType>
+			<ResourceType>RESOURCE_SILVER</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER</BuildingType>
+			<ResourceType>RESOURCE_GEMS</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER</BuildingType>
+			<ResourceType>RESOURCE_PEARLS</ResourceType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+	</Building_ResourceYieldChanges>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+	</Building_YieldChanges>
+	<Building_Flavors>
+		<Row>
+			<BuildingType>BUILDING_CORP_JEWELER</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>100</Flavor>
+		</Row>
+	</Building_Flavors>
+	<Language_en_US>
+		<Row Tag="TXT_KEY_BUILDING_CORP_JEWELER">
+			<Text>Civilized Jewelers</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CORP_JEWELER_STRATEGY">
+			<Text>Civilized Jewelers can only be constructed in a city with an improved source of [ICON_RES_GEMS] Gems, [ICON_RES_GOLD] Gold, [ICON_RES_PEARLS] Pearls, or [ICON_RES_SILVER] Silver nearby.[NEWLINE][NEWLINE]Civilized Jewelers competes with Mining Inc. and cannot be built in the same city. The Civilized Jewelers Corporation Wonder must be built by any civilization before Civilized Jewelers can be constructed.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILDING_CORP_JEWELER_HELP">
+			<Text>Each source of [ICON_RES_GEMS] Gems, [ICON_RES_GOLD] Gold, [ICON_RES_PEARLS] Pearls, and [ICON_RES_SILVER] Silver worked by this City produces +3 [ICON_CULTURE] Culture.</Text>
+		</Row>
+	</Language_en_US>
+</GameData>

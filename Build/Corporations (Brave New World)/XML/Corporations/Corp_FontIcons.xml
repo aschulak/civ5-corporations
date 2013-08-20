@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<IconFontTextures>
+		<Row>
+			<IconFontTexture>ICON_FONT_TEXTURE_CORP</IconFontTexture>
+			<IconFontTextureFile>CorporationsFontIcon</IconFontTextureFile>
+		</Row>
+	</IconFontTextures>
+	<IconFontMapping>
+		<Row>
+			<IconName>ICON_CORP_SUSHI</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CORP</IconFontTexture>
+			<IconMapping>1</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CORP_JEWELER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CORP</IconFontTexture>
+			<IconMapping>2</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CORP_PERFUME</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CORP</IconFontTexture>
+			<IconMapping>3</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CORP_CLOTHES</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CORP</IconFontTexture>
+			<IconMapping>4</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CORP_MINING</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CORP</IconFontTexture>
+			<IconMapping>5</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CORP_HAMBURGER</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CORP</IconFontTexture>
+			<IconMapping>6</IconMapping>
+		</Row>
+		<Row>
+			<IconName>ICON_CORP_COLA</IconName>
+			<IconFontTexture>ICON_FONT_TEXTURE_CORP</IconFontTexture>
+			<IconMapping>7</IconMapping>
+		</Row>
+	</IconFontMapping>
+</GameData>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<IconTextureAtlases>
+		<Row>
+			<Atlas>CORPORATION_ATLAS</Atlas>
+			<IconSize>256</IconSize>
+			<Filename>CorporationIconAtlas256.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CORPORATION_ATLAS</Atlas>
+			<IconSize>214</IconSize>
+			<Filename>CorporationIconAtlas214.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CORPORATION_ATLAS</Atlas>
+			<IconSize>128</IconSize>
+			<Filename>CorporationIconAtlas128.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CORPORATION_ATLAS</Atlas>
+			<IconSize>80</IconSize>
+			<Filename>CorporationIconAtlas80.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CORPORATION_ATLAS</Atlas>
+			<IconSize>64</IconSize>
+			<Filename>CorporationIconAtlas64.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+		<Row>
+			<Atlas>CORPORATION_ATLAS</Atlas>
+			<IconSize>45</IconSize>
+			<Filename>CorporationIconAtlas45.dds</Filename>
+			<IconsPerRow>8</IconsPerRow>
+			<IconsPerColumn>3</IconsPerColumn>
+		</Row>
+	</IconTextureAtlases>  
+</GameData>

@@ -5,6 +5,10 @@
 include("Corp_Bootstrap.lua");
 include("Corp_Utils.lua");
 
+--
+-- GLOBALS
+--
+
 local gT = MapModData.gT;
 
 --

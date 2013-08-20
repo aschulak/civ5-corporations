@@ -4,13 +4,22 @@
 		<Column name="Value" type="integer" default="0"/>
 	</Table>
 	<CorporationSettings>
+		<!-- Base settings -->
+		
+		<!-- -1 will turn off financial update notifications -->
+		<Row>
+			<Type>FinancialNotificationUpdateTurns</Type>
+			<Value>10</Value>
+		</Row>
+
+		<!-- Corporation spread pressure settings -->
 		<Row>
 			<Type>BasePressureModifier</Type>
 			<Value>100</Value>
 		</Row>
 		<Row>
 			<Type>OpenBordersPressureModifier</Type>
-			<Value>5</Value>
+			<Value>25</Value>
 		</Row>
 		<Row>
 			<Type>ClosedBordersPressureModifier</Type>

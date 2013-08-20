@@ -2,6 +2,7 @@
 -- Author: Envoy (@fourfourhero)
 -- DateCreated: 7/27/2013 12:33:42 AM
 --------------------------------------------------------------
+include("TableSaverLoader.lua");
 
 --
 -- GLOBALS
@@ -49,6 +50,35 @@ if not MapModData.gCorpUtilsInitted then
 	end	
 	
 	MapModData.gCorpUtilsInitted = true;
+end
+
+--
+-- DATA
+--
+
+function LoadCorporationsData()
+	print("--LoadCorporationsData");
+	local DBQuery = Modding.OpenSaveData().Query;
+	local bNewGame = true;
+	for row in DBQuery("SELECT name FROM sqlite_master WHERE name='CorporationsBNW_Info'") do
+		if row.name then bNewGame = false end
+	end
+	if bNewGame then
+		TableSave(gT, "CorporationsBNW");		
+	else
+		TableLoad(gT, "CorporationsBNW");
+	end	
+	MapModData.gT = gT;
+	
+	return gT;
+end
+
+-- Save corp data
+-- GameEvents.PlayerDoTurn
+function SaveCorporationsData()
+	print("--SaveCorporationsData");
+	local gT = MapModData.gT;
+	TableSave(gT, "CorporationsBNW");
 end
 
 --
@@ -107,6 +137,7 @@ function round(x)
   return x-0.5;
 end
 
+-- from http://lua-users.org/wiki/SplitJoin
 function split(str, pat)
    local t = {}  -- NOTE: use {n = 0} in Lua-5.0
    local fpat = "(.-)" .. pat
@@ -302,6 +333,7 @@ function HasUnlimitedCorporationSpreadDistanceTechnology(player)
 			end
 		end
 	end
+	
 	return false;
 end
 
@@ -424,29 +456,20 @@ function GetCorporationSpreadModifierFromTraits(player)
 end
 
 function GetCorporationSpreadModifierFromReligion(hqPlayer, city)
-	print("--GetCorporationSpreadModifierFromReligion");	
+	--print("--GetCorporationSpreadModifierFromReligion");	
 	local modifier = 0;
 	
 	local religionId = hqPlayer:GetReligionCreatedByPlayer();
-	--print("hq player", hqPlayer:GetName());
-	--print("religionId", religionId);
 	if religionId > 0 then
 		local rm = city:GetReligiousMajority();
-		--print("spread city", city:GetName());
-		--print ("rm", rm);
 		if religionId == city:GetReligiousMajority() then
-			--print("same religion as city");
 			for i, beliefId in ipairs(Game.GetBeliefsInReligion(religionId)) do
-				--print("beliefId", beliefId);
 				local belief = GameInfo.Beliefs[beliefId];
-				--print("belief type", belief.Type);
-				--print("belief csm", belief.CorporationSpreadPressureModifier);
 				modifier = modifier + belief.CorporationSpreadPressureModifier;
 			end
 		end
 	end
 	
-	--print("religious mod", modifier);
 	return modifier;
 end
 
